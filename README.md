@@ -1,108 +1,90 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Dry Drops
 
-Welcome USER_NAME,
+Dry Drops is a e-commerce website operating in the field of alcohol free beverages.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This fully responsive website was built using the Django framework in Python.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The payment system uses a service called Stripe. To test this system, dummy card details can be used. A list of these can be found [here](https://stripe.com/docs/testing#cards).
 
-## Gitpod Reminders
+## User Experience (UX)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+A list of my user stories and theri tasks can be found [here](https://github.com/delboy/drydrops/issues).
 
-`python3 -m http.server`
+### EPIC | Navigation
+- As a shopper I can navigate around the site so that I easily view the desired content.
+- As a shopper I can view a list of products so that I can choose what products to purchase.
+- As a shopper I can click on a product to see its details so that I can view the descirption, price and any customer reviews.
+- As a shopper I can easily identify different product categories so that I can quickly view the type of products I'm looking for.
+- As a shopper I can search for products so that I can find the products I'm specifically looking for.
+- As a shopper I can sort the products so that I can easily find products based on price, reviews, category, or title.
+- As a shopper I can view products I have saved so that I can navigate to them easily without having to find them again.
 
-A blue button should appear to click: _Make Public_,
+### EPIC | Accounts
+- As a User I can register for an account so that I can use the features afforded to members.
+- As a user I can receive a confirmation email when creating an account so that I know the registration was successful.
+- As a user I can easily log in and out so that I can access my personal account.
+- As a user I can easily see my login status so that I know if I'm logged in or out.
+- As a user I can view my previous orders so that I can keeep record of what purchases I've made.
+- As a user I can save my delivery information so that I do not have to refill it out for future orders.
 
-Another blue button should appear to click: _Open Browser_.
+### EPIC | Admin
+- As a admin I can add products so that I can update the sites inventory.
+- As a admin I can edit a product so that I can keep the products information up to date.
+- As a admin I can delete a product so that I can remove products no longer available.
+- As a admin I can feature products so that I can display them on the home page.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### EPIC | Purchasing
+- As a shopper I can add items to my bag in different quantitys so that I can store the items untill I'm willing to buy.
+- As a shopper I can view my bag so that I can identify the total cost of the transaction and the items I will be purchasing.
+- As a shopper I can adjust the quantity of the items in my bag so that I can easily make changes before I purchase.
+- As a shopper I can always see a running subtotal so that I can keep an eye on how much I'm spending.
+- As a shopper I can see a summary of my purchase before I buy so that I know exactly what I'm ordering and how much it all costs.
+- As a shopper I can pay for goods as a guest so that I can still use the site without having to sign up for an account.
+- As a shopper I can easily enter my payment details so that I can checkout quickly with no problems.
+- As a shopper I can view confirmation of my purchases so that I know the order was received and can review what I've purchased.
+- As a shopper I can receive an email of my order so that I can keep it for my records.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### EPIC | Interaction
+- As a user I can save my favourite products so that they are easily accessible for future purchases.
+- As a user I can leave reviews on products so that I can share my experience with others.
+- As a user I can sign up to the websites newsletter so that I can keep up to date with new products and promotions.
+- As a user I can connect to the sites social media pages so that I can follow them and keep up to date with their products and promotions.
+- As a user I can contact the business so that I can find out any information that I require.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Design
 
-To log into the Heroku toolbelt CLI:
+### Colour Scheme
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- I wanted the colour scheme to be similar to the colour of dark ales and wines to fit in with the sites's theme, so the main colour I chose was a dark redish brow, along with a lighter shade and a couple more neutral tones to balance it out.  
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+ ![Colour Scheme](assets/images/colour-scheme.png)
 
-------
+### Typography 
 
-## Release History
+I will be using two fonts from Google Fonts.
+- Roboto Serif for titles and headers.
+- Source Sans 3 for paragraphs and general text.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Imagery
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Wireframes
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Wireframes for each page are linked here:
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* [Home Page](assets/documents/home.pdf)
+* [Products](assets/documents/products.pdf)
+* [Product Details](assets/documents/product-details.pdf)
+* [About](assets/documents/about.pdf)
+* [Contact](assets/documents/contact.pdf)
+* [Register](assets/documents/register.pdf)
+* [Account](assets/documents/account.pdf)
+* [Sign in/out](assets/documents/log.pdf)
+* [Bag](assets/documents/bag.pdf)
+* [Checkout](assets/documents/checkout.pdf)
+* [Success](assets/documents/success.pdf)
+* [Product Management](assets/documents/product-management.pdf)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Database Schema
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+![Database Schema](assets/images/schema.png)
