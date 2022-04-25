@@ -1,0 +1,64 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Imbue:wght@400;500&family=Libre+Baskerville&family=Raleway:wght@100&family=Roboto+Serif&family=Source+Sans+3:wght@300&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/bottles2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #706563;
+}
+
+.logo {
+    font-family: 'Roboto Seriff';
+    margin-bottom: 0;
+}
+
+.hero-text {
+    position: relative;
+    font-family: 'Source Sans 3';
+    
+}
+
+.hero-btn {
+    position: relative;
+    background-color: #706563;
+    border: 1px solid black;
+    
+}
+
+.hero-btn:hover {
+    background-color: #748386;
+}
+
+.hero-box {
+    background-color: #3b0d11;
+    opacity: 80%;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+}
+
+.search-btn {
+    background-color: #748386;
+}
+
+.search-btn:hover {
+    background-color: #706563;
+}
