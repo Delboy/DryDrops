@@ -9,6 +9,7 @@ body {
     background: url('/media/bottles2.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
+    font-family: 'Source Sans 3';
 }
 
 a {
@@ -61,4 +62,14 @@ a:hover {
 
 .search-btn:hover {
     background-color: #706563;
+}
+
+#main-nav {
+    font-size: 1.5rem;
+    font-family: 'Roboto Serif';
+}
+
+.delivery-banner {
+    background-color: #3b0d11;
+    opacity: 80%;
 }
