@@ -26,6 +26,7 @@ A list of my user stories and theri tasks can be found [here](https://github.com
 - As a user I can easily see my login status so that I know if I'm logged in or out.
 - As a user I can view my previous orders so that I can keeep record of what purchases I've made.
 - As a user I can save my delivery information so that I do not have to refill it out for future orders.
+- As a user I can recover my password in case I forget it so that I can regain access to my account.
 
 ### EPIC | Admin
 - As a admin I can add products so that I can update the sites inventory.
