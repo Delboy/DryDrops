@@ -103,9 +103,9 @@
                 <div class="icon"><i class="fas fa-shopping-bag fa-lg"></i></div>
                 <p class="my-0 font-weight-bold">
                   {% if grand_total %}
-                  ${{ grand_total|floatformat:2 }}
+                  £{{ grand_total|floatformat:2 }}
                   {% else %}
-                  $0.00
+                  £0.00
                   {% endif %}
                 </p>
               </div>
@@ -140,7 +140,7 @@
   {% endblock %}
 
   <!-- Footer -->
-  <footer class="w-100 pt-4  px-4 bg-white text-black">
+  <footer class="w-100 pt-4  px-4 bg-white text-black fixed-bottom">
     
       <div class="row gy-4 gx-5">
         <div class="col-lg-4 col-md-6">
