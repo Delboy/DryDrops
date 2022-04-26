@@ -55,14 +55,14 @@
       <!-- Logo -->
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 mb-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link">
-          <h2 class="logo"><strong>DRYDROPS.COM</strong></h2>
+          <h2 class="logo">DRYDROPS.COM</h2>
         </a>
       </div>
       <!-- Search Bar -->
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <form class="d-flex" method="GET" action="#">
           <input class="form-control me-2" type="text" name="q" placeholder="Search our site" aria-label="Search">
-          <button class="btn search-btn text-white" type="submit">
+          <button class="btn link-btn text-white" type="submit">
             <i class="fas fa-search"></i>
           </button>
         </form>
@@ -74,11 +74,11 @@
             <a href="#" class="nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
+                <div class="icon"><i class="fas fa-user fa-lg"></i></div>
                 {% if user.is_authenticated %}
-                <p class="my-0">{{ user }}'s Account</p>
+                <p class="my-0 font-weight-bold">{{ user }}'s Account</p>
                 {% else %}
-                <p class="my-0">My Account</p>
+                <p class="my-0 font-weight-bold">My Account</p>
                 {% endif %}
               </div>
             </a>
@@ -100,8 +100,8 @@
           <li class="list-inline-item">
             <a href="#" class="nav-link">
               <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                <p class="my-0">
+                <div class="icon"><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <p class="my-0 font-weight-bold">
                   {% if grand_total %}
                   ${{ grand_total|floatformat:2 }}
                   {% else %}
@@ -116,7 +116,7 @@
     </div>
 
     <div class="row bg-white">
-      <nav class="navbar navbar-expand-lg navbar-light w-100">
+      <nav class="navbar navbar-expand-lg navbar-light w-100 pt-0 pb-3">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
           aria-controls="main-nav" aria-label="Toggle Navigation">
           <span class="navbar-toggler-icon"></span>
@@ -125,7 +125,7 @@
         {% include 'includes/main-nav.html' %}
       </nav>
     </div>
-    </div>
+
 
   </header>
 
@@ -138,6 +138,74 @@
 
   {% block content %}
   {% endblock %}
+
+  <!-- Footer -->
+  <footer class="w-100 pt-4  px-4 bg-white text-black">
+    
+      <div class="row gy-4 gx-5">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="h1 logo">DRYDROPS.COM</h5>
+          <p class="small text-muted">All the pleasure. None of the guilt.</p>
+          <p class="small text-muted mb-0">&copy; Copyrights - 2022 Dry Drops</p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class=" mb-3 mt-3 mt-md-0"><strong>Quick links</strong></h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Beers</a></li>
+            <li><a href="#">Ciders</a></li>
+            <li><a href="#">Wines</a></li>
+            <li><a href="#">Spirits</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class=" mb-3"><strong>Contact Us</strong></h5>
+          <div class="row">
+            <div class="col-4 col-md-6">
+              <p>Address:</p>
+            </div>
+            <div class="col-8 col-md-6 small">
+              <p class="mb-0">Dry Drops Lane, Drydrops</p>
+              <p class="mb-0">Dryville</p>
+              <p>LN1 1DD</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 col-md-6">
+              <p>Phone:</p>
+            </div>
+            <div class="col-8 col-md-6 small">
+              <p>+44 207 123 456</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 col-md-6">
+              <p>Email:</p>
+            </div>
+            <div class="col-8 col-md-6 small">
+              <p>drydrops@gmail.com</p>
+            </div>
+          </div>
+          <p><a href="https://www.facebook.com/" class="social-icon" target="_blank"><i class="fab fa-facebook-square"></i></a><a href="https://www.instagram.com/" class="social-icon" target="_blank"><i class="fab fa-instagram-square"></i></a><a href="https://www.twitter.com/" class="social-icon" target="_blank"><i
+            class="fab fa-twitter-square"></i></a></p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class=" mb-3"><strong>Newsletter</strong></h5>
+          <p class="small text-muted">Sign up to our weekly newsletter to keep up to date with all our latest products
+            and offers!</p>
+          <form action="#">
+            <div class="input-group mb-3">
+              <input class="form-control" type="text" placeholder="Email Address" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+              <button class="btn link-btn" id="button-addon2" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </footer>
+
 
   {% block postloadjs %}
   {% endblock %}

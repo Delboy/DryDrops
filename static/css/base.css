@@ -1,12 +1,11 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Imbue:wght@400;500&family=Libre+Baskerville&family=Raleway:wght@100&family=Roboto+Serif&family=Source+Sans+3:wght@300&display=swap');
-
 html {
     height: 100%;
 }
 
 body {
-    background: url('/media/bottles2.jpg') no-repeat center center fixed;
+    background: url('/media/bottles.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     font-family: 'Source Sans 3';
@@ -23,21 +22,15 @@ a:hover {
 }
 
 .logo {
-    font-family: 'Roboto Seriff';
+    font-family: 'imbue';
+    letter-spacing: 2px;
+    font-size: 3rem;
+    font-weight: 500;
     margin-bottom: 0;
 }
 
-.hero-text {
-    position: relative;
-    font-family: 'Source Sans 3';
-    
-}
-
-.hero-btn {
-    position: relative;
-    background-color: #706563;
+.black-border {
     border: 1px solid black;
-    
 }
 
 .hero-btn:hover {
@@ -56,12 +49,15 @@ a:hover {
     padding: 0.5rem 1rem;
 }
 
-.search-btn {
-    background-color: #748386;
+.link-btn {
+    
+    background-color: #706563;
+    color: white;
 }
 
-.search-btn:hover {
-    background-color: #706563;
+.link-btn:hover {
+    background-color: #748386;
+    color: white;
 }
 
 #main-nav {
@@ -73,3 +69,14 @@ a:hover {
     background-color: #3b0d11;
     opacity: 80%;
 }
+
+.color-burgundy {
+    color: #3b0d11;
+}
+
+.social-icon {
+    color: #3b0d11;
+    font-size: 2rem;
+    padding-right: 1rem;
+}
+
