@@ -107,6 +107,7 @@ a:hover {
 
 .category-col {
     background-color: #748386;
+    border: 1px solid black;
     border-radius: 2%;
     font-family: 'Roboto Serif';
 }
@@ -122,5 +123,14 @@ a:hover {
 
 .whats-hot {
     background-color: #6a3937;
+    border: 1px solid black;
     border-radius: 1%;
+}
+
+/* Media Queries */
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 125px;
+    }
 }

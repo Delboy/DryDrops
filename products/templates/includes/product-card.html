@@ -1,4 +1,4 @@
-<a href="">
+<a href="{% url 'product_detail' product.id %}">
     {% if product.image %}
         <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
     {% else %}
