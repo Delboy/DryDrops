@@ -1,0 +1,25 @@
+<img class="card-img-top" src="{{ product.image.url }}" alt="Card image cap">
+<div class="card-body">
+    <p><strong>{{ product.name }}</strong></p>
+    <p class="card-text"><strong>£{{ product.price }}</strong></p>
+    <p class="card-text"> <a href="#"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
+    {% if product.rating >= 4.5 %}
+    <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
+    {% elif product.rating >= 4 %}
+    <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i>
+    {% elif product.rating >= 3.5 %}
+    <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
+    {% elif product.rating >= 3 %}
+    <i class="fa fa-solid fa-star"></i></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i>
+    {% elif product.rating >= 2.5 %}
+    <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
+    {% elif product.rating >= 2 %}
+    </i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i>
+    {% elif product.rating >= 1.5 %}
+    <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
+    {% elif product.rating >= 1 %}
+    <i class="fa fa-solid fa-star"></i>
+    {% else %}
+    <p>No Rating</p>
+    {% endif %}
+</div>
