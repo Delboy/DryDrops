@@ -11,48 +11,53 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container">
+<div class="container-flex">
     <div class="row">
-        <div class="col">
+        <div class="col-8 offset-2">
             <hr>
             <h2 class="text-center">Products</h2>
             <hr>
         </div>
     </div>
     <div class="row">
-        <div class="col-2 d-none d-lg-block">
+        <div class="col-2 ml-5 d-none d-lg-block">
             <div class="row">
-                <div class="col-4">
-                    <h4 class="text-center">Categories</h4>
-                    <a href="" class="dropdown-item">All Products</a>
+                <div class="col category-col py-2">
+                    <h3 class="mb-0 py-2">Categories</h3>
+                    <hr class="my-0">
+                    <ul class="pl-0">
+                    <li><a href="" class="nav-li nav-link">All Products</a></li>
                     {% for category in categories %}
-                    <a href="" class="dropdown-item">{{ category.friendly_name }}</a>
+                    <li><a href="" class="nav-li nav-link">{{ category.friendly_name }}</a></li>
                     {% endfor %}
+                    </ul>
                 </div>
             </div>
             <div class="row pt-3">
-                <div class="col whats-hot">
-                    <h4 class="text-center" >Whats Hot!</h4>
+                <div class="col pt-2 px-auto whats-hot">
+                    <h4 class="text-center text-white">Whats Hot!</h4>
                     {% for product in products %}
                         {% if product.featured %}
-                            <div class="card mb-2" style="width: 11rem;">
+                            <div class="card mb-2 mx-auto" style="width: 100%;">
                                 {% include 'includes/product-card.html' %}
                             </div>
-                        
                     {% endif %}
                 {% endfor %}
                 </div>
             </div>
         </div>
-
         <div class="col">
-            <div class="row">
+            <div class="row px-4">
                 {% for product in products %}
-                <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-2">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-lg-3 col-md-6 d-flex justify-content-center py-1 px-2">
+                    <div class="card border-white" style="width: 18rem;">
                         {% include 'includes/product-card.html' %}
                     </div>
                 </div>
+                {% if forloop.counter|divisibleby:4 %}
+            </div>
+            <div class="row">
+            {% endif %}
                 {% endfor %}
             </div>
         </div>

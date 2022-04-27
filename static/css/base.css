@@ -1,5 +1,7 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Imbue:wght@400;500&family=Libre+Baskerville&family=Raleway:wght@100&family=Roboto+Serif&family=Source+Sans+3:wght@300&display=swap');
+
+/* defualts */
 html {
     height: 100%;
 }
@@ -8,7 +10,12 @@ body {
     background: url('/media/bottles.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
-    font-family: 'Source Sans 3';
+    font-family: 'Roboto Serif';
+}
+
+h1, h2, h3, h4 {
+    font-family: 'imbue';
+    letter-spacing: 2px;
 }
 
 a {
@@ -81,7 +88,7 @@ a:hover {
 }
 
 .header-container {
-    padding-top: 200px;
+    padding-top: 175px;
 }
 
 .overlay {
@@ -98,3 +105,22 @@ a:hover {
     margin-bottom: 0px;
 }
 
+.category-col {
+    background-color: #748386;
+    border-radius: 2%;
+    font-family: 'Roboto Serif';
+}
+
+.category-col ul {
+    font-size: 1.25rem;
+    list-style-type: none;
+}
+
+.nav-li {
+    color:#3b0d11
+}
+
+.whats-hot {
+    background-color: #6a3937;
+    border-radius: 1%;
+}

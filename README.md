@@ -64,8 +64,8 @@ A list of my user stories and theri tasks can be found [here](https://github.com
 ### Typography 
 
 I will be using two fonts from Google Fonts.
-- Imbue for the logo.
-- Source Sans 3 for paragraphs and general text.
+- Imbue for the logo and headers.
+- Roboto Serif for paragraphs and general text.
 
 ### Imagery
 
