@@ -7,7 +7,7 @@
     <div class="card-body bg-light">
         <p><strong>{{ product.name }}</strong></p>
         <p class="card-text"><strong>£{{ product.price }}</strong></p>
-        <p class="card-text"> <a href="#"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
+        <p class="card-text"> <a href="{% url 'products' %}?category={{ product.category.name }}"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
         {% if product.rating >= 4.5 %}
         <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
             class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>

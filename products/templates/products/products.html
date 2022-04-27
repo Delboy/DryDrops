@@ -19,13 +19,16 @@
         </div>
     </div>
     <div class="row">
+
+    </div>
+    <div class="row">
         <div class="col-2 ml-5 d-none d-lg-block">
             <div class="row">
                 <div class="col category-col py-2">
                     <h3 class="mb-0 py-2">Categories</h3>
                     <hr class="my-0">
                     <ul class="pl-0">
-                        <li><a href="" class="nav-li nav-link">All Products</a></li>
+                        <li><a href="{% url 'products' %}" class="nav-li nav-link">All Products</a></li>
                         <li><a href="{% url 'products' %}?category=beers" class="nav-li nav-link">Beers</a></li>
                         <li><a href="{% url 'products' %}?category=ciders" class="nav-li nav-link">Ciders</a></li>
                         <li><a href="{% url 'products' %}?category=wines" class="nav-li nav-link">Wines</a></li>
