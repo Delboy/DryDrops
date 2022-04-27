@@ -33,6 +33,7 @@
             <div class="row pt-3">
                 <div class="col whats-hot">
                     <h4>Whats Hot!</h4>
+                    {% for product in products %}
                 </div>
             </div>
         </div>
@@ -52,21 +53,17 @@
                             {% elif product.rating >= 4 %}
                             <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i>
                             {% elif product.rating >= 3.5 %}
-                            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-star-o"></i>
+                            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
                             {% elif product.rating >= 3 %}
-                            <i class="fa fa-solid fa-star"></i></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i><i class="fa fa-star-o"></i>
+                            <i class="fa fa-solid fa-star"></i></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i>
                             {% elif product.rating >= 2.5 %}
-                            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
                             {% elif product.rating >= 2 %}
-                            </i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                            </i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i>
                             {% elif product.rating >= 1.5 %}
-                            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
                             {% elif product.rating >= 1 %}
-                            <i class="fa fa-solid fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-                            {% elif product.rating >= 0.5 %}
-                            <i class="fa fa-solid fa-star-half"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-                            {% elif product.rating >= 0.0 %}
-                            <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                            <i class="fa fa-solid fa-star"></i>
                             {% else %}
                             <p>No Rating</p>
                             {% endif %}

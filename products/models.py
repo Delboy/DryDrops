@@ -43,6 +43,7 @@ class Product(models.Model):
         related_name='recipe_likes',
         blank=True
         )
+    featured = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
