@@ -7,13 +7,19 @@ from .models import Product, Category
 
 
 def all_products(request):
-    """ A view to show all products """
+    """ A view to show all products and search queries """
 
     products = Product.objects.all()
-    categories = Category.objects.all()
+    hot_products = Product.objects.all()
     query = None
+    categories = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -25,8 +31,9 @@ def all_products(request):
 
     context = {
         'products': products,
-        'categories': categories,
         'search_term': query,
+        'current_categories': categories,
+        'hot_products': hot_products,
     }
 
     return render(request, 'products/products.html', context)

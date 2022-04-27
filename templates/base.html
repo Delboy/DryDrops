@@ -152,10 +152,10 @@
           <h5 class=" mb-3 mt-3 mt-md-0"><strong>Quick links</strong></h5>
           <ul class="list-unstyled text-muted">
             <li><a href="{% url 'products' %}">All Products</a></li>
-            <li><a href="#">Beers</a></li>
-            <li><a href="#">Ciders</a></li>
-            <li><a href="#">Wines</a></li>
-            <li><a href="#">Spirits</a></li>
+            <li><a href="{% url 'products' %}?category=beers">Beers</a></li>
+            <li><a href="{% url 'products' %}?category=ciders">Ciders</a></li>
+            <li><a href="{% url 'products' %}?category=wines">Wines</a></li>
+            <li><a href="{% url 'products' %}?category=spirits">Spirits</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
           </ul>

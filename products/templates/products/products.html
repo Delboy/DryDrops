@@ -26,21 +26,22 @@
                     <hr class="my-0">
                     <ul class="pl-0">
                         <li><a href="" class="nav-li nav-link">All Products</a></li>
-                        {% for category in categories %}
-                        <li><a href="" class="nav-li nav-link">{{ category.friendly_name }}</a></li>
-                        {% endfor %}
+                        <li><a href="{% url 'products' %}?category=beers" class="nav-li nav-link">Beers</a></li>
+                        <li><a href="{% url 'products' %}?category=ciders" class="nav-li nav-link">Ciders</a></li>
+                        <li><a href="{% url 'products' %}?category=wines" class="nav-li nav-link">Wines</a></li>
+                        <li><a href="{% url 'products' %}?category=spirits" class="nav-li nav-link">Spirits</a></li>
                     </ul>
                 </div>
             </div>
             <div class="row pt-3">
                 <div class="col pt-2 px-auto whats-hot">
                     <h4 class="text-center text-white">Whats Hot!</h4>
-                    {% for product in products %}
-                    {% if product.featured %}
-                    <div class="card mb-2 mx-auto" style="width: 100%;">
-                        {% include 'includes/product-card.html' %}
-                    </div>
-                    {% endif %}
+                    {% for product in hot_products %}
+                        {% if product.featured %}
+                        <div class="card mb-2 mx-auto" style="width: 100%;">
+                            {% include 'includes/product-card.html' %}
+                        </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>

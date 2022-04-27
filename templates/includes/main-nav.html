@@ -12,10 +12,10 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                <a href="" class="dropdown-item">Beers</a>
-                <a href="" class="dropdown-item">Ciders</a>
-                <a href="" class="dropdown-item">Wine</a>
-                <a href="" class="dropdown-item">Spirits</a>
+                <a href="{% url 'products' %}?category=beers" class="dropdown-item">Beers</a>
+                <a href="{% url 'products' %}?category=ciders" class="dropdown-item">Ciders</a>
+                <a href="{% url 'products' %}?category=wines" class="dropdown-item">Wine</a>
+                <a href="{% url 'products' %}?category=spirits" class="dropdown-item">Spirits</a>
             </div>
         </li>
 
