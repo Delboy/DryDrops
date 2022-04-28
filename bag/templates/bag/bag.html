@@ -10,32 +10,82 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-8 offset-2 mt-3">
-                <h2 class="text-center">Shopping Bag</h2>
-                <hr>
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2 mt-3">
+            <h2 class="text-center">Shopping Bag</h2>
+            <hr>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+            <table class="table table-sm table-borderless ml-4">
+                <thead>
+                    <tr>
+                        <th>Product Info</th>
+                        <th></th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                {% for item in bag_items %}
+                <tr>
+                    <td class="pt-3">
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" id="bag_img"
+                            style="width: 8rem;" class="img-fluid">
+                    </td>
+                    <td class="pt-5 pl-0">
+                        {{ item.product.name }}<br>
+                        <span class="text-muted">SKU: {{ item.product.sku }}</span>
+                    </td>
+                    <td class="pt-5"><strong>£{{ item.product.price }}</strong></td>
+                    <td class="pt-5 text-center">x {{ item.quantity }}</td>
+                    <td class="pt-5">£{{ item.product.price }}</td>
+                    <td class="pt-5">
+                        <a><span class="small pr-3 update-link text-info">update</span></a>
+                        <a><i class="fa fa-trash btn text-danger" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="offset-md-6 col-lg-4 offset-lg-8">
+            <p><strong>Bag Total: £{{ total|floatformat:2 }}</strong></p>
+            <p>Delivery: £{{ delivery|floatformat:2 }}</p>
+            {% if free_delivery_delta > 0 %}
+            <p class="text-danger">You could get free delivery by spending just <strong>£{{ free_delivery_delta }}
+                </strong>more!</p>
+            {% endif %}
+            <h4><strong>Grand Total:  £{{ grand_total|floatformat:2 }}</strong></h4>
+            <div class="pt-3">
+                <a href="{% url 'products' %}" class="btn btn-sm ">
+                    <i class="fas fa-chevron-left"></i>
+                    Continue Shopping
+                </a>
+                <a href="" class="btn btn-dark">
+                    <span class="text-uppercase">secure checkout</span>
+                    <i class="fas fa-lock"></i>
+                </a>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-         <div class="col">
-             {% if bag_items %}
-             
-             {{ bag_items }}
-             {% else %}
-                <p>Your bag is empty.
-                    <br>
-                    <br>
-                    <a href="{% url 'products' %}" class="btn btn-lg ">
-                        <i class="fas fa-chevron-left"></i>
-                        Continue Shopping
-                    </a>
-                </p>
-             {% endif %}
-         </div>
-        </div>
-    </div>
+    {% else %}
+        <p>Your bag is empty.
+            <br>
+            <br>
+            <a href="{% url 'products' %}" class="btn btn-lg ">
+                <i class="fas fa-chevron-left"></i>
+                Continue Shopping
+            </a>
+        </p>
+    {% endif %}
+</div>
 {% endblock %}
