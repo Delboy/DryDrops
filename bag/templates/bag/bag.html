@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -62,7 +63,7 @@
                                     </div>
                                 </form>
                             </td>
-                            <td class="pt-5 border-bottom">£{{ item.product.price }}</td>
+                            <td class="pt-5 border-bottom">£{{ item.product.price | calc_subtotal:item.quantity }}</td>
                             <td class="pt-5 border-bottom-0">
                                 <p class="small pr-3 mb-0 btn btn-sm update-btn text-info">update</p>
                                 <i class="fa fa-trash btn text-danger remove-btn" id="remove_{{ item.item_id }}"
