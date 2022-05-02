@@ -23,51 +23,54 @@
     <div class="row">
         <div class="col">
             {% if bag_items %}
-            <table class="table table-sm table-borderless ml-4">
-                <thead>
-                    <tr>
-                        <th>Product Info</th>
-                        <th></th>
-                        <th>Price</th>
-                        <th class="text-center">Qty</th>
-                        <th>Subtotal</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                {% for item in bag_items %}
-                <tr class="pe-4">
-                    <td class="py-3 border-bottom">
-                        <a href="{% url 'product_detail' item.product.id %}"><img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" id="bag_img"
-                            style="width: 8rem;" class="img-fluid"></a>
-                    </td>
-                    <td class="pt-5 pl-0 border-bottom">
-                        <a href="{% url 'product_detail' item.product.id %}">{{ item.product.name }}</a><br>
-                        <span class="text-muted">SKU: {{ item.product.sku }}</span>
-                    </td>
-                    <td class="pt-5 border-bottom"><strong>£{{ item.product.price }}</strong></td>
-                    <td class="pt-5 w-25 text-center border-bottom">
-                        <form class="form update-form pb-3" method="POST">
-                            {% csrf_token %}
-                            <div class="qty-btns">
-                                <button class="btn-dark rounded minus-qty" id="minus-qty-{{ item.item_id }}" data-item_id="{{ item.item_id }}">
-                                    <i class="fas fa-minus fa-sm"></i>
-                                </button>
-                                <input class="w-25 text-center qty-input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                <button class="btn-light rounded plus-qty" id="plus-qty-{{ item.item_id }}" data-item_id="{{ item.item_id }}">
-                                    <i class="fas fa-plus fa-sm"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </td>
-                    <td class="pt-5 border-bottom">£{{ item.product.price }}</td>
-                    <td class="pt-5 border-bottom-0">
-                        <span class="small pr-3 btn btn-sm update-btn text-info">update</span>
-                        <i class="fa fa-trash btn text-danger remove-btn" aria-hidden="true"></i>
-                    </td>
-                </tr>
-                
-                {% endfor %}
-            </table>
+                <table class="table table-sm table-borderless ml-4">
+                    <thead>
+                        <tr>
+                            <th>Product Info</th>
+                            <th></th>
+                            <th>Price</th>
+                            <th class="text-center">Qty</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    {% for item in bag_items %}
+                        <tr class="pe-4">
+                            <td class="py-3 border-bottom">
+                                <a href="{% url 'product_detail' item.product.id %}"><img src="{{ item.product.image.url }}"
+                                        alt="{{ item.product.name }}" id="bag_img" style="width: 8rem;" class="img-fluid"></a>
+                            </td>
+                            <td class="pt-5 pl-0 border-bottom">
+                                <a href="{% url 'product_detail' item.product.id %}">{{ item.product.name }}</a><br>
+                                <span class="text-muted">SKU: {{ item.product.sku }}</span>
+                            </td>
+                            <td class="pt-5 border-bottom"><strong>£{{ item.product.price }}</strong></td>
+                            <td class="pt-5 text-center border-bottom">
+                                <form class="form update-form pb-3" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                                    {% csrf_token %}
+                                    <div class="qty-btns">
+                                        <button class="btn-dark rounded minus-qty" id="minus-qty-{{ item.item_id }}"
+                                            data-item_id="{{ item.item_id }}">
+                                            <i class="fas fa-minus fa-sm"></i>
+                                        </button>
+                                        <input class="w-25 qty-input" type="number" name="quantity" value="{{ item.quantity }}"
+                                            min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                        <button class="btn-light rounded plus-qty" id="plus-qty-{{ item.item_id }}"
+                                            data-item_id="{{ item.item_id }}">
+                                            <i class="fas fa-plus fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </td>
+                            <td class="pt-5 border-bottom">£{{ item.product.price }}</td>
+                            <td class="pt-5 border-bottom-0">
+                                <p class="small pr-3 mb-0 btn btn-sm update-btn text-info">update</p>
+                                <i class="fa fa-trash btn text-danger remove-btn" id="remove_{{ item.item_id }}"
+                                    aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
         </div>
     </div>
     <div class="row pb-5">
@@ -78,7 +81,7 @@
             <p class="text-danger">You could get free delivery by spending just <strong>£{{ free_delivery_delta }}
                 </strong>more!</p>
             {% endif %}
-            <h4><strong>Grand Total:  £{{ grand_total|floatformat:2 }}</strong></h4>
+            <h4><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
             <div class="pt-3">
                 <a href="{% url 'products' %}" class="btn btn-sm ">
                     <i class="fas fa-chevron-left"></i>
@@ -91,8 +94,9 @@
             </div>
         </div>
     </div>
+</div>
     {% else %}
-        <p>Your bag is empty.
+        <p class="text-center">Your bag is empty.
             <br>
             <br>
             <a href="{% url 'products' %}" class="btn btn-lg ">
@@ -100,8 +104,12 @@
                 Continue Shopping
             </a>
         </p>
-    {% endif %}
+        </div>
+    </div>
 </div>
+
+{% endif %}
+
 {% endblock %}
 
 {% block postloadjs %}
@@ -109,22 +117,24 @@
 {% include 'products/includes/quantity-script.html' %}
 <script>
     // Update Qty on click
-    $('.update-btn').click(function(e){
-        let form = $(this).prev('.update-form');
-        form.submit();
+    $('.update-btn').click(function (e) {
+        var form = $('.update-form');
+        form.submit()
     })
 
     // Remove item and reload on click
-    $('.remove-btn').click(function(e){
+    $('.remove-btn').click(function (e) {
         let csrfToken = "{{ csrf_token }}";
-        let itemId = $(this).attr('id');
-        let url = `/bag/remove/${itemId}`;
-        let data = {'csrfmiddlewaretoken': csrfToken};
+        let itemId = $(this).attr('id').split('remove_')[1];
+        let url = `/bag/remove/${itemId}/`;
+        let data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
 
         $.post(url, data)
-        .done(function(){
-            location.reload();
-        });
+            .done(function () {
+                location.reload();
+            });
     })
 </script>
 {% endblock%}

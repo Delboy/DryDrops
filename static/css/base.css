@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Imbue:wght@400;500&family=Libre+Baskerville&family=Raleway:wght@100&family=Roboto+Serif&family=Source+Sans+3:wght@300&display=swap');
 
 /* defualts */
+html, body {
+    overflow-x: hidden;
+  }
+
+
 html {
     height: 100%;
 }
@@ -125,10 +130,6 @@ a:hover {
     background-color: #6a3937;
     border: 1px solid black;
     border-radius: 1%;
-}
-
-.update-link:hover {
-    cursor: pointer;
 }
 
 .minus-qty:disabled, .plus-qty:disabled {
