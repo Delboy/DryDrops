@@ -57,7 +57,7 @@
                     {% for product in hot_products %}
                         {% if product.featured %}
                         <div class="card mb-2 mx-auto" style="width: 100%;">
-                            {% include 'includes/product-card.html' %}
+                            {% include 'products/includes/product-card.html' %}
                         </div>
                         {% endif %}
                     {% endfor %}
@@ -69,7 +69,7 @@
                 {% for product in products %}
                 <div class="col-lg-3 col-md-6 d-flex justify-content-center py-1 px-2">
                     <div class="card border-white" style="width: 100%;">
-                        {% include 'includes/product-card.html' %}
+                        {% include 'products/includes/product-card.html' %}
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:4 %}

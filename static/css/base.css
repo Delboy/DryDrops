@@ -131,6 +131,12 @@ a:hover {
     cursor: pointer;
 }
 
+.minus-qty:disabled, .plus-qty:disabled {
+    background-color: whitesmoke;
+    color: white;
+    border: none;
+}
+
 /* Media Queries */
 
 @media (max-width: 991px) {

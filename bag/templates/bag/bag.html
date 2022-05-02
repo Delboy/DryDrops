@@ -35,23 +35,24 @@
                     </tr>
                 </thead>
                 {% for item in bag_items %}
-                <tr>
-                    <td class="pt-3">
+                <tr class="pe-4">
+                    <td class="py-3 border-bottom">
                         <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" id="bag_img"
                             style="width: 8rem;" class="img-fluid">
                     </td>
-                    <td class="pt-5 pl-0">
+                    <td class="pt-5 pl-0 border-bottom">
                         {{ item.product.name }}<br>
                         <span class="text-muted">SKU: {{ item.product.sku }}</span>
                     </td>
-                    <td class="pt-5"><strong>£{{ item.product.price }}</strong></td>
-                    <td class="pt-5 text-center">x {{ item.quantity }}</td>
-                    <td class="pt-5">£{{ item.product.price }}</td>
-                    <td class="pt-5">
+                    <td class="pt-5 border-bottom"><strong>£{{ item.product.price }}</strong></td>
+                    <td class="pt-5 text-center border-bottom">x {{ item.quantity }}</td>
+                    <td class="pt-5 border-bottom">£{{ item.product.price }}</td>
+                    <td class="pt-5 border-bottom-0">
                         <a><span class="small pr-3 update-link text-info">update</span></a>
                         <a><i class="fa fa-trash btn text-danger" aria-hidden="true"></i></a>
                     </td>
                 </tr>
+                
                 {% endfor %}
             </table>
         </div>
