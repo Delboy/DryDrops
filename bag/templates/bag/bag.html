@@ -118,9 +118,10 @@
 {% include 'products/includes/quantity-script.html' %}
 <script>
     // Update Qty on click
-    $('.update-btn').click(function (e) {
-        var form = $('.update-form');
+    $('.update-btn').click(function(e) {
+        var form = $(this).parent().prev().prev().children('.update-form');
         form.submit()
+        console.log('Done')
     })
 
     // Remove item and reload on click
