@@ -32,6 +32,21 @@
     border-radius: 5px;
 }
 
+#id_country {
+  padding-left: 10px;
+  padding-top: 8px;
+}
+
+select,
+select option {
+  color: black;
+}
+
+select:invalid,
+select option[value=''] {
+  color: #aab7c4 !important;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
