@@ -165,12 +165,22 @@
     </div>
 </div>
 
+{% if from_profile %}
 <div class="row">
     <div class="col-12">
-        <a href="{% url 'products' %}" class="btn link-btn mt-3 ml-5">
+        <a href="{% url 'profile' %}" class="btn link-btn rounded-pill mb-2 ml-5">
+            Back to Profile
+        </a>
+    </div>
+</div>
+{% else %}
+<div class="row">
+    <div class="col-12">
+        <a href="{% url 'products' %}" class="btn link-btn rounded-pill mt-3 ml-5">
             Continue Shopping
         </a>
     </div>
 </div>
+{% endif %}
 
 {% endblock %}
