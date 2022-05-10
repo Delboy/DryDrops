@@ -24,6 +24,24 @@
     </div>
 </div>
 
-{{ profile }}
+<div class="row m-4">
+    <div class="col-lg-6">
+        <h4>Default Delivery Information:</h4>
+        <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
+            {% csrf_token %}
+            {{ form|crispy}}
+            <button class="btn link-btn rounded-pill">Update information</button>
+
+        </form>
+    </div>
+    <div class="col-lg-6">
+        <h4>Order History:</h4>
+    </div>
+</div>
 
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock%}
