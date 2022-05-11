@@ -40,7 +40,7 @@ class Product(models.Model):
         )
     likes = models.ManyToManyField(
         User,
-        related_name='recipe_likes',
+        related_name='product_likes',
         blank=True
         )
     featured = models.BooleanField(default=False)

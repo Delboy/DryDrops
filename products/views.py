@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
 from django.db.models.functions import Lower
+from django.views import View
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -62,10 +64,22 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual products details """
 
-    product = get_object_or_404(Product, pk=product_id)
+    if request.POST:
+        product = get_object_or_404(Product, pk=product_id)
+        if product.likes.filter(id=request.user.id).exists():
+            product.likes.remove(request.user)
+        else:
+            product.likes.add(request.user)
+        return HttpResponseRedirect(reverse('product_detail', args=[product.id]))
+    else:
+        product = get_object_or_404(Product, pk=product_id)
+        liked = False
+        if product.likes.filter(id=request.user.id).exists():
+            liked = True
+        
+        context = {
+            'product': product,
+            'liked': liked,
+        }
 
-    context = {
-        'product': product,
-    }
-
-    return render(request, 'products/product_detail.html', context)
+        return render(request, 'products/product_detail.html', context)
