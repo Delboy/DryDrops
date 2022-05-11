@@ -25,8 +25,8 @@
         </div>
         <div class="col-12 col-md-8 col-lg-8">
             <div class="mb-1">
-                <p class="d-lg-inline "><strong>{{ product.name }}</strong></p>
-                <p class="d-inline pl-lg-4">Add to Favourites: </p>
+                <p class="mb-0"><strong>{{ product.name }}</strong></p>
+                <p class="d-inline">Add to Favourites: </p>
                 {% if user.is_authenticated %}
                 <form class="d-inline" action="{% url 'product_detail' product.id %}" method="POST">
                     {% csrf_token %}
@@ -41,10 +41,6 @@
                     {% endif %}
                 </form>
                 {% else %}
-                <!-- <a class="btn btn-like">
-                    <i class="far fa-heart"></i>
-                </a> -->
-
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-like" data-toggle="modal" data-target="#exampleModal">
                     <i class="far fa-heart"></i>
@@ -56,7 +52,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Account Required</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -67,12 +63,11 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-dark rounded-pill" data-dismiss="modal">Close</button>
                                 <a href="{% url 'account_signup' %}"><button type="button" class="btn link-btn rounded-pill">Register</button></a>
-                                <a href="{% url 'account_login' %}"><button type="button" class="btn link-btn rounded-pill">Sign In</button>
+                                <a href="{% url 'account_login' %}"><button type="button" class="btn link-btn rounded-pill">Sign In</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 {% endif %}
             </div>
             <div class="mb-1">
@@ -106,7 +101,7 @@
             </div>
             <p class="lead"><strong>£{{ product.price }}</strong></p>
             <p class="text-muted">{{ product.sku }}</p>
-            <p><a href="#"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
+            <p><a href="{% url 'products' %}?category={{ product.category.name }}"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
             <p class="d-none d-md-block">Product Description:</p>
             <p>{{ product.description }}</p>
             <form class="form pb-3" action="{% url 'add_to_bag' product.id %}" method="POST">
