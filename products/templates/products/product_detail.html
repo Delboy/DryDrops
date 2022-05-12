@@ -27,7 +27,11 @@
             </div>
             {% if user.is_superuser %}
                 <div class="d-block text-center mb-sm-4">
-                    <a href="" class="text-white bg-info btn-sm small border rounded-pill">{% if product.featured %}Unfeature{% else %}Feature{% endif %}</a>
+                    <form class="d-inline" action="{% url 'feature_product' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <button type="submit" class="text-white bg-info btn-sm small border rounded-pill">{% if product.featured %}Unfeature{% else %}Feature{% endif %}</button>
+                    </form>
                     <a href="{% url 'edit_product' product.id %}" class="text-white bg-success btn-sm small border rounded-pill">Edit</a>
                     <a href="{% url 'delete_product' product.id %}" class="text-white bg-danger btn-sm small border rounded-pill">Delete</a>
                 </div>

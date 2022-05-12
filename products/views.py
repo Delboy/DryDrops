@@ -138,3 +138,21 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def feature_product(request, product_id):
+    """ Toggles products feature status """
+    redirect_url = request.POST.get('redirect_url')
+    print(redirect_url)
+    if request.POST:
+        product = get_object_or_404(Product, pk=product_id)
+        if product.featured:
+            product.featured = False
+            product.save()
+            messages.success(request, 'Product unfeatured!')
+        else:
+            product.featured = True
+            product.save()
+            messages.success(request, 'Product Featured!')
+        return redirect(redirect_url)
+
