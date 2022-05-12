@@ -14,6 +14,9 @@
 <div class="container">
     <div class="row mt-4">
         <div class="col-12 col-md-4 col-lg-4">
+            {% if user.is_superuser and product.featured %}
+                <div class="ribbon ribbon-top-left"><span>Featured</span></div>
+            {% endif %}
             <div class="image-container mb-3 ">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank"><img src="{{ product.image.url }}"
@@ -22,6 +25,13 @@
                 <img src="/media/noimage.png" alt="{{ product.name }}">
                 {% endif %}
             </div>
+            {% if user.is_superuser %}
+                <div class="d-block text-center mb-sm-4">
+                    <a href="" class="text-white bg-info btn-sm small border rounded-pill">{% if product.featured %}Unfeature{% else %}Feature{% endif %}</a>
+                    <a href="{% url 'edit_product' product.id %}" class="text-white bg-success btn-sm small border rounded-pill">Edit</a>
+                    <a href="{% url 'delete_product' product.id %}" class="text-white bg-danger btn-sm small border rounded-pill">Delete</a>
+                </div>
+            {% endif %}
         </div>
         <div class="col-12 col-md-8 col-lg-8">
             <div class="mb-1">

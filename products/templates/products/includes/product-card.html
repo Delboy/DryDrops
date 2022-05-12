@@ -1,3 +1,6 @@
+{% if user.is_superuser and product.featured %}
+<div class="ribbon ribbon-top-left"><span>Featured</span></div>
+{% endif %}
 <a href="{% url 'product_detail' product.id %}">
     {% if product.image %}
         <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -32,5 +35,13 @@
             {% else %}
             <p>No Rating</p>
         {% endif %}
+        {% if user.is_superuser %}
+        <div class="float-right">
+            <a href="" class="text-white bg-info btn-sm small border rounded-pill">{% if product.featured %}Unfeature{% else %}Feature{% endif %}</a>
+            <a href="{% url 'edit_product' product.id %}" class="text-white bg-success btn-sm small border rounded-pill">Edit</a>
+            <a href="{% url 'delete_product' product.id %}" class="text-white bg-danger btn-sm small border rounded-pill">Delete</a>
+        </div>
+        {% endif %}
     </div>
 </a>
+
