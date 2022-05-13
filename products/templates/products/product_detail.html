@@ -33,8 +33,35 @@
                         <button type="submit" class="text-white bg-info btn-sm small border rounded-pill">{% if product.featured %}Unfeature{% else %}Feature{% endif %}</button>
                     </form>
                     <a href="{% url 'edit_product' product.id %}" class="text-white bg-success btn-sm small border rounded-pill">Edit</a>
-                    <a href="{% url 'delete_product' product.id %}" class="text-white bg-danger btn-sm small border rounded-pill">Delete</a>
+                    
+                    <!-- Button triggering deletion warning modal -->
+                    <button type="button" class="text-white bg-danger btn-sm border rounded-pill" data-toggle="modal" data-target="#modal-{{ product.id }}">
+                        Delete
+                    </button>
+
+                    <!-- Deletion warning Modal -->
+                    <div class="modal fade" id="modal-{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-danger" id="exampleModalLabel">Warning!</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure you want to delete {{ product.name }}? This act is irreversible.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-dark rounded-pill" data-dismiss="modal">Cancel</button>
+                                    <a href="{% url 'delete_product' product.id %}" class="btn text-white bg-danger rounded-pill">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
             {% endif %}
         </div>
         <div class="col-12 col-md-8 col-lg-8">
@@ -55,18 +82,18 @@
                     {% endif %}
                 </form>
                 {% else %}
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-like" data-toggle="modal" data-target="#exampleModal">
+                <!-- Button to trigger account required modal -->
+                <button type="button" class="btn btn-like" data-toggle="modal" data-target="#account-required-modal">
                     <i class="far fa-heart"></i>
                 </button>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Account required Modal -->
+                <div class="modal fade" id="account-required-modal" tabindex="-1" role="dialog"
+                    aria-labelledby="account-required-modal-Label" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Account Required</h5>
+                                <h5 class="modal-title" id="account-required-modal-Label">Account Required</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>

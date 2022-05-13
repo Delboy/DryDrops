@@ -3,49 +3,78 @@
 {% endif %}
 <a href="{% url 'product_detail' product.id %}">
     {% if product.image %}
-        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
     {% else %}
-        <img class="card-img-top" src="/media/noimage.png" alt="{{ product.name }}">
+    <img class="card-img-top" src="/media/noimage.png" alt="{{ product.name }}">
     {% endif %}
     <div class="card-body bg-light">
         <p><strong>{{ product.name }}</strong></p>
         <p class="card-text"><strong>£{{ product.price }}</strong></p>
-        <p class="card-text"> <a href="{% url 'products' %}?category={{ product.category.name }}"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
+        <p class="card-text"> <a href="{% url 'products' %}?category={{ product.category.name }}"><i
+                    class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
         {% if product.rating >= 4.5 %}
-            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
-            {% elif product.rating >= 4 %}
-            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i>
-            {% elif product.rating >= 3.5 %}
-            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                class="fa fa-solid fa-star"></i>
-            {% elif product.rating >= 3 %}
-            <i class="fa fa-solid fa-star"></i></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                class="fa fa-solid fa-star-half"></i>
-            {% elif product.rating >= 2.5 %}
-            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
-            {% elif product.rating >= 2 %}
-            </i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                class="fa fa-solid fa-star-half"></i>
-            {% elif product.rating >= 1.5 %}
-            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
-            {% elif product.rating >= 1 %}
-            <i class="fa fa-solid fa-star"></i>
-            {% else %}
-            <p>No Rating</p>
+        <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
+            class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
+        {% elif product.rating >= 4 %}
+        <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
+            class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i>
+        {% elif product.rating >= 3.5 %}
+        <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
+            class="fa fa-solid fa-star"></i>
+        {% elif product.rating >= 3 %}
+        <i class="fa fa-solid fa-star"></i></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
+            class="fa fa-solid fa-star-half"></i>
+        {% elif product.rating >= 2.5 %}
+        <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
+        {% elif product.rating >= 2 %}
+        </i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
+            class="fa fa-solid fa-star-half"></i>
+        {% elif product.rating >= 1.5 %}
+        <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
+        {% elif product.rating >= 1 %}
+        <i class="fa fa-solid fa-star"></i>
+        {% else %}
+        <p>No Rating</p>
         {% endif %}
+        <!-- Admin Buttons -->
         {% if user.is_superuser %}
-        <div class="float-right">
+        <div class="d-block pt-2 text-center">
             <form class="d-inline" action="{% url 'feature_product' product.id %}" method="POST">
                 {% csrf_token %}
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                <button type="submit" value="{{ product.id }}" class="text-white bg-info btn-sm small border rounded-pill">{% if product.featured %}Unfeature{% else %}Feature{% endif %}</button>
+                <button type="submit" value="{{ product.id }}"
+                    class="text-white bg-info btn-sm border rounded-pill">{% if product.featured %}Unfeature{% else %}Feature{% endif %}</button>
             </form>
-            <a href="{% url 'edit_product' product.id %}" class="text-white bg-success btn-sm small border rounded-pill">Edit</a>
-            <a href="{% url 'delete_product' product.id %}" class="text-white bg-danger btn-sm small border rounded-pill">Delete</a>
+            <a href="{% url 'edit_product' product.id %}"
+                class="text-white bg-success btn-sm border rounded-pill">Edit</a>
+
+            <!-- Button triggering deletion warning modal -->
+            <button type="button" class="text-white bg-danger btn-sm border rounded-pill" data-toggle="modal" data-target="#modal-{{ product.id }}">
+                Delete
+            </button>
+
+            <!-- Deletion Warning Modal -->
+            <div class="modal fade" id="modal-{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-danger" id="exampleModalLabel">Warning!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete {{ product.name }}? This act is irreversible.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark rounded-pill" data-dismiss="modal">Cancel</button>
+                            <a href="{% url 'delete_product' product.id %}" class="btn text-white bg-danger rounded-pill">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         {% endif %}
     </div>
 </a>
-
