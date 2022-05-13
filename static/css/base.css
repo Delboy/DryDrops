@@ -172,6 +172,50 @@ a:hover {
     border-radius: 0;
 }
 
+.message-container {
+    position: fixed;
+    top: 125px;
+    right: 20px;
+    z-index: 99999999999;
+}
+
+.toast-header {
+    background-color: #6a3937;
+}
+
+.toast-top {
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+}
+
+.triangle-success {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #28a745;
+    border-left: 20px solid transparent;
+}
+
+.triangle-info {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #17a2b8;
+    border-left: 20px solid transparent;
+}
+
+.triangle-error {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #dc3545;
+    border-left: 20px solid transparent;
+}
+
+.triangle-warning {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #ffc107;
+    border-left: 20px solid transparent;
+}
+
 /* Taken from Codepen (https://codepen.io/nxworld/pen/oLdoWb) to generate ribbon on featured products */
 
   /* common */
