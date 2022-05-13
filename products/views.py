@@ -73,8 +73,10 @@ def product_detail(request, product_id):
         product = get_object_or_404(Product, pk=product_id)
         if product.likes.filter(id=request.user.id).exists():
             product.likes.remove(request.user)
+            messages.success(request, f'Removed {product.name} from your favourites')
         else:
             product.likes.add(request.user)
+            messages.success(request, f'Added {product.name} to your favourites')
         return HttpResponseRedirect(
             reverse('product_detail', args=[product.id]))
     else:
