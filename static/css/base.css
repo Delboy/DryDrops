@@ -33,6 +33,22 @@ a:hover {
     color: #706563;
 }
 
+/* bag icon */
+
+#bag {
+    font-size: 12px;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius: 9px;
+}
+
+/* *** */
+
 .logo {
     font-family: 'imbue';
     letter-spacing: 2px;

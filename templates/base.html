@@ -100,8 +100,11 @@
           <li class="list-inline-item">
             <a href="{% url 'view_bag' %}" class="nav-link">
               <div class="text-center">
-                <div class="icon"><i class="fas fa-shopping-bag fa-lg"></i></div>
-                <p class="my-0 font-weight-bold">
+                <i class="fas fa-shopping-bag fa-lg"></i>
+                {% if product_count %}
+                  <span class='badge badge-warning' id='bag'> {{ product_count }} </span>
+                {% endif %}
+                  <p class="my-0 font-weight-bold">
                   {% if grand_total %}
                   £{{ grand_total|floatformat:2 }}
                   {% else %}
