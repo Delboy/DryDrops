@@ -49,6 +49,22 @@ a:hover {
 
 /* *** */
 
+/* Review stars */
+
+label {
+    cursor: pointer;
+}
+
+label[for="star-1"]:hover,
+label[for="star-2"]:hover,
+label[for="star-3"]:hover,
+label[for="star-4"]:hover,
+label[for="star-5"]:hover {
+    color:gold
+ }
+
+/* *** */
+
 .logo {
     font-family: 'imbue';
     letter-spacing: 2px;
