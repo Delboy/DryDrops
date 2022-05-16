@@ -6,7 +6,10 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
+from review.models import Review
 from .forms import ProductForm
+from review.forms import ReviewForm
+from profiles.models import UserProfile
 
 
 # Create your views here.
@@ -68,18 +71,27 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual products details """
-
-    if request.POST:
-        product = get_object_or_404(Product, pk=product_id)
-        if product.likes.filter(id=request.user.id).exists():
-            product.likes.remove(request.user)
-            messages.success(request, f'Removed {product.name} from your favourites')
+    product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.all().filter(product=product)
+    user_profile = get_object_or_404(UserProfile, user=request.user)
+    
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            reviews.create(
+                user=user_profile,
+                product=product,
+                rating=request.POST.get('rating'),
+                body=request.POST.get('body')
+            )
+            messages.success(request, 'Review sucessfully added')
+            return redirect(reverse('product_detail', args=[product_id]))
         else:
-            product.likes.add(request.user)
-            messages.success(request, f'Added {product.name} to your favourites')
-        return HttpResponseRedirect(
-            reverse('product_detail', args=[product.id]))
+            print(form.errors.as_data())
+            messages.error(request, 'Review Failed. Please check for errors and try again.')
+            return redirect(reverse('product_detail', args=[product_id]))
     else:
+        form = ReviewForm()
         product = get_object_or_404(Product, pk=product_id)
         liked = False
         if product.likes.filter(id=request.user.id).exists():
@@ -88,9 +100,24 @@ def product_detail(request, product_id):
         context = {
             'product': product,
             'liked': liked,
+            'form': form,
+            'reviews': reviews
         }
 
         return render(request, 'products/product_detail.html', context)
+
+
+def favourite_product(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.POST:
+        if product.likes.filter(id=request.user.id).exists():
+            product.likes.remove(request.user)
+            messages.success(request, f'Removed {product.name} from your favourites')
+        else:
+            product.likes.add(request.user)
+            messages.success(request, f'Added {product.name} to your favourites')
+        return HttpResponseRedirect(
+            reverse('product_detail', args=[product.id]))
 
 
 @login_required

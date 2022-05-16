@@ -67,9 +67,10 @@
         <div class="col-12 col-md-8 col-lg-8">
             <div class="mb-1">
                 <p class="mb-0"><strong>{{ product.name }}</strong></p>
+                <!-- Heart button to add product to favourites -->
                 <p class="d-inline">Add to Favourites: </p>
                 {% if user.is_authenticated %}
-                <form class="d-inline" action="{% url 'product_detail' product.id %}" method="POST">
+                <form class="d-inline" action="{% url 'favourite_product' product.id %}" method="POST">
                     {% csrf_token %}
                     {% if liked %}
                     <button type="submit" value="{{ product.id }}" class="btn-like">
@@ -173,35 +174,40 @@
 </div>
 
 <div class="row mt-5 px-4">
-    <div class="col-6 ">
-        {% if product.reviews %}
+    <div class="col-lg-6 ">
+        {% if reviews %}
         <h3>{{ review_count }} Reviews for {{ product.name }}</h3>
         <hr>
         {% else %}
-        <h3>There are no Reviews for {{ product.name }}</h3>
+        <h3>This Product has no reviews</h3>
         <hr>
         {% endif %}
     </div>
-    <div class="col-6 ">
+    <div class="col-lg-6 ">
         <h3>Add Review</h3>
         <hr>
         {% if user.is_authenticated %}
-            <form action="">
-                <p class="mb-2">Rating *</p>
-                <div class="mb-3">
-                    <input type="radio" class="star d-none" name=rate id="star-1" value="1">
-                    <label for="star-1" class="far fa-star"></label>
-                    <input type="radio" class="star d-none" name=rate id="star-2" value="2">
-                    <label for="star-2" class="far fa-star"></label>
-                    <input type="radio" class="star d-none" name=rate id="star-3" value="3">
-                    <label for="star-3" class="far fa-star"></label>
-                    <input type="radio" class="star d-none" name=rate id="star-4" value="4">
-                    <label for="star-4" class="far fa-star"></label>
-                    <input type="radio" class="star d-none" name=rate id="star-5" value="5">
-                    <label for="star-5" class="far fa-star"></label>
-                </div>
-                <p>Review *</p>
-                <textarea rows=10 class="w-75" placeholder="Add your review..."></textarea>
+            <form action="{% url 'product_detail' product.id %}" method="POST">
+                {% csrf_token %}
+                
+                {% for field in form  %}
+                    {% if field.name == "rating" %}
+                        {{ field.label }} *
+                        <br>
+                        {% for radio in field %}
+                            <label for="{{ radio.id_for_label }}">
+                                <i class="far fa-star star"></i>
+                            </label>
+                            <div class="radio-tag d-inline">{{ radio.tag }}</div>
+                        {% endfor %}
+                        <br>
+                    {% else %}
+                        {{ field.errors }}
+                        {{ field.label }} *
+                        <br>
+                        {{ field }}
+                    {% endif %}
+                {% endfor %}
                 <button type="submit" class="btn link-btn rounded-pill d-block mt-2">Add Review</button>
             </form>
         {% else %}
@@ -217,13 +223,13 @@
 {% include 'products/includes/quantity-script.html' %}
 <script>
     // Changes stars from empty to filled on selection
-    $('.star').next().click(function(e) {
-        prevLabels = $(this).prevAll('label')
-        nextLabels = $(this).nextAll('label')
-
+    $('.star').click(function(e) {
+        prevStars = $(this).parent().prevAll().children()
+        nextStars = $(this).parent().nextAll().children()
+        
         $(this).removeClass('far').addClass('fas').css({'color':'gold'})
-        prevLabels.removeClass('far').addClass('fas').css({'color':'gold'})
-        nextLabels.removeClass('fas').addClass('far').css({'color':'black'})
+        prevStars.removeClass('far').addClass('fas').css({'color':'gold'})
+        nextStars.removeClass('fas').addClass('far').css({'color':'black'})
     })
 </script>
 {% endblock%}

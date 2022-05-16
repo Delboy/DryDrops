@@ -51,17 +51,17 @@ a:hover {
 
 /* Review stars */
 
+.radio-tag {
+    opacity: 0;
+}
+
 label {
     cursor: pointer;
 }
 
-label[for="star-1"]:hover,
-label[for="star-2"]:hover,
-label[for="star-3"]:hover,
-label[for="star-4"]:hover,
-label[for="star-5"]:hover {
-    color:gold
- }
+label:hover {
+    color: gold;
+}
 
 /* *** */
 
