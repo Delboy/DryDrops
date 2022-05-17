@@ -176,15 +176,50 @@
 <div class="row mt-5 px-4">
     <div class="col-lg-6 ">
         {% if reviews %}
-        <h3>{{ review_count }} Reviews for {{ product.name }}</h3>
+        <h4>{{ review_count }} Reviews for {{ product.name }}</h4>
         <hr>
+        <div class="container">
+            {% for review in reviews %}
+                <div class="row">
+                    <div class="col review-stars">
+                        {% if review.rating == 5 %}
+                            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
+                                class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
+                            {% elif review.rating == 4 %}
+                            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
+                                class="fa fa-solid fa-star"></i>
+                            {% elif review.rating == 3 %}
+                            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
+                            {% elif review.rating == 2 %}
+                            <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
+                            {% elif review.rating == 1 %}
+                            <i class="fa fa-solid fa-star"></i>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        {{ review.body }}
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col">
+                       <p class="d-inline font-italic small text-muted">by {{ review.user }} on {{review.created_on }}</p>
+                       <p class="d-inline small text-muted float-right">
+                           <span>edit</span> | 
+                           <span>delete</span></p>
+                    </div>
+                </div>
+                <hr>
+            {% endfor %}
+        </div>
         {% else %}
-        <h3>This Product has no reviews</h3>
+        <h4>This Product has no reviews</h4>
         <hr>
         {% endif %}
     </div>
     <div class="col-lg-6 ">
-        <h3>Add Review</h3>
+        <h4>Add Review</h4>
         <hr>
         {% if user.is_authenticated %}
             <form action="{% url 'product_detail' product.id %}" method="POST">

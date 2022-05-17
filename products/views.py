@@ -73,6 +73,7 @@ def product_detail(request, product_id):
     """ A view to show individual products details """
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.all().filter(product=product)
+    review_count = len(reviews)
     user_profile = get_object_or_404(UserProfile, user=request.user)
     
     if request.method == 'POST':
@@ -101,7 +102,8 @@ def product_detail(request, product_id):
             'product': product,
             'liked': liked,
             'form': form,
-            'reviews': reviews
+            'reviews': reviews,
+            'review_count': review_count,
         }
 
         return render(request, 'products/product_detail.html', context)

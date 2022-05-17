@@ -55,6 +55,11 @@ a:hover {
     opacity: 0;
 }
 
+.review-stars .fa-star {
+    color: gold;
+    text-shadow: -1px 1px #000;
+}
+
 label {
     cursor: pointer;
 }
