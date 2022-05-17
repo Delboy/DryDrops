@@ -74,8 +74,10 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.all().filter(product=product)
     review_count = len(reviews)
-    user_profile = get_object_or_404(UserProfile, user=request.user)
-    
+
+    if request.user.is_authenticated:
+        user_profile = get_object_or_404(UserProfile, user=request.user)
+
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -89,7 +91,10 @@ def product_detail(request, product_id):
             return redirect(reverse('product_detail', args=[product_id]))
         else:
             print(form.errors.as_data())
-            messages.error(request, 'Review Failed. Please check for errors and try again.')
+            messages.error(
+                request,
+                'Review Failed. Please check for errors and try again.'
+                )
             return redirect(reverse('product_detail', args=[product_id]))
     else:
         form = ReviewForm()
@@ -114,10 +119,14 @@ def favourite_product(request, product_id):
     if request.POST:
         if product.likes.filter(id=request.user.id).exists():
             product.likes.remove(request.user)
-            messages.success(request, f'Removed {product.name} from your favourites')
+            messages.success(
+                request, f'Removed {product.name} from your favourites'
+                )
         else:
             product.likes.add(request.user)
-            messages.success(request, f'Added {product.name} to your favourites')
+            messages.success(
+                request, f'Added {product.name} to your favourites'
+                )
         return HttpResponseRedirect(
             reverse('product_detail', args=[product.id]))
 

@@ -206,8 +206,10 @@
                     <div class="col">
                        <p class="d-inline font-italic small text-muted">by {{ review.user }} on {{review.created_on }}</p>
                        <p class="d-inline small text-muted float-right">
-                           <span>edit</span> | 
+                           {% if user.is_authenticated and user.id == review.user.id %}
+                           <a href="{% url 'edit_review' review.id %}">edit</a> | 
                            <span>delete</span></p>
+                           {% endif %}
                     </div>
                 </div>
                 <hr>
