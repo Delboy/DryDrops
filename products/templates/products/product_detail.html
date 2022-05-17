@@ -224,9 +224,11 @@
         <h4>Add Review</h4>
         <hr>
         {% if user.is_authenticated %}
+            {% if reviewed %}
+             <p>You have already reviewed this product.</p>
+            {% else %}
             <form action="{% url 'product_detail' product.id %}" method="POST">
                 {% csrf_token %}
-                
                 {% for field in form  %}
                     {% if field.name == "rating" %}
                         {{ field.label }} *
@@ -247,6 +249,7 @@
                 {% endfor %}
                 <button type="submit" class="btn link-btn rounded-pill d-block mt-2">Add Review</button>
             </form>
+            {% endif %}
         {% else %}
         <p>Please <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
         {% endif %}
