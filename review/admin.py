@@ -2,17 +2,7 @@ from django.contrib import admin
 from .models import Review
 
 
-admin.site.register(Review)
-
-
 class ReviewAdmin(admin.ModelAdmin):
-    """
-    Admin settings to display list of Reviews
-    Ordered by date created and ratings
-    filter by ratings
-    """
-
-    model = Review
     list_display = (
         'product',
         'created_on',
@@ -21,5 +11,8 @@ class ReviewAdmin(admin.ModelAdmin):
         'body',
     )
 
-    ordering = ('-created_on', '-rating', )
-    list_filter = ('rating',)
+    ordering = ('-created_on', 'rating',)
+    list_filter = ('product', 'rating',)
+
+
+admin.site.register(Review, ReviewAdmin)
