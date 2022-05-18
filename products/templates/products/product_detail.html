@@ -208,7 +208,29 @@
                        <p class="d-inline small text-muted float-right">
                            {% if user.is_authenticated and user.id == review.user.id %}
                            <a href="{% url 'edit_review' review.id %}">edit</a> | 
-                           <span>delete</span></p>
+                            <!-- Button triggering deletion warning modal -->
+                            <button class="btn btn-sm p-0 review-delete-btn" data-toggle="modal" data-target="#modal-{{ review.id }}">Delete</button>
+                            <!-- Deletion warning Modal -->
+                            <div class="modal fade" id="modal-{{ review.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-danger" id="exampleModalLabel">Warning!</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to delete your review? This act is irreversible.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-dark rounded-pill" data-dismiss="modal">Cancel</button>
+                                            <a href="{% url 'delete_review' review.id %}" class="btn text-white bg-danger rounded-pill">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                            {% endif %}
                     </div>
                 </div>
@@ -227,28 +249,28 @@
             {% if reviewed %}
              <p>You have already reviewed this product.</p>
             {% else %}
-            <form action="{% url 'product_detail' product.id %}" method="POST">
-                {% csrf_token %}
-                {% for field in form  %}
-                    {% if field.name == "rating" %}
-                        {{ field.label }} *
-                        <br>
-                        {% for radio in field %}
-                            <label for="{{ radio.id_for_label }}">
-                                <i class="far fa-star star"></i>
-                            </label>
-                            <div class="radio-tag d-inline">{{ radio.tag }}</div>
-                        {% endfor %}
-                        <br>
-                    {% else %}
-                        {{ field.errors }}
-                        {{ field.label }} *
-                        <br>
-                        {{ field }}
-                    {% endif %}
-                {% endfor %}
-                <button type="submit" class="btn link-btn rounded-pill d-block mt-2">Add Review</button>
-            </form>
+                <form action="{% url 'product_detail' product.id %}" method="POST">
+                    {% csrf_token %}
+                    {% for field in form  %}
+                        {% if field.name == "rating" %}
+                            {{ field.label }} *
+                            <br>
+                            {% for radio in field %}
+                                <label for="{{ radio.id_for_label }}">
+                                    <i class="far fa-star star"></i>
+                                </label>
+                                <div class="radio-tag d-inline">{{ radio.tag }}</div>
+                            {% endfor %}
+                            <br>
+                        {% else %}
+                            {{ field.errors }}
+                            {{ field.label }} *
+                            <br>
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <button type="submit" class="btn link-btn rounded-pill d-block mt-2">Add Review</button>
+                </form>
             {% endif %}
         {% else %}
         <p>Please <a href="{% url 'account_login' %}">login</a> to leave a review.</p>

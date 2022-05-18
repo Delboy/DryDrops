@@ -1,13 +1,20 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Review
 from .forms import ReviewForm
 
 
+@login_required
 def edit_review(request, review_id):
     """ Edit a review for a product """
     review = get_object_or_404(Review, pk=review_id)
+    if request.user.id != review.user.id:
+        messages.info(request, 'Sorry, you do not have access to that.')
+        return redirect(
+            reverse('product_detail', args=[review.product.id])
+            )
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES, instance=review)
         if form.is_valid():
@@ -33,3 +40,17 @@ def edit_review(request, review_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete a users review from product details page """
+    review = get_object_or_404(Review, pk=review_id)
+    if request.user.id != review.user.id:
+        messages.info(request, 'Sorry, you do not have access to that.')
+        return redirect(
+            reverse('product_detail', args=[review.product.id])
+            )
+    review.delete()
+    messages.success(request, 'Review successfully deleted!')
+    return redirect(reverse('product_detail', args=[review.product.id]))

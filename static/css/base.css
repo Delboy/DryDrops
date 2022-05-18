@@ -181,6 +181,10 @@ label {
     border: none;
 }
 
+.review-delete-btn {
+    font-size: 12.8px;
+}
+
 /*  Product Form */
 
 .btn-file {

@@ -99,7 +99,8 @@ def product_detail(request, product_id):
     else:
         form = ReviewForm()
         product = get_object_or_404(Product, pk=product_id)
-        reviewed = Review.objects.all().filter(product=product).filter(user=request.user.id)
+        reviewed = Review.objects.all().filter(product=product).filter(
+            user=request.user.id)
         liked = False
         if product.likes.filter(id=request.user.id).exists():
             liked = True
