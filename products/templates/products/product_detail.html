@@ -113,33 +113,48 @@
                 {% endif %}
             </div>
             <div class="mb-1">
-                {% if product.rating >= 4.5 %}
-                <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                    class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                    class="fa fa-solid fa-star"></i>
-                {% elif product.rating >= 4 %}
-                <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                    class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                    class="fa fa-solid fa-star-half"></i>
-                {% elif product.rating >= 3.5 %}
-                <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                    class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
-                {% elif product.rating >= 3 %}
-                <i class="fa fa-solid fa-star"></i></i><i class="fa fa-solid fa-star"></i><i
-                    class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i>
-                {% elif product.rating >= 2.5 %}
-                <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                    class="fa fa-solid fa-star"></i>
-                {% elif product.rating >= 2 %}
-                </i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-                    class="fa fa-solid fa-star-half"></i>
-                {% elif product.rating >= 1.5 %}
-                <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
-                {% elif product.rating >= 1 %}
+                {% if rating > 4.5 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                {% elif rating > 4 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star-half"></i>
+                {% elif rating > 3.5 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                {% elif rating > 3 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star-half"></i>
+                {% elif rating > 2.5 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                {% elif rating > 2 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star-half"></i>
+                {% elif rating > 1.5 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                {% elif rating > 1 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star-half"></i>
+                {% elif rating > 0.5 %}
                 <i class="fa fa-solid fa-star"></i>
                 {% else %}
                 <p>No Rating</p>
                 {% endif %}
+                <p class="ml-3 small d-inline">({{ review_count }})</p>
             </div>
             <p class="lead"><strong>£{{ product.price }}</strong></p>
             <p class="text-muted">{{ product.sku }}</p>
@@ -206,7 +221,7 @@
                     <div class="col">
                        <p class="d-inline font-italic small text-muted">by {{ review.user }} on {{review.created_on }}</p>
                        <p class="d-inline small text-muted float-right">
-                           {% if user.is_authenticated and user.id == review.user.id %}
+                           {% if user.is_authenticated and user.id == review.user.user.id %}
                            <a href="{% url 'edit_review' review.id %}">edit</a> | 
                             <!-- Button triggering deletion warning modal -->
                             <button class="btn btn-sm p-0 review-delete-btn" data-toggle="modal" data-target="#modal-{{ review.id }}">Delete</button>
@@ -242,6 +257,8 @@
         <hr>
         {% endif %}
     </div>
+
+    <!-- Add a review Section -->
     <div class="col-lg-6 ">
         <h4>Add Review</h4>
         <hr>
@@ -286,8 +303,8 @@
 <script>
     // Changes stars from empty to filled on selection
     $('.star').click(function(e) {
-        prevStars = $(this).parent().prevAll().children()
-        nextStars = $(this).parent().nextAll().children()
+        prevStars = $(this).parent().prevAll('label').children()
+        nextStars = $(this).parent().nextAll('label').children()
         
         $(this).removeClass('far').addClass('fas').css({'color':'gold'})
         prevStars.removeClass('far').addClass('fas').css({'color':'gold'})

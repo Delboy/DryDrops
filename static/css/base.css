@@ -55,6 +55,10 @@ a:hover {
     opacity: 0;
 }
 
+.fa-star, .fa-star-half {
+    color: gold;
+}
+
 .review-stars .fa-star {
     color: gold;
     text-shadow: -1px 1px #000;

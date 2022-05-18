@@ -10,7 +10,7 @@ from .forms import ReviewForm
 def edit_review(request, review_id):
     """ Edit a review for a product """
     review = get_object_or_404(Review, pk=review_id)
-    if request.user.id != review.user.id:
+    if request.user.id != review.user.user.id:
         messages.info(request, 'Sorry, you do not have access to that.')
         return redirect(
             reverse('product_detail', args=[review.product.id])
@@ -46,7 +46,7 @@ def edit_review(request, review_id):
 def delete_review(request, review_id):
     """ Delete a users review from product details page """
     review = get_object_or_404(Review, pk=review_id)
-    if request.user.id != review.user.id:
+    if request.user.id != review.user.user.id:
         messages.info(request, 'Sorry, you do not have access to that.')
         return redirect(
             reverse('product_detail', args=[review.product.id])

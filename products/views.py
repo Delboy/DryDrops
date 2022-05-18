@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.db.models import Avg
 
 from .models import Product, Category
 from review.models import Review
@@ -74,6 +75,7 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.all().filter(product=product)
     review_count = len(reviews)
+    rating = reviews.aggregate(Avg('rating'))['rating__avg']
 
     if request.user.is_authenticated:
         user_profile = get_object_or_404(UserProfile, user=request.user)
@@ -98,9 +100,9 @@ def product_detail(request, product_id):
             return redirect(reverse('product_detail', args=[product_id]))
     else:
         form = ReviewForm()
-        product = get_object_or_404(Product, pk=product_id)
-        reviewed = Review.objects.all().filter(product=product).filter(
-            user=request.user.id)
+        reviewed = Review.objects.all().filter(
+            product=product).filter(user=user_profile.id)
+
         liked = False
         if product.likes.filter(id=request.user.id).exists():
             liked = True
@@ -112,6 +114,7 @@ def product_detail(request, product_id):
             'reviews': reviews,
             'review_count': review_count,
             'reviewed': reviewed,
+            'rating': rating,
         }
 
         return render(request, 'products/product_detail.html', context)
