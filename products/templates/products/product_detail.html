@@ -32,7 +32,7 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         <button type="submit" class="text-white bg-info btn-sm small border rounded-pill">{% if product.featured %}Unfeature{% else %}Feature{% endif %}</button>
                     </form>
-                    <a href="{% url 'edit_product' product.id %}" class="text-white bg-success btn-sm small border rounded-pill">Edit</a>
+                    <a href="{% url 'edit_product' product.id %}" class="text-white bg-success btn btn-sm small border rounded-pill">Edit</a>
                     
                     <!-- Button triggering deletion warning modal -->
                     <button type="button" class="text-white bg-danger btn-sm border rounded-pill" data-toggle="modal" data-target="#modal-{{ product.id }}">
@@ -224,7 +224,7 @@
                            {% if user.is_authenticated and user.id == review.user.user.id %}
                            <a href="{% url 'edit_review' review.id %}">edit</a> | 
                             <!-- Button triggering deletion warning modal -->
-                            <button class="btn btn-sm p-0 review-delete-btn" data-toggle="modal" data-target="#modal-{{ review.id }}">Delete</button>
+                            <button class="btn btn-sm p-0 review-delete-btn" data-toggle="modal" data-target="#modal-{{ review.id }}">delete</button>
                             <!-- Deletion warning Modal -->
                             <div class="modal fade" id="modal-{{ review.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">

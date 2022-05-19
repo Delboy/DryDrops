@@ -42,7 +42,7 @@
                 <div class="col category-col py-2">
                     <h3 class="mb-0 py-2">Categories</h3>
                     <hr class="my-0">
-                    <ul class="pl-0">
+                    <ul class="pl-0 mt-1">
                         <li><a href="{% url 'products' %}" class="nav-li nav-link">All Products</a></li>
                         <li><a href="{% url 'products' %}?category=beers" class="nav-li nav-link">Beers</a></li>
                         <li><a href="{% url 'products' %}?category=ciders" class="nav-li nav-link">Ciders</a></li>
@@ -51,9 +51,10 @@
                     </ul>
                 </div>
             </div>
+            <!-- Whats Hot section -->
             <div class="row pt-3">
                 <div class="col pt-2 px-auto whats-hot">
-                    <h4 class="text-center text-white">Whats Hot!</h4>
+                    <h4 class="text-center ">Whats Hot!</h4>
                     {% for product in hot_products %}
                         {% if product.featured %}
                         <div class="card mb-2 mx-auto" style="width: 100%;">
@@ -68,7 +69,7 @@
             <div class="row px-4">
                 {% for product in products %}
                 <div class="col-lg-3 col-md-6 d-flex justify-content-center py-1 px-2">
-                    <div class="card border-white" style="width: 100%;">
+                    <div class="card border-white all-products" style="width: 100%;">
                         {% include 'products/includes/product-card.html' %}
                     </div>
                 </div>

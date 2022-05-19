@@ -90,6 +90,10 @@ label {
     background-color: #748386;
 }
 
+.hover-link:hover {
+    color:#706563;
+}
+
 .hero-box {
     background-color: #3b0d11;
     opacity: 80%;
@@ -153,14 +157,24 @@ label {
     z-index: -1;
 }
 
+.all-products .product-card:hover {
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    box-shadow: -10px 10px 25px whitesmoke;
+}
+
+.product-card {
+    height: 100%;
+}
+
 .card-body p {
     margin-bottom: 0px;
 }
 
 .category-col {
-    background-color: #748386;
-    border: 1px solid black;
-    border-radius: 2%;
+    border: 5px solid #3b0d11;
+    border-radius: 25px;
     font-family: 'Roboto Serif';
 }
 
@@ -169,14 +183,33 @@ label {
     list-style-type: none;
 }
 
+.category-col li{
+    border: 5px solid white;
+    
+}
+
+.category-col li a{
+    color: #000; 
+}
+
+.category-col li:hover a{
+    color: white; 
+}
+
+.category-col li:hover {
+    border: 5px solid #6a3937;
+    border-radius: 25px;
+    background-color: #748386;
+}
+
 .nav-li {
     color:#3b0d11
 }
 
 .whats-hot {
-    background-color: #6a3937;
-    border: 1px solid black;
-    border-radius: 1%;
+    border: 5px solid #3b0d11;
+    border-radius: 25px;
+    
 }
 
 .minus-qty:disabled, .plus-qty:disabled {
@@ -187,6 +220,8 @@ label {
 
 .review-delete-btn {
     font-size: 12.8px;
+    position: relative;
+    bottom: 1px;
 }
 
 /*  Product Form */

@@ -1,89 +1,125 @@
-{% if user.is_superuser and product.featured %}
-<div class="ribbon ribbon-top-left"><span>Featured</span></div>
-{% endif %}
+
 <!-- Product Image -->
-<a href="{% url 'product_detail' product.id %}">
-    {% if product.image %}
-    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
-    {% else %}
-    <img class="card-img-top" src="/media/noimage.png" alt="{{ product.name }}">
+<div class="product-card bg-light">
+    {% if user.is_superuser and product.featured %}
+        <div class="ribbon ribbon-top-left"><span>Featured</span></div>
     {% endif %}
-    <!-- Product Card -->
-    <div class="card-body bg-light">
-        <p><strong>{{ product.name }}</strong></p>
-        <p class="card-text"><strong>£{{ product.price }}</strong></p>
-        <p class="card-text"> <a href="{% url 'products' %}?category={{ product.category.name }}"><i
-                    class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
-        <!-- Product Rating -->
-        {% if product.rating >= 4.5 %}
-        <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-            class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
-        {% elif product.rating >= 4 %}
-        <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-            class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star-half"></i>
-        {% elif product.rating >= 3.5 %}
-        <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-            class="fa fa-solid fa-star"></i>
-        {% elif product.rating >= 3 %}
-        <i class="fa fa-solid fa-star"></i></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-            class="fa fa-solid fa-star-half"></i>
-        {% elif product.rating >= 2.5 %}
-        <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
-        {% elif product.rating >= 2 %}
-        </i><i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i><i
-            class="fa fa-solid fa-star-half"></i>
-        {% elif product.rating >= 1.5 %}
-        <i class="fa fa-solid fa-star"></i><i class="fa fa-solid fa-star"></i>
-        {% elif product.rating >= 1 %}
-        <i class="fa fa-solid fa-star"></i>
+    <a href="{% url 'product_detail' product.id %}" >
+        {% if product.image %}
+        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
         {% else %}
-        <p class="d-inline">No Rating</p>
+        <img class="card-img-top" src="/media/noimage.png" alt="{{ product.name }}">
         {% endif %}
-        <!-- Quick Add Button -->
-        <form class="form d-inline pt-2" action="{% url 'add_to_bag' product.id %}" method="POST">
-            {% csrf_token %}
-            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            <button type="submit" class="btn btn-sm link-btn rounded-pill float-right" name="quantity" value="1">Add +</button>
-        </form>
-        <!-- Admin Buttons -->
-        {% if user.is_superuser %}
-        <div class="d-block pt-2 text-center">
-            <form class="d-inline" action="{% url 'feature_product' product.id %}" method="POST">
+        <!-- Product Card -->
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+            <p><strong>{{ product.name }}</strong></p>
+            <p class="card-text"><strong>£{{ product.price }}</strong></p>
+            <p class="card-text"> 
+                <a href="{% url 'products' %}?category={{ product.category.name }}">
+                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                </a>
+            </p>
+            <!-- Product Rating -->
+            <div class="float-left">
+            {% if product.rating > 4.5 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+            {% elif product.rating > 4 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star-half"></i>
+            {% elif product.rating > 3.5 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+            {% elif product.rating > 3 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star-half"></i>
+            {% elif product.rating > 2.5 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+            {% elif product.rating > 2 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star-half"></i>
+            {% elif product.rating > 1.5 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star"></i>
+            {% elif product.rating > 1 %}
+                <i class="fa fa-solid fa-star"></i>
+                <i class="fa fa-solid fa-star-half"></i>
+            {% elif product.rating > 0.5 %}
+                <i class="fa fa-solid fa-star"></i>
+            {% else %}
+                <p>No Rating</p>
+            {% endif %}
+            </div>
+            <!-- Quick Add Button -->
+            <form class="form d-inline float-right mb-3" action="{% url 'add_to_bag' product.id %}" method="POST">
                 {% csrf_token %}
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                <button type="submit" value="{{ product.id }}"
-                    class="text-white bg-info btn-sm border rounded-pill">{% if product.featured %}Unfeature{% else %}Feature{% endif %}</button>
+                <button type="submit" class="btn btn-sm link-btn rounded-pill" name="quantity" value="1">Add +</button>
             </form>
-            <a href="{% url 'edit_product' product.id %}"
-                class="text-white bg-success btn-sm border rounded-pill">Edit</a>
-
-            <!-- Button triggering deletion warning modal -->
-            <button type="button" class="text-white bg-danger btn-sm border rounded-pill" data-toggle="modal" data-target="#modal-{{ product.id }}">
-                Delete
-            </button>
-
-            <!-- Deletion Warning Modal -->
-            <div class="modal fade" id="modal-{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title text-danger" id="exampleModalLabel">Warning!</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            Are you sure you want to delete {{ product.name }}? This act is irreversible.
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-dark rounded-pill" data-dismiss="modal">Cancel</button>
-                            <a href="{% url 'delete_product' product.id %}" class="btn text-white bg-danger rounded-pill">Delete</a>
+            </div>
+            </div>
+            <!-- Admin Buttons -->
+            {% if user.is_superuser %}
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <!-- Edit Button -->
+                    <a href="{% url 'edit_product' product.id %}" class="small d-inline d-inline">edit</a>
+                    |
+                
+                    <!-- Button triggering deletion warning modal -->
+                    <p type="button" class="small d-inline hover-link" data-toggle="modal" data-target="#modal-{{ product.id }}">
+                        delete
+                    </p>
+                    <!-- Deletion Warning Modal -->
+                    <div class="modal fade" id="modal-{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-danger" id="exampleModalLabel">Warning!</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure you want to delete {{ product.name }}? This act is irreversible.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-dark rounded-pill" data-dismiss="modal">Cancel</button>
+                                    <a href="{% url 'delete_product' product.id %}" class="btn text-white bg-danger rounded-pill">Delete</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!--Feature Button -->
+                    <form class="d-inline float-right" action="{% url 'feature_product' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <button type="submit" value="{{ product.id }}" 
+                            class="small link hover-link border-0 bg-transparent">{% if product.featured %}unfeature{% else %}feature{% endif %}
+                    </button>
+                    </form>
                 </div>
             </div>
+                
+            {% endif %}
         </div>
-        {% endif %}
-    </div>
-</a>
+    </a>
+</div>
