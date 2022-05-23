@@ -24,6 +24,7 @@
     // Increment quantity
     $('.plus-qty').click(function(e) {
         e.preventDefault();
+        console.log('+ clicked')
         let closestInput = $(this).closest('.qty-btns').find('.qty-input')[0];
         let currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue + 1);
@@ -34,6 +35,7 @@
     // Decrease quantity
     $('.minus-qty').click(function(e) {
         e.preventDefault();
+        console.log('- clicked')
         let closestInput = $(this).closest('.qty-btns').find('.qty-input')[0];
         let currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue - 1);
