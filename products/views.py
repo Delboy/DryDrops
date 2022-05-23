@@ -20,7 +20,7 @@ def all_products(request):
     """ A view to show all products and search queries """
 
     products = Product.objects.all()
-    hot_products = Product.objects.all()
+    hot_products = Product.objects.filter(featured=True)
     query = None
     categories = None
     sort = None

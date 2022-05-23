@@ -158,9 +158,6 @@ label {
 }
 
 .all-products .product-card:hover {
-    position: relative;
-    bottom: 10px;
-    left: 10px;
     box-shadow: -10px 10px 25px whitesmoke;
 }
 
@@ -209,8 +206,21 @@ label {
 .whats-hot {
     border: 5px solid #3b0d11;
     border-radius: 25px;
-    
 }
+
+/* Carousel contrple Code taken from https://stackoverflow.com/questions/49391266/change-bootstrap-4-carousel-control-colors */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23748386' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    position: relative;
+    bottom: 65px;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23748386' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    position: relative;
+    bottom: 65px;
+}
+/* *** */
 
 .minus-qty:disabled, .plus-qty:disabled {
     background-color: whitesmoke;

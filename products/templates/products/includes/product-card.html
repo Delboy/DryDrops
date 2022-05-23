@@ -14,7 +14,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col">
-            <p><strong>{{ product.name }}</strong></p>
+            <p><strong>{{ product.name|truncatechars:63  }}</strong></p>
             <p class="card-text"><strong>£{{ product.price }}</strong></p>
             <p class="card-text"> 
                 <a href="{% url 'products' %}?category={{ product.category.name }}">
