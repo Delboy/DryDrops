@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.db.models import Avg
 
 from .models import Review
 from .forms import ReviewForm
@@ -19,6 +20,11 @@ def edit_review(request, review_id):
         form = ReviewForm(request.POST, request.FILES, instance=review)
         if form.is_valid():
             form.save()
+            product = review.product
+            reviews = Review.objects.all().filter(product=product)
+            rating = reviews.aggregate(Avg('rating'))['rating__avg']
+            product.rating = rating
+            product.save()
             messages.success(request, 'Successfully updated review!')
             return redirect(
                 reverse('product_detail', args=[review.product.id])
@@ -52,5 +58,10 @@ def delete_review(request, review_id):
             reverse('product_detail', args=[review.product.id])
             )
     review.delete()
+    product = review.product
+    reviews = Review.objects.all().filter(product=product)
+    rating = reviews.aggregate(Avg('rating'))['rating__avg']
+    product.rating = rating
+    product.save()
     messages.success(request, 'Review successfully deleted!')
     return redirect(reverse('product_detail', args=[review.product.id]))

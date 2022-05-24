@@ -89,6 +89,10 @@ def product_detail(request, product_id):
                 rating=request.POST.get('rating'),
                 body=request.POST.get('body')
             )
+            reviews = Review.objects.all().filter(product=product)
+            rating = reviews.aggregate(Avg('rating'))['rating__avg']
+            product.rating = rating
+            product.save()
             messages.success(request, 'Review sucessfully added')
             return redirect(reverse('product_detail', args=[product_id]))
         else:
