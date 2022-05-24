@@ -1,0 +1,1 @@
+ALERT! New customer message: {{ inbox_subject }}

@@ -1,0 +1,10 @@
+Hello {{ cust_name }},
+
+Thank you for your message. One of our agents will respond to you as soon as possible.
+
+Sincerely,
+
+Dry Drops
+
+
+Your message reads: {{ message }}

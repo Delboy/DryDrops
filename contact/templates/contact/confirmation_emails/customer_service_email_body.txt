@@ -1,0 +1,9 @@
+To Dry Drops Customer Service Agent.
+
+{{ cust_name }} sent the message:
+
+'{{ inbox_message }}'
+
+Please respond to the message at {{ cust_email }} as soon as possible.
+
+Thank You
