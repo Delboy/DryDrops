@@ -89,3 +89,32 @@ Wireframes for each page are linked here:
 ### Database Schema
 
 ![Database Schema](assets/images/schema.png)
+
+### Search Engine Optimisation
+
+The purpose of the About Us page was not so much designed in mind to inform the user, but more so to have an opportunity to use some key words, and link the user to other relevant website, all in order to help boost the sites ranking in search engine results. 
+
+The inital key words and phrases I came up with were:
+
+## Short Tail Keywords
+- Alcohol Free
+- Teetotal Drinks
+- 0% Alcohol
+- Zero Alcohol
+- 0% Beer/Wine/Cider/Spirits
+- Dry Drinks
+- Low alcohol
+- No alcohol
+- Halal drinks
+- Quiting Alcohol
+
+## Long Tail Keywords
+- Drinks for quiting alcohol
+- Drinks for designated drivers
+- Drinks for recovering alcoholics
+- Alcohol free beverages
+- Alcohol free drinks for pregnant women
+- Drinks suitable for people practicing sobriety.
+- Drinks suitable for someone whos straight edge
+
+These phrases can also be used in the meta data in the head of the page.
