@@ -66,12 +66,12 @@
         <!-- Send a message form  -->
         <div class="col-md-6 pl-3 mt-4 mt-md-0">
             <p class="font-weight-bold">Send Us a Message:</p>
-            <form action="{% url 'contact' %}" method="POST" name="message_form">
+            <form action="{% url 'contact' %}" method="POST" class="form" name="message_form">
                 {% csrf_token %}
-                <input type="text" class="w-100" placeholder="Name *" name="name" required>
-                <input type="email" class="w-100 mt-4" placeholder="Email Address *" name="email" required>
-                <input type="text" class="w-100 mt-4" placeholder="Subject *" name="subject" required>
-                <textarea type="text" class="w-100 mt-4" placeholder="Your Message *" rows="10" name="message" required></textarea>
+                <input type="text" class="w-100 rounded-pill form-control" placeholder="Name *" name="name" required>
+                <input type="email" class="w-100 mt-4 rounded-pill form-control" placeholder="Email Address *" name="email" required>
+                <input type="text" class="w-100 mt-4 rounded-pill form-control" placeholder="Subject *" name="subject" required>
+                <textarea type="text" class="w-100 mt-4 rounded form-control mb-2" placeholder="Your Message *" rows="10" name="message" required></textarea>
                 <p class="float-left">* Required Fields</p>
                 <button type="submit" class="btn link-btn rounded-pill float-right">Send Message</button>
             </form>
