@@ -20,8 +20,8 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row">
+
+    <div class="row ml-4">
         <div class="col">
             {% if bag_items %}
                 <table class="table table-sm table-borderless ml-4">
@@ -66,7 +66,7 @@
                                 </form>
                             </td>
                             <td class="pt-5 border-bottom">£{{ item.product.price | calc_subtotal:item.quantity }}</td>
-                            <td class="pt-5 border-bottom-0">
+                            <td class="pt-5 text-center border-bottom-0">
                                 <p class="small pr-3 mb-0 btn btn-sm update-btn text-info">update</p>
                                 <i class="fa fa-trash btn text-danger remove-btn" id="remove_{{ item.item_id }}"
                                     aria-hidden="true"></i>
@@ -97,7 +97,7 @@
             </div>
         </div>
     </div>
-</div>
+
     {% else %}
         <p class="text-center">Your bag is empty.
             <br>
