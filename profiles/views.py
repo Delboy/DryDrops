@@ -44,10 +44,11 @@ def profile(request):
 def order_history(request, order_number):
     """ Displays the user's previous orders """
     order = get_object_or_404(Order, order_number=order_number)
+    order_date = order.date.strftime("%d-%m-%Y %H:%M:%S")
 
     messages.info(request, (
-        f'This is a past confirmation for order number { order_number }.'
-        'A confirmation email was sent on {{ order.date }}.'
+        f'This is a past confirmation for order number {order_number}.'
+        f'A confirmation email was sent on { order_date }.'
     ))
 
     template = 'checkout/checkout_success.html'
