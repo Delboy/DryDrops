@@ -104,8 +104,11 @@ def product_detail(request, product_id):
             return redirect(reverse('product_detail', args=[product_id]))
     else:
         form = ReviewForm()
-        reviewed = Review.objects.all().filter(
-            product=product).filter(user=user_profile.id)
+        if request.user.is_authenticated:
+            reviewed = Review.objects.all().filter(
+                product=product).filter(user=user_profile.id)
+        else:
+            reviewed = False
 
         liked = False
         if product.likes.filter(id=request.user.id).exists():
