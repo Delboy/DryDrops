@@ -80,9 +80,17 @@
         <div class="offset-md-6 col-lg-4 offset-lg-8">
             <p><strong>Bag Total: £{{ total|floatformat:2 }}</strong></p>
             <p>Delivery: £{{ delivery|floatformat:2 }}</p>
-            {% if free_delivery_delta > 0 %}
+            {% if not user.is_authenticated and free_delivery_delta > 0 %}
+            <p class="text-danger">Get free delivery on your first order when you register an account</p>
+            <p class="text-danger">OR</p>
+            <p class="text-danger">You could get free delivery by spending just <strong>£{{ free_delivery_delta }}
+            </strong>more!</p>
+            {% elif free_delivery_delta > 0 %}
             <p class="text-danger">You could get free delivery by spending just <strong>£{{ free_delivery_delta }}
                 </strong>more!</p>
+            {% endif %}
+            {% if user.is_authenticated and not user_has_orders %}
+            <p class="text-success">FREE DELIVERY on your first order!</p>
             {% endif %}
             <h4><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
             <div class="pt-3">
