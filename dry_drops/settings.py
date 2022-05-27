@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'about',
 
     # other
-    'crispy_forms'
+    'crispy_forms',
+    'profanity'
 ]
 
 MIDDLEWARE = [

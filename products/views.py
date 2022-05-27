@@ -102,7 +102,7 @@ def product_detail(request, product_id):
             print(form.errors.as_data())
             messages.error(
                 request,
-                'Review Failed. Please check for errors and try again.'
+                'Review Failed. Please check for errors or profanity and try again.'
                 )
             return redirect(reverse('product_detail', args=[product_id]))
     else:
