@@ -156,7 +156,7 @@
                 {% endif %}
                 <p class="ml-3 small d-inline">({{ review_count }})</p>
             </div>
-            <p class="lead"><strong>£{{ product.price }}</strong></p>
+            <p><strong class="lead">£{{ product.price }}</strong><span class="text-muted small font-weight-italic ml-2">+ £{{ delivery }} delivery</span></p>
             <p class="text-muted">{{ product.sku }}</p>
             <p><a href="{% url 'products' %}?category={{ product.category.name }}"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
             <p class="d-none d-md-block">Product Description:</p>

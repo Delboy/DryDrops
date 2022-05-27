@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.db.models import Avg
+from django.conf import settings
 
 from .models import Product, Category
 from review.models import Review
@@ -21,6 +22,7 @@ def all_products(request):
 
     products = Product.objects.all()
     hot_products = Product.objects.filter(featured=True)
+    delivery = settings.STANDARD_DELIVERY
     query = None
     categories = None
     sort = None
@@ -65,6 +67,7 @@ def all_products(request):
         'hot_products': hot_products,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'delivery': delivery,
     }
 
     return render(request, 'products/products.html', context)
@@ -114,6 +117,8 @@ def product_detail(request, product_id):
         if product.likes.filter(id=request.user.id).exists():
             liked = True
 
+        delivery = settings.STANDARD_DELIVERY
+
         context = {
             'product': product,
             'liked': liked,
@@ -122,6 +127,7 @@ def product_detail(request, product_id):
             'review_count': review_count,
             'reviewed': reviewed,
             'rating': rating,
+            'delivery': delivery,
         }
 
         return render(request, 'products/product_detail.html', context)
