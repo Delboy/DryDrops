@@ -8,9 +8,13 @@ html {
 }
 
 body {
+    font-family: 'Roboto Serif';
+}
+
+.hero-img {
     background: url('/media/bottles.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
+    height: 90vh;
     font-family: 'Roboto Serif';
 }
 
@@ -86,15 +90,13 @@ label {
     border: 1px solid black;
 }
 
-.hero-btn:hover {
-    background-color: #748386;
-}
-
 .hover-link:hover {
     color:#706563;
 }
 
 .hero-box {
+    position: relative;
+    top: 33vh;
     background-color: #3b0d11;
     opacity: 80%;
     border: 1px solid black;

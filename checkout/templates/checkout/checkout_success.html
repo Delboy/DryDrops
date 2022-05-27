@@ -7,25 +7,18 @@
 {% endblock %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="container">
     <div class="row">
-        <div class="col"></div>
+        <div class="col mt-3">
+            <h2 class="text-center">Cheers!</h2>
+            <hr>
+            <p class="text-center">Thank you for your order. Your order informaion bellow. A confirmation email has been sent to <strong>{{ order.email }}</strong></p>
+        </div>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container">
-    <div class="row mt-2">
-        <div class="col">
-            <h2 class="text-center">Cheers! <i class="fa-solid fa-beer-mug"></i></h2>
-            <hr>
-            <p>Thank you for your order. Your order informaion bellow. A confirmation email has been sent to <strong>{{ order.email }}</strong></p>
-        </div>
-    </div>
-</div>
-
 <div class="row p-4">
     <div class="col-12 col-lg-7">
         <div class="order-confirmation-wrapper p-4 border">

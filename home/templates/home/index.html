@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col hero-box my-auto">
-                <h1 class="display-4 text-white text-center hero-text">All of the pleasure. None of the guilt.</h1>
+    <div class="hero-img">
+        <div class="row ">
+            <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3 mx-5 mx-md-auto  hero-box my-auto">
+                <h1 class="display-4 text-white text-center">All of the pleasure. None of the guilt.</h1>
                 <div>
                     <h4 class="text-center pt-2">
-                        <a href="{% url 'products' %}" class="btn btn-lg link-btn text-uppercase black-border hero-btn">Shop Now</a>
+                        <a href="{% url 'products' %}" class="btn btn-lg link-btn text-uppercase black-border rounded-pill">Shop Now</a>
                     </h4>
                 </div>
             </div>
         </div>
     </div>
+
 {% endblock %}
