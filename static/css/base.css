@@ -29,6 +29,10 @@ a:hover {
     color: #706563;
 }
 
+footer {
+    background-color: whitesmoke;
+}
+
 /* bag icon */
 
 #bag {
@@ -135,8 +139,8 @@ label {
 
 .social-icon {
     color: #3b0d11;
-    font-size: 2rem;
-    padding-right: 1rem;
+    font-size: 1.75rem;
+    padding-right: .5rem;
 }
 
 .header-container {
