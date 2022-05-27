@@ -113,6 +113,10 @@
                 </div>
                 <div class="row px-4">
                     {% endif %}
+                    {% empty %}
+                    <div class="col mt-5">
+                        <p class="text-center lead">Sorry, no products match that search.</p>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
