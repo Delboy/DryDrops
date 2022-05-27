@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
+from checkout.models import Order
+from profiles.models import UserProfile
 
 
 def bag_contents(request):
@@ -20,7 +22,20 @@ def bag_contents(request):
             'product': product,
         })
 
-    if total != 0 and total < settings.FREE_DELIVERY_THRESHOLD:
+    # Checks if user has ordered before
+    user_has_orders = False
+
+    if request.user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        orders = Order.objects.all().filter(user_profile=profile)
+        if len(orders) >= 1:
+            user_has_orders = True
+
+    # Works out delivery total
+    if request.user.is_authenticated and user_has_orders is False:
+        delivery = 0
+        free_delivery_delta = 0
+    elif total != 0 and total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = product_count * (settings.STANDARD_DELIVERY)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
