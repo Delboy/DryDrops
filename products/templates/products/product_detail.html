@@ -105,47 +105,8 @@
                 {% endif %}
             </div>
             <div class="mb-1">
-                {% if rating > 4.5 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                {% elif rating > 4 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star-half"></i>
-                {% elif rating > 3.5 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                {% elif rating > 3 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star-half"></i>
-                {% elif rating > 2.5 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                {% elif rating > 2 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star-half"></i>
-                {% elif rating > 1.5 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                {% elif rating > 1 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star-half"></i>
-                {% elif rating > 0.5 %}
-                <i class="fa fa-solid fa-star"></i>
-                {% else %}
-                <p>No Rating</p>
-                {% endif %}
+                <!-- Product Rating -->
+                {% include 'products/includes/product-rating.html' %}
                 <p class="ml-3 small d-inline">({{ review_count }})</p>
             </div>
             <p><strong class="lead">£{{ product.price }}</strong><span class="text-muted small font-weight-italic ml-2">+ £{{ delivery }} delivery</span></p>

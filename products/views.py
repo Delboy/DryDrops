@@ -78,7 +78,6 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.all().filter(product=product)
     review_count = len(reviews)
-    rating = reviews.aggregate(Avg('rating'))['rating__avg']
 
     if request.user.is_authenticated:
         user_profile = get_object_or_404(UserProfile, user=request.user)
@@ -102,7 +101,8 @@ def product_detail(request, product_id):
             print(form.errors.as_data())
             messages.error(
                 request,
-                'Review Failed. Please check for errors or profanity and try again.'
+                'Review Failed. \
+                    Please check for errors or profanity and try again.'
                 )
             return redirect(reverse('product_detail', args=[product_id]))
     else:
@@ -126,7 +126,6 @@ def product_detail(request, product_id):
             'reviews': reviews,
             'review_count': review_count,
             'reviewed': reviewed,
-            'rating': rating,
             'delivery': delivery,
         }
 
