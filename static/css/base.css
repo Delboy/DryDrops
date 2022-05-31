@@ -5,6 +5,7 @@
 
 html {
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -272,9 +273,29 @@ label {
 
 .message-container {
     position: fixed;
+    min-width: 300px;
     top: 125px;
     right: 20px;
     z-index: 99999999999;
+
+    /* animation for sliding in  */
+    animation-name: slide;
+    animation-duration: 1.5s;
+}
+
+/* Animation for slide */
+@keyframes slide {
+    0% {
+        transform: translateX(200px)
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .toast-header {
