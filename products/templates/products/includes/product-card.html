@@ -23,47 +23,7 @@
             </p>
             <!-- Product Rating -->
             <div class="float-left">
-            {% if product.rating > 4.5 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-            {% elif product.rating > 4 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star-half"></i>
-            {% elif product.rating > 3.5 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-            {% elif product.rating > 3 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star-half"></i>
-            {% elif product.rating > 2.5 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-            {% elif product.rating > 2 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star-half"></i>
-            {% elif product.rating > 1.5 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star"></i>
-            {% elif product.rating > 1 %}
-                <i class="fa fa-solid fa-star"></i>
-                <i class="fa fa-solid fa-star-half"></i>
-            {% elif product.rating > 0.5 %}
-                <i class="fa fa-solid fa-star"></i>
-            {% else %}
-                <p>No Rating</p>
-            {% endif %}
+                {% include 'products/includes/product-rating.html' %}
             </div>
             <!-- Quick Add Button -->
             <form class="form d-inline float-right mb-3" action="{% url 'add_to_bag' product.id %}" method="POST">

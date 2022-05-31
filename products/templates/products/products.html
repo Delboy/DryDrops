@@ -71,11 +71,8 @@
                                         <img class="d-block w-100" src="{{ product.image.url }}"
                                             alt="{{ product.name }}">
                                         <p class="font-weight-bold mt-2">{{ product.name|truncatechars:32  }}</p>
-                                        {% if rating %}
-                                        <p class="float-left">{{ product.rating }}</p>
-                                        {% else %}
-                                        <p class="float-left">No Rating</p>
-                                        {% endif %}
+                                        <!-- Product Rating -->
+                                        {% include 'products/includes/product-rating.html' %}
                                         <p class="font-weight-bold float-right">£{{ product.price }}</p>
                                     </a>
                                 </div>
