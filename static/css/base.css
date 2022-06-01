@@ -34,6 +34,10 @@ a:hover {
     color: #706563;
 }
 
+.category-card:hover {
+    opacity: 90%;
+}
+
 footer {
     background-color: whitesmoke;
 }
@@ -150,14 +154,21 @@ label {
     padding-top: 175px;
 }
 
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
+.category-card-img {
+    border-top: 5px solid #6a3937;
+    border-left: 5px solid #6a3937;
+    border-right: 5px solid #6a3937;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.category-card-body {
+    background-color: #748386;
+    border-bottom: 5px solid #6a3937;
+    border-left: 5px solid #6a3937;
+    border-right: 5px solid #6a3937;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .all-products .product-card:hover {
