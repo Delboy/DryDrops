@@ -34,6 +34,7 @@ a:hover {
     color: #706563;
 }
 
+
 .category-card:hover {
     opacity: 90%;
 }
@@ -171,8 +172,9 @@ label {
     border-bottom-right-radius: 20px;
 }
 
-.all-products .product-card:hover {
+.all-products .product-card:hover, .top-products .product-card:hover {
     box-shadow: -10px 10px 25px whitesmoke;
+    opacity: 90%;
 }
 
 .product-card {
