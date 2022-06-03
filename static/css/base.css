@@ -55,6 +55,9 @@ footer {
   padding-left: 9px;
   padding-right: 9px;
   border-radius: 9px;
+  position: relative;
+  top: 0;
+  right: 0;
 }
 
 /* Review stars */
