@@ -428,4 +428,8 @@ label {
     .header-container {
         padding-top: 125px;
     }
+
+    .hero-box {
+        top: 10vh;
+    }
 }
