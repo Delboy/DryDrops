@@ -57,8 +57,6 @@ footer {
   border-radius: 9px;
 }
 
-/* *** */
-
 /* Review stars */
 
 .radio-tag {
@@ -120,7 +118,7 @@ label {
     color: white;
 }
 
-.link-btn:hover {
+.link-btn:hover, .btn-bag:hover {
     background-color: #748386;
     color: white;
 }
