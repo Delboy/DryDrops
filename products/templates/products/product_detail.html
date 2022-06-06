@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% load profanity %}
 
 {% block content %}
@@ -105,9 +106,9 @@
                 {% endif %}
             </div>
             <div class="mb-1">
-                <!-- Product Rating -->
-                {% include 'products/includes/product-rating.html' %}
-                <p class="ml-3 small d-inline">({{ review_count }})</p>
+            <!-- Product Rating -->
+            {% include 'products/includes/product-rating.html' %}
+            <p class="ml-3 small d-inline">({{ review_count }})</p>
             </div>
             <p><strong class="lead">£{{ product.price }}</strong><span class="text-muted small font-weight-italic ml-2">+ £{{ delivery }} delivery</span></p>
             <p class="text-muted">{{ product.sku }}</p>
@@ -141,7 +142,8 @@
     </div>
 </div>
 
-<div class="row mt-5 px-4">
+<!-- Reviews -->
+<div class="row mt-5 mb-2 mb-lg-3 px-4">
     <div class="col-lg-6 ">
         {% if reviews %}
         <h4>{{ review_count }} Reviews for {{ product.name }}</h4>
@@ -212,7 +214,7 @@
     </div>
 
     <!-- Add a review Section -->
-    <div class="col-lg-6 mb-4">
+    <div class="col-lg-6 my-4 my-lg-0">
         <h4>Add Review</h4>
         <hr>
         {% if user.is_authenticated %}
@@ -236,7 +238,7 @@
                             {{ field.errors }}
                             {{ field.label }} *
                             <br>
-                            {{ field }}
+                            {{ field | as_crispy_field }}
                         {% endif %}
                     {% endfor %}
                     <button type="submit" class="btn link-btn rounded-pill d-block mt-2">Add Review</button>

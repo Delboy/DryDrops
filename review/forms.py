@@ -12,7 +12,12 @@ class ReviewForm(forms.ModelForm):
         (4, '4'),
         (5, '5'),
     ]
-    rating = forms.ChoiceField(choices=RATING, widget=forms.RadioSelect(attrs={ 'class': 'form-check-inline ', 'style': 'list-style:none'}, ))
+    rating = forms.ChoiceField(
+        choices=RATING,
+        widget=forms.RadioSelect(
+            attrs={'class': 'form-check-inline ', 'style': 'list-style:none'},
+            )
+        )
 
     class Meta:
         model = Review
@@ -20,4 +25,3 @@ class ReviewForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-
