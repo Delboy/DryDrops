@@ -1,0 +1,1 @@
+web: gunicorn dry_drops.wsgi:application
