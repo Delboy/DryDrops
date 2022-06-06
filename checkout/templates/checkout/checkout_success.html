@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="row p-4">
+<div class="row px-4 pt-4">
     <div class="col-12 col-lg-7">
         <div class="order-confirmation-wrapper p-4 border">
             <div class="row mb-2">
@@ -30,7 +30,7 @@
 
             <div class="row mb-2">
                 <div class="col-12">
-                    <p class="mb-0"><strong>Order Number:</strong> {{ order.order_number }}</p>
+                    <p class="mb-0"><strong>Order Number:</strong> <span class="small">{{ order.order_number }}</span></p>
                 </div>
             </div>
 
@@ -160,16 +160,16 @@
 
 {% if from_profile %}
 <div class="row">
-    <div class="col-12">
+    <div class="col-12 mb-3">
         <a href="{% url 'profile' %}" class="btn link-btn rounded-pill mb-2 ml-5">
             Back to Profile
         </a>
     </div>
 </div>
 {% else %}
-<div class="row">
-    <div class="col-12">
-        <a href="{% url 'products' %}" class="btn link-btn rounded-pill mt-3 ml-5">
+<div class="row my-3">
+    <div class="col-12 text-center text-md-left ml-md-4">
+        <a href="{% url 'products' %}" class="btn link-btn rounded-pill">
             Continue Shopping
         </a>
     </div>
