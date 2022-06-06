@@ -61,7 +61,7 @@
                         <td class="pt-4">
                             <ul class="list-unstyled">
                                 {% for item in order.lineitems.all %}
-                                <li>x {{ item.quantity }}</li>
+                                <li><span class="small">x</span> {{ item.quantity }}</li>
                                 {% endfor %}
                             </ul>
                         </td>
