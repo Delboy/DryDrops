@@ -23,12 +23,13 @@
         <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
             {% csrf_token %}
             {{ form|crispy}}
-            <button class="btn link-btn rounded-pill">Update information</button>
-
+            <button class="btn link-btn rounded-pill mx-auto mx-md-0 d-block">Update information</button>
         </form>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 mt-2 mt-lg-0">
+        <hr class="d-lg-none">
         <h4>Order History:</h4>
+        {% if orders %}
         <div class="order-history">
             <table class="table table-sm table-borderless">
                 <thead>
@@ -70,34 +71,53 @@
                 </tbody>
             </table>
         </div>
+        {% else %}
+            <p class="text-center pt-4">Looks like you dont have any orders yet!</p>
+            <p class="text-center">Browse our complete range here.</p>
+            <div class="text-center">
+                <a href="{% url 'products' %}" class="btn link-btn rounded-pill">Shop Now!</a>
+            </div>
+
+        {% endif %}
     </div>
 </div>
 
-<div class="row ml-4 mt-2">
+<div class="row mx-4 mt-2">
     <div class="col-12">
+        {% if not orders %}
+        <hr class="d-lg-none">
+        {% endif %}
         <h4>Favourite Items:</h4>
     </div>
 </div>
 
-<div class="row mx-4 mt-2 mb-4">
 {% if products %}
+<div class="row mx-4 mt-2 mb-4">
     {% for product in products %}
         <div class="col-lg-2 col-md-6 d-flex justify-content-center py-1 px-2">
-            <div class="card border rounded" style="width: 100%;">
+            <div class="card border-0 rounded" style="width: 100%;">
                 {% include 'products/includes/product-card.html' %}
             </div>
         </div>
     {% endfor %}
-    </div>
+</div>
 {% else %}
 <div class="col mb-5">
     <p class="text-center">Looks like you don't have any favourite items yet!</p>
 </div>
 {% endif %}
 
+<!-- Scroll Up Arrow -->
+<div class="row d-lg-none">
+    <div id="arrow" class="col float-right btn fixed-bottom">
+        <i class="fa fa-solid fa-caret-up h1"></i>
+    </div>
+</div>
+
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
+{% include 'products/includes/scroll-arrow-script.html'%}
 <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock%}
