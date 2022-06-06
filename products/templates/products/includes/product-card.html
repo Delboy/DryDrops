@@ -4,6 +4,11 @@
     {% if user.is_superuser and product.featured %}
         <div class="ribbon ribbon-top-left"><span>Featured</span></div>
     {% endif %}
+    {% if user in product.likes.all  %}
+    <div class="card-liked">
+        <i class="fas fa-heart text-danger"></i>
+    </div>
+    {% endif %}
     <a href="{% url 'product_detail' product.id %}" >
         {% if product.image %}
         <img class="card-img-top pt-2" src="{{ product.image.url }}" alt="{{ product.name }}">

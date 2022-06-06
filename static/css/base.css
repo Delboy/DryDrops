@@ -156,6 +156,13 @@ label {
     padding-top: 175px;
 }
 
+.card-liked {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: larger;
+}
+
 .category-card-img {
     border-top: 5px solid #6a3937;
     border-left: 5px solid #6a3937;
