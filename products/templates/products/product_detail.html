@@ -18,8 +18,9 @@
                 <img src="/media/noimage.png" alt="{{ product.name }}">
                 {% endif %}
             </div>
+            <!-- Admin Buttons -->
             {% if user.is_superuser %}
-                <div class="d-block text-center mb-sm-4">
+                <div class="d-block text-center mb-4">
                     <form class="d-inline" action="{% url 'feature_product' product.id %}" method="POST">
                         {% csrf_token %}
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -54,7 +55,6 @@
                         </div>
                     </div>
                 </div>
-                
             {% endif %}
         </div>
         <div class="col-12 col-md-8 col-lg-8">
@@ -105,12 +105,15 @@
                 </div>
                 {% endif %}
             </div>
-            <div class="mb-1">
+            <div class="mb-3">
             <!-- Product Rating -->
             {% include 'products/includes/product-rating.html' %}
             <p class="ml-3 small d-inline">({{ review_count }})</p>
             </div>
-            <p><strong class="lead">£{{ product.price }}</strong><span class="text-muted small font-weight-italic ml-2">+ £{{ delivery }} delivery</span></p>
+            <p>
+                <strong class="lead">£{{ product.price }}</strong>
+                <span class="text-muted small font-weight-italic ml-2">+ £{{ delivery }} delivery</span>
+            </p>
             <p class="text-muted">{{ product.sku }}</p>
             <p><a href="{% url 'products' %}?category={{ product.category.name }}"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
             <p class="d-none d-md-block">Product Description:</p>
