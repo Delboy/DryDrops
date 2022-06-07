@@ -56,6 +56,7 @@
                 </div>
             </div>
             <!-- Whats Hot section -->
+            {% if hot_products %}
             <div class="row pt-3 mb-4">
                 <div class="col pt-2 px-auto whats-hot">
                     <h4 class="text-center">Whats Hot!</h4>
@@ -71,7 +72,7 @@
                                     <a href="{% url 'product_detail' product.id %}">
                                         <img class="d-block w-100" src="{{ product.image.url }}"
                                             alt="{{ product.name }}">
-                                        <p class="font-weight-bold mt-2">{{ product.name|truncatechars:32  }}</p>
+                                        <p class="font-weight-bold mt-2">{{ product.name|truncatechars:32 }}</p>
                                         <!-- Product Rating -->
                                         {% include 'products/includes/product-rating.html' %}
                                         <p class="font-weight-bold float-right">£{{ product.price }}</p>
@@ -93,7 +94,9 @@
                     </div>
                 </div>
             </div>
-
+            {% else %}
+            </div>
+            {% endif %}
             <!-- Main Section -->
             <div class="col px-5 mb-4">
                 <div class="row">
