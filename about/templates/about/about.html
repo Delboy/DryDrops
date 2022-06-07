@@ -16,7 +16,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <img src="/media/founder.jpg" class="img-fluid" alt="A picture of Dry Drops founder, Jack Daniels">
+            <img src="{{ MEDIA_URL }}founder.jpg" class="img-fluid" alt="A picture of Dry Drops founder, Jack Daniels">
             <p class="text-center font-italic text-muted mt-1">Jack Daniels - Founder of Dry Drops</p>
             <div class="text-center">
                 <a href="{% url 'contact' %}" class="btn link-btn rounded-pill">Contact Us</a>
@@ -80,9 +80,9 @@
             </div>
             <p class="text-center mt-4">If you yourself have problems with alcohol abuse please contact one of our partnered charities below.</p>
             <div class="my-5 text-center">
-                <a href="https://www.alcoholics-anonymous.org.uk/" target="_blank"><img src="/media/AA.jpg" alt="Alcoholics Anonymous logo" class="img-fluid mr-md-5"></a>
-                <a href="https://alcoholchange.org.uk/" target="_blank"><img src="/media/alcohol_change.png" alt="Alcohol Change logo" class="img-fluid mx-md-5"></a>
-                <a href="https://www.mind.org.uk/" target="_blank"><img src="/media/mind.jpg" alt="Mind logo" class="img-fluid ml-md-4"></a>
+                <a href="https://www.alcoholics-anonymous.org.uk/" target="_blank"><img src="{{ MEDIA_URL }}AA.jpg" alt="Alcoholics Anonymous logo" class="img-fluid mr-md-5"></a>
+                <a href="https://alcoholchange.org.uk/" target="_blank"><img src="{{ MEDIA_URL }}alcohol_change.png" alt="Alcohol Change logo" class="img-fluid mx-md-5"></a>
+                <a href="https://www.mind.org.uk/" target="_blank"><img src="{{ MEDIA_URL }}mind.jpg" alt="Mind logo" class="img-fluid ml-md-4"></a>
             </div>
         </div>
     </div>
