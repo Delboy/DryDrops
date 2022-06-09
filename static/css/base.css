@@ -66,7 +66,7 @@ footer {
     opacity: 0;
 }
 
-.fa-star, .fa-star-half {
+.product-rating .fa-solid {
     color: gold;
 }
 

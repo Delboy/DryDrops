@@ -107,7 +107,7 @@
             </div>
             <div class="mb-3">
             <!-- Product Rating -->
-            {% include 'products/includes/product-rating.html' %}
+            <div class="product-rating d-inline">{% include 'products/includes/product-rating.html' %}</div>
             <p class="ml-3 small d-inline">({{ review_count }})</p>
             </div>
             <p>
@@ -228,7 +228,7 @@
                     {% csrf_token %}
                     {% for field in form  %}
                         {% if field.name == "rating" %}
-                            {{ field.label }} *
+                            <p class="mb-0">{{ field.label }} *</p>
                             <br>
                             {% for radio in field %}
                                 <label for="{{ radio.id_for_label }}">
@@ -239,11 +239,11 @@
                             <br>
                         {% else %}
                             {{ field.errors }}
-                            {{ field.label }} *
                             <br>
                             {{ field | as_crispy_field }}
                         {% endif %}
                     {% endfor %}
+                    <p class="small text-muted font-italic">* Required</p>
                     <button type="submit" class="btn link-btn rounded-pill d-block mt-2">Add Review</button>
                 </form>
             {% endif %}

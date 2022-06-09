@@ -74,7 +74,7 @@
                                             alt="{{ product.name }}">
                                         <p class="font-weight-bold mt-2">{{ product.name|truncatechars:32 }}</p>
                                         <!-- Product Rating -->
-                                        {% include 'products/includes/product-rating.html' %}
+                                        <div class="product-rating">{% include 'products/includes/product-rating.html' %}</div>
                                         <p class="font-weight-bold float-right">£{{ product.price }}</p>
                                     </a>
                                 </div>
