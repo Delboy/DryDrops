@@ -29,12 +29,12 @@
                     <a href="{% url 'edit_product' product.id %}" class="text-white bg-success btn btn-sm small border rounded-pill">Edit</a>
                     
                     <!-- Button triggering deletion warning modal -->
-                    <button type="button" class="text-white bg-danger btn-sm border rounded-pill" data-toggle="modal" data-target="#modal-{{ product.id }}">
+                    <button type="button" class="text-white bg-danger btn-sm border rounded-pill" data-toggle="modal" data-target="#product-modal-{{ product.id }}">
                         Delete
                     </button>
 
                     <!-- Deletion warning Modal -->
-                    <div class="modal fade" id="modal-{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="product-modal-{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
@@ -182,9 +182,9 @@
                            {% if user.is_authenticated and user.id == review.user.user.id %}
                            <a href="{% url 'edit_review' review.id %}">edit</a> | 
                             <!-- Button triggering deletion warning modal -->
-                            <button class="btn btn-sm p-0 review-delete-btn" data-toggle="modal" data-target="#modal-{{ review.id }}">delete</button>
+                            <button class="btn btn-sm p-0 review-delete-btn" data-toggle="modal" data-target="#review-modal-{{ review.id }}">delete</button>
                             <!-- Deletion warning Modal -->
-                            <div class="modal fade" id="modal-{{ review.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                            <div class="modal fade" id="review-modal-{{ review.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
