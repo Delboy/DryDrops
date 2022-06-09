@@ -19,6 +19,7 @@
             <p class="small d-flex justify-content-center justify-content-md-start pl-md-5"><a
                     href="{% url 'products' %}">Products</a>&nbsp|&nbsp{{ products | length }}</p>
         </div>
+        <!-- Sorting -->
         <div class="col-12 col-md-6 pr-md-5 my-4">
             <select id="sort-selector" class="form-select custom-select-sm rounded mx-auto d-block mr-md-3 w-50 float-md-right" action="GET">
                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
@@ -41,7 +42,7 @@
     </div>
     <div class="row">
         <div class="col-2 ml-5 d-none d-lg-block">
-            <!-- Categories Section -->
+            <!-- Categories -->
             <div class="row">
                 <div class="col category-col py-2">
                     <h3 class="mb-0 py-2">Categories</h3>
@@ -136,6 +137,7 @@
 {{ block.super }}
 {% include 'products/includes/scroll-arrow-script.html'%}
 <script type="text/javascript">
+    // Sort Script
     $('#sort-selector').change(function () {
         let selector = $(this);
         let currentUrl = new URL(window.location);
