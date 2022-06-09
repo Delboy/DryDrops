@@ -20,7 +20,7 @@ from profiles.models import UserProfile
 def all_products(request):
     """ A view to show all products and search queries """
 
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('sku')
     hot_products = Product.objects.filter(featured=True)
     delivery = settings.STANDARD_DELIVERY
     query = None
