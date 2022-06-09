@@ -77,6 +77,19 @@
         {% endfor %}
     </div>
     
+    <p>PLUS</p>
+    {% for products in top_products_plus %}
+    <p>{{ products.name }}</p>
+    <p>{{products.rating }}</p>
+    {% endfor %}
+    <br>
+    <p>MINUS</p>
+    {% for products in top_products_minus %}
+    <p>{{ products.name }}</p>
+    <p>{{products.rating }}</p>
+    {% endfor %}
+    
+    
 </div>
 <!-- Scroll Up Arrow -->
 <div class="row d-lg-none">
