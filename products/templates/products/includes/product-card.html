@@ -13,7 +13,7 @@
         {% if product.image %}
         <img class="card-img-top pt-2" src="{{ product.image.url }}" alt="{{ product.name }}">
         {% else %}
-        <img class="card-img-top pt-2" src="/media/noimage.png" alt="{{ product.name }}">
+        <img class="card-img-top pt-2" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
         {% endif %}
     </a>
     <!-- Product Card -->

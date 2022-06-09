@@ -70,8 +70,11 @@
                                 <div class="carousel-item">
                                     {% endif %}
                                     <a href="{% url 'product_detail' product.id %}">
-                                        <img class="d-block w-100" src="{{ product.image.url }}"
-                                            alt="{{ product.name }}">
+                                        {% if product.image %}
+                                        <img class="d-block w-100" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        {% else %}
+                                        <img class="d-block w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                        {% endif %}
                                         <p class="font-weight-bold mt-2">{{ product.name|truncatechars:32 }}</p>
                                         <!-- Product Rating -->
                                         <div class="product-rating">{% include 'products/includes/product-rating.html' %}</div>
