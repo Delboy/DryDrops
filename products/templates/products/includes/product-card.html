@@ -84,7 +84,7 @@
                     {% csrf_token %}
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     <button type="submit" value="{{ product.id }}" 
-                        class="small link hover-link border-0 bg-transparent">{% if product.featured %}unfeature{% else %}feature{% endif %}
+                        class="small link text-dark hover-link border-0 bg-transparent">{% if product.featured %}unfeature{% else %}feature{% endif %}
                     </button>
                 </form>
             </div>
