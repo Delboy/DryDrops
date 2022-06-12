@@ -333,7 +333,7 @@ label {
 
 .toast-header {
     background-color: #748386;
-    color: whit
+    color: white;
 }
 
 .toast-top, .modal-content {
@@ -436,5 +436,12 @@ label {
 
     .hero-box {
         top: 10vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .message-container {
+        min-width: 0;
+        right: 10px;
     }
 }
