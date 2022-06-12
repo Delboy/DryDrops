@@ -125,12 +125,12 @@
             <h6 class="font-weight-bold"><span class="mr-4">Subtotal:</span> £{{ item.product.price | calc_subtotal:item.quantity }}</h6>
             <form class="form update-form pb-3 text-center mt-4" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                 {% csrf_token %}
-                <div class="qty-btns">
+                <div class="qty-btns input-group-prepend">
                     <button class="btn-dark rounded minus-qty" id="minus-qty-{{ item.item_id }}"
                         data-item_id="{{ item.item_id }}">
                         <i class="fas fa-minus fa-sm"></i>
                     </button>
-                    <input class="w-75 qty-input text-center" type="number" name="quantity" value="{{ item.quantity }}"
+                    <input class="form-control form-control-sm qty-input text-center" type="number" name="quantity" value="{{ item.quantity }}"
                         min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                     <button class="btn-light rounded plus-qty" id="plus-qty-{{ item.item_id }}"
                         data-item_id="{{ item.item_id }}">
