@@ -30,12 +30,12 @@
                         {% endfor %}
                         <br>
                     {% else %}
-                        {{ field.errors }}
-                        {{ field.label }} *
-                        <br>
-                        {{ field }}
+                    {{ field.errors }}
+                    <br>
+                    {{ field | as_crispy_field }}
                     {% endif %}
                 {% endfor %}
+                <p class="small text-muted font-italic">* Required</p>
                 <div class="mt-1">
                     <a href="{% url 'product_detail' review.product.id %}" class="btn btn-outline-dark rounded-pill">Cancel</a>
                     <button type="submit" class="btn link-btn rounded-pill">Update Review</button>
