@@ -10,10 +10,11 @@ html {
 
 body {
     font-family: 'Roboto Serif';
+    overflow-x: hidden;
 }
 
 .hero-img {
-    background: url('/media/bottles.jpg') no-repeat center center fixed;
+    background: url('/media/bottles.jpg') ;
     background-size: cover;
     height: 90vh;
     font-family: 'Roboto Serif';
