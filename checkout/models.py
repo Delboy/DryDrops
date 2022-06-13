@@ -26,6 +26,7 @@ class Order(models.Model):
     postcode = models.CharField(max_length=20, null=False, blank=False)
     country = CountryField(blank_label='Country *', null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
+    first_order = models.BooleanField(default=False)
     order_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0
         )
@@ -58,7 +59,9 @@ class Order(models.Model):
             Sum('quantity')
             )['quantity__sum'] or 0
 
-        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
+        if self.first_order is True:
+            self.delivery_cost = 0    
+        elif self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = quantity * settings.STANDARD_DELIVERY
         else:
             self.delivery_cost = 0
