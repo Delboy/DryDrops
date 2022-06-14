@@ -43,7 +43,7 @@
                     <p>Email us at:</p>
                 </div>
                 <div class="col-8">
-                    <a href = "mailto: drydrops@gmail.com">drydrops@gmail.com</a>
+                    <a href = "mailto:drydrops@gmail.com">drydrops@gmail.com</a>
                 </div>
             </div>
             <div class="row">
@@ -73,14 +73,12 @@
                 <input type="text" class="w-100 rounded-pill form-control" placeholder="Name *" name="name" value="{{ request.user.username }}" required>
                 <input type="email" class="w-100 mt-4 rounded-pill form-control" placeholder="Email Address *" name="email" value="{{ request.user.email }}" required>
                 <input type="text" class="w-100 mt-4 rounded-pill form-control" placeholder="Subject *" name="subject" required>
-                <textarea type="text" class="w-100 mt-4 rounded form-control mb-2" placeholder="Your Message *" rows="10" name="message" required></textarea>
+                <textarea class="w-100 mt-4 rounded form-control mb-2" placeholder="Your Message *" rows="10" name="message" required></textarea>
                 <p class="float-left">* Required Fields</p>
                 <button type="submit" class="btn link-btn rounded-pill float-right">Send Message</button>
             </form>
         </div>
     </div>
 </div>
-
-
 
 {% endblock %}
