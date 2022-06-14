@@ -417,6 +417,14 @@ label {
 }
 
 /******* Media Queries *******/
+@media (min-width: 1200px) {
+    .hero-img {
+    background: url('/media/bottles2.jpg') ;
+    background-size: cover;
+    height: 90vh;
+    font-family: 'Roboto Serif';
+}
+}
 @media (max-width: 991px) {
     .header-container {
         padding-top: 125px;
