@@ -27,6 +27,10 @@ a:hover {
     color: #706563;
 }
 
+.logo {
+    font-family: 'imbue';
+}
+
 /******* Colors and Borders *******/
 .color-burgundy {
     color: #3b0d11;
@@ -68,6 +72,13 @@ a:hover {
 .delivery-banner {
     background-color: #3b0d11;
     opacity: 80%;
+}
+
+.mobile-nav-ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0;
 }
 
     /* bag icon */
