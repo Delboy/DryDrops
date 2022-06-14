@@ -14,121 +14,124 @@
 
 {% block content %}
 
-    <div class="row">
-        <div class="col-12 col-md-6 my-4 text-center">
-            <p class="small d-flex justify-content-center justify-content-md-start pl-md-5"><a
-                    href="{% url 'products' %}">Products</a>&nbsp|&nbsp{{ products | length }}</p>
-        </div>
-        <!-- Sorting -->
-        <div class="col-12 col-md-6 pr-md-5 my-4">
-            <select id="sort-selector" class="form-select custom-select-sm rounded mx-auto d-block mr-md-3 w-50 float-md-right" action="GET">
-                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)
-                </option>
-                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to
-                    low)</option>
-                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to
-                    low)</option>
-                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to
-                    high)</option>
-                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category
-                    (A-Z)</option>
-                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category
-                    (Z-A)</option>
-            </select>
-        </div>
+<div class="row">
+    <div class="col-12 col-md-6 my-4 text-center">
+        <p class="small d-flex justify-content-center justify-content-md-start pl-md-5"><a
+                href="{% url 'products' %}">Products</a>&nbsp;|&nbsp;{{ products | length }}</p>
     </div>
-    <div class="row">
-        <div class="col-2 ml-5 d-none d-lg-block">
-            <!-- Categories -->
-            <div class="row">
-                <div class="col category-col py-2">
-                    <h3 class="mb-0 py-2">Categories</h3>
-                    <hr class="my-0">
-                    <ul class="pl-0 mt-1">
-                        <li><a href="{% url 'products' %}" class="nav-li nav-link">All Products</a></li>
-                        <li><a href="{% url 'products' %}?category=beers" class="nav-li nav-link">Beers</a></li>
-                        <li><a href="{% url 'products' %}?category=ciders" class="nav-li nav-link">Ciders</a></li>
-                        <li><a href="{% url 'products' %}?category=wines" class="nav-li nav-link">Wines</a></li>
-                        <li><a href="{% url 'products' %}?category=spirits" class="nav-li nav-link">Spirits</a></li>
-                    </ul>
-                </div>
+    <!-- Sorting -->
+    <div class="col-12 col-md-6 pr-md-5 my-4">
+        <select id="sort-selector"
+            class="form-select custom-select-sm rounded mx-auto d-block mr-md-3 w-50 float-md-right">
+            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)
+            </option>
+            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to
+                low)</option>
+            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to
+                low)</option>
+            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to
+                high)</option>
+            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category
+                (A-Z)</option>
+            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category
+                (Z-A)</option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2 ml-5 d-none d-lg-block">
+        <!-- Categories -->
+        <div class="row">
+            <div class="col category-col py-2">
+                <h3 class="mb-0 py-2">Categories</h3>
+                <hr class="my-0">
+                <ul class="pl-0 mt-1">
+                    <li><a href="{% url 'products' %}" class="nav-li nav-link">All Products</a></li>
+                    <li><a href="{% url 'products' %}?category=beers" class="nav-li nav-link">Beers</a></li>
+                    <li><a href="{% url 'products' %}?category=ciders" class="nav-li nav-link">Ciders</a></li>
+                    <li><a href="{% url 'products' %}?category=wines" class="nav-li nav-link">Wines</a></li>
+                    <li><a href="{% url 'products' %}?category=spirits" class="nav-li nav-link">Spirits</a></li>
+                </ul>
             </div>
-            <!-- Whats Hot section -->
-            {% if hot_products %}
-            <div class="row pt-3 mb-4">
-                <div class="col pt-2 px-auto whats-hot">
-                    <h4 class="text-center">Whats Hot!</h4>
-                    <!-- Carousel -->
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            {% for product in hot_products %}
-                            {% if forloop.first %}
-                            <div class="carousel-item active">
-                                {% else %}
-                                <div class="carousel-item">
+        </div>
+        <!-- Whats Hot section -->
+        {% if hot_products %}
+        <div class="row pt-3 mb-4">
+            <div class="col pt-2 px-auto whats-hot">
+                <h4 class="text-center">Whats Hot!</h4>
+                <!-- Carousel -->
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for product in hot_products %}
+                        {% if forloop.first %}
+                        <div class="carousel-item active">
+                            {% else %}
+                            <div class="carousel-item">
+                                {% endif %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    {% if product.image %}
+                                    <img class="d-block w-100" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    {% else %}
+                                    <img class="d-block w-100" src="{{ MEDIA_URL }}noimage.png"
+                                        alt="{{ product.name }}">
                                     {% endif %}
-                                    <a href="{% url 'product_detail' product.id %}">
-                                        {% if product.image %}
-                                        <img class="d-block w-100" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                        {% else %}
-                                        <img class="d-block w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                        {% endif %}
-                                        <p class="font-weight-bold mt-2">{{ product.name|truncatechars:32 }}</p>
-                                        <!-- Product Rating -->
-                                        <div class="product-rating">{% include 'products/includes/product-rating.html' %}</div>
-                                        <p class="font-weight-bold float-right">£{{ product.price }}</p>
-                                    </a>
-                                </div>
-                                {% endfor %}
+                                    <p class="font-weight-bold mt-2">{{ product.name|truncatechars:32 }}</p>
+                                    <!-- Product Rating -->
+                                    <div class="product-rating">{% include 'products/includes/product-rating.html' %}
+                                    </div>
+                                    <p class="font-weight-bold float-right">£{{ product.price }}</p>
+                                </a>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                                data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                                data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                            {% endfor %}
                         </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
             </div>
-            {% else %}
+        </div>
+        {% else %}
+    </div>
+    {% endif %}
+    <!-- Main Section -->
+    <div class="col px-5 mb-4">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-lg-3 col-md-6 d-flex justify-content-center py-1 px-2">
+                <div class="card h-100 border-white all-products" style="width: 100%;">
+                    {% include 'products/includes/product-card.html' %}
+                </div>
             </div>
+            {% if forloop.counter|divisibleby:4 %}
+        </div>
+        <div class="row">
             {% endif %}
-            <!-- Main Section -->
-            <div class="col px-5 mb-4">
-                <div class="row">
-                    {% for product in products %}
-                    <div class="col-lg-3 col-md-6 d-flex justify-content-center py-1 px-2">
-                        <div class="card h-100 border-white all-products" style="width: 100%;">
-                            {% include 'products/includes/product-card.html' %}
-                        </div>
-                    </div>
-                    {% if forloop.counter|divisibleby:4 %}
-                </div>
-                <div class="row">
-                    {% endif %}
-                    {% empty %}
-                    <div class="col mt-5">
-                        <p class="text-center lead">Sorry, no products match that search.</p>
-                    </div>
-                    {% endfor %}
-                </div>
+            {% empty %}
+            <div class="col mt-5">
+                <p class="text-center lead">Sorry, no products match that search.</p>
             </div>
+            {% endfor %}
         </div>
     </div>
-    <!-- Scroll Up Arrow -->
-    <div class="row d-lg-none">
-        <div id="arrow" class="col float-right btn fixed-bottom">
-            <i class="fa fa-solid fa-caret-up h1"></i>
-        </div>
+</div>
+
+<!-- Scroll Up Arrow -->
+<div class="row d-lg-none">
+    <div id="arrow" class="col float-right btn fixed-bottom">
+        <i class="fa fa-solid fa-caret-up h1"></i>
     </div>
+</div>
 
 
 {% endblock %}
@@ -136,7 +139,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/scroll-arrow-script.html'%}
-<script type="text/javascript">
+<script>
     // Sort Script
     $('#sort-selector').change(function () {
         let selector = $(this);
