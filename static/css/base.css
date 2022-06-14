@@ -31,6 +31,10 @@ a:hover {
     font-family: 'imbue';
 }
 
+.cursor:hover {
+    cursor: pointer;
+}
+
 /******* Colors and Borders *******/
 .color-burgundy {
     color: #3b0d11;

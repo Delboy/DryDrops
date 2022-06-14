@@ -54,16 +54,16 @@
                 <a href="{% url 'edit_product' product.id %}" class="small d-inline d-inline">edit</a>
                 |
                 <!-- Button triggering deletion warning modal -->
-                <p type="button" class="small d-inline hover-link" data-toggle="modal" data-target="#product-modal-{{ product.id }}">
+                <p class="small d-inline hover-link cursor" data-toggle="modal" data-target="#product-modal-{{ product.id }}">
                     delete
                 </p>
                 <!-- Deletion Warning Modal -->
-                <div class="modal fade" id="product-modal-{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="product-modal-{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="warning-{{ product.id }}"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Warning!</h5>
+                                <h5 class="modal-title" id="warning-{{ product.id }}">Warning!</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
