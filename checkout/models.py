@@ -60,7 +60,7 @@ class Order(models.Model):
             )['quantity__sum'] or 0
 
         if self.first_order is True:
-            self.delivery_cost = 0    
+            self.delivery_cost = 0
         elif self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = quantity * settings.STANDARD_DELIVERY
         else:
