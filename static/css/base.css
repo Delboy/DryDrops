@@ -122,7 +122,7 @@ footer {
 
 .hero-box {
     position: relative;
-    top: 33vh;
+    top: 20vh;
     background-color: #3b0d11;
     opacity: 80%;
     border: 1px solid black;
@@ -448,10 +448,6 @@ label {
 @media (max-width: 991px) {
     .header-container {
         padding-top: 125px;
-    }
-
-    .hero-box {
-        top: 10vh;
     }
 
     .qty-btns {
