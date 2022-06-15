@@ -49,22 +49,13 @@
 
 {% block postloadjs %}
 {{ block.super }}
+{% include 'review/includes/fill-stars-script.html' %}
 <script>
     // Checks the current rating and fills in the relevant stars
     $(document).ready(function(){
-        input = $("input[type=radio][name='rating']:checked")
-        star = input.parent().prev().children()
-        star.click()
+        input = $("input[type=radio][name='rating']:checked");
+        star = input.parent().prev().children();
+        star.click();
     });
-
-    // Changes stars from empty to filled on selection
-    $('.star').click(function(e) {
-        prevStars = $(this).parent().prevAll('label').children()
-        nextStars = $(this).parent().nextAll('label').children()
-        
-        $(this).removeClass('far').addClass('fas').css({'color':'gold'})
-        prevStars.removeClass('far').addClass('fas').css({'color':'gold'})
-        nextStars.removeClass('fas').addClass('far').css({'color':'black'})
-    })
 </script>
 {% endblock %}

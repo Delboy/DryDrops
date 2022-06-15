@@ -11,7 +11,7 @@
     // Ensures proper enabling/disabling of all inputs on page load
     let allQtyInputs = $('.qty-input');
     for(let i = 0; i < allQtyInputs.length; i++){
-        let itemId = $(allQtyInputs[i]).data('item_id')
+        let itemId = $(allQtyInputs[i]).data('item_id');
         handleEnableDisable(itemId);
     }
 
@@ -19,12 +19,12 @@
     $('.qty-input').change(function(){
         let itemId = $(this).data('item_id');
         handleEnableDisable(itemId);
-    })
+    });
 
     // Increment quantity
     $('.plus-qty').click(function(e) {
         e.preventDefault();
-        console.log('+ clicked')
+        console.log('+ clicked');
         let closestInput = $(this).closest('.qty-btns').find('.qty-input')[0];
         let currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue + 1);
@@ -35,7 +35,7 @@
     // Decrease quantity
     $('.minus-qty').click(function(e) {
         e.preventDefault();
-        console.log('- clicked')
+        console.log('- clicked');
         let closestInput = $(this).closest('.qty-btns').find('.qty-input')[0];
         let currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue - 1);

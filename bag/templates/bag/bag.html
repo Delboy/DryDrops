@@ -156,22 +156,22 @@
 {% include 'products/includes/quantity-script.html' %}
 <script>
     // Update Qty on click
-    $('.update-btn').click(function (e) {
+    $('.update-btn').click(function(e){
         var form = $(this).parent().prev().prev().children('.update-form');
-        form.submit()
-        console.log('Done')
-    })
+        form.submit();
+        console.log('Done');
+    });
 
     // Update Qty on click for small screens
-    $('.update-sm-btn').click(function (e) {
+    $('.update-sm-btn').click(function(e){
         var form = $(this).parent().siblings('.update-form');
-        form.submit()
-        console.log('Done')
-    })
+        form.submit();
+        console.log('Done');
+    });
 
 
     // Remove item and reload on click
-    $('.remove-btn').click(function (e) {
+    $('.remove-btn').click(function(e){
         let csrfToken = "{{ csrf_token }}";
         let itemId = $(this).attr('class').split('remove_')[1];
         let url = `/bag/remove/${itemId}/`;
@@ -183,6 +183,6 @@
             .done(function () {
                 location.reload();
             });
-    })
+    });
 </script>
 {% endblock%}
