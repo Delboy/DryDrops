@@ -5,7 +5,8 @@
 
 {% block content %}
 <div class="container">
-    <div class="row mt-4">
+    <section class="row mt-4">
+        <!-- Product Image -->
         <div class="col-12 col-md-4 col-lg-4">
             {% if user.is_superuser and product.featured %}
                 <div class="ribbon ribbon-top-left"><span>Featured</span></div>
@@ -57,6 +58,7 @@
                 </div>
             {% endif %}
         </div>
+        <!-- Product Details -->
         <div class="col-12 col-md-8 col-lg-8">
             <div class="mb-1">
                 <p class="mb-0"><strong>{{ product.name }}</strong></p>
@@ -97,8 +99,8 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-dark rounded-pill" data-dismiss="modal">Close</button>
-                                <a href="{% url 'account_signup' %}"><button type="button" class="btn link-btn rounded-pill">Register</button></a>
-                                <a href="{% url 'account_login' %}"><button type="button" class="btn link-btn rounded-pill">Sign In</button></a>
+                                <a class="btn link-btn rounded-pill" href="{% url 'account_signup' %}">Register</a>
+                                <a class="btn link-btn rounded-pill" href="{% url 'account_login' %}">Sign In</a>
                             </div>
                         </div>
                     </div>
@@ -118,17 +120,18 @@
             <p><a href="{% url 'products' %}?category={{ product.category.name }}"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a></p>
             <p class="d-none d-md-block">Product Description:</p>
             <p>{{ product.description }}</p>
+            <!-- Quantity input -->
             <form class="form pb-3" action="{% url 'add_to_bag' product.id %}" method="POST">
                 {% csrf_token %}
                 <p>Quantity:</p>
                 <div class="qty-btns">
-                    <button class="btn-dark rounded minus-qty" id="minus-qty-{{ product.id }}"
+                    <button class="btn-dark rounded minus-qty minus-qty-{{ product.id }}"
                         data-item_id="{{ product.id }}">
                         <i class="fas fa-minus"></i>
                     </button>
-                    <input class="w-25 d-inline qty-input form-control" type="number" name="quantity" value="1" min="1" max="99"
-                        data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                    <button class="btn-light rounded plus-qty" id="plus-qty-{{ product.id }}"
+                    <input class="w-25 d-inline qty-input form-control id_qty_{{ product.id }}" type="number" name="quantity" value="1" min="1" max="99"
+                        data-item_id="{{ product.id }}">
+                    <button class="btn-light rounded plus-qty plus-qty-{{ product.id }}"
                         data-item_id="{{ product.id }}">
                         <i class="fas fa-plus"></i>
                     </button>
@@ -141,13 +144,13 @@
                 Continue Shopping
             </a>
         </div>
-
-    </div>
+    </section>
 </div>
 
 <!-- Reviews -->
 <div class="row mt-5 mb-2 mb-lg-3 px-4">
-    <div class="col-lg-6 ">
+    <!-- Customer Reviews -->
+    <section class="col-lg-6 ">
         {% if reviews %}
         <h4>{{ review_count }} Reviews for {{ product.name }}</h4>
         <hr>
@@ -214,10 +217,10 @@
         <h4>This Product has no reviews</h4>
         <hr>
         {% endif %}
-    </div>
+    </section>
 
-    <!-- Add a review Section -->
-    <div class="col-lg-6 my-4 my-lg-0">
+    <!-- Add a review  -->
+    <section class="col-lg-6 my-4 my-lg-0">
         <h4>Add Review</h4>
         <hr>
         {% if user.is_authenticated %}
@@ -250,7 +253,7 @@
         {% else %}
         <p>Please <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
         {% endif %}
-    </div>
+    </section>
 </div>
 
 {% endblock %}
