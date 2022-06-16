@@ -85,21 +85,21 @@ a:hover {
     padding-left: 0;
 }
 
-    /* bag icon */
-    .bag {
-        font-size: 12px;
-        padding: 0 5px;
-        vertical-align: top;
-        margin-left: -10px;
-    }
-    .badge {
-    padding-left: 9px;
-    padding-right: 9px;
-    border-radius: 9px;
-    position: relative;
-    top: 0;
-    right: 0;
-    }
+/* bag icon */
+.bag {
+    font-size: 12px;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+.badge {
+padding-left: 9px;
+padding-right: 9px;
+border-radius: 9px;
+position: relative;
+top: 0;
+right: 0;
+}
 
 /******* Footer *******/
 footer {
@@ -107,9 +107,16 @@ footer {
 }
 
 .social-icon {
-    color: #3b0d11;
+    color:#748386;
     font-size: 1.75rem;
     padding-right: .5rem;
+}
+
+/* Mailchimp */
+#mc_embed_signup{
+    font:14px 'Roboto Serif',Arial,sans-serif;  
+    width:100%;
+    padding-left: 0px;
 }
 
 /******* Index Page  *******/
@@ -452,6 +459,13 @@ label {
 
     .qty-btns {
         width: 95%;
+    }
+}
+
+@media (min-width: 991px) {
+    #mc_embed_signup .button{
+        position: relative;
+        left: 30px;
     }
 }
 
