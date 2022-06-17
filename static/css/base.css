@@ -151,6 +151,11 @@ footer {
     border: 1px solid black;
     border-radius: 25px;
     padding: 25px;
+    width: -webkit-fill-available;
+}
+
+#hero-logo {
+    font-size: 4rem;
 }
 
 .category-card-img {
@@ -487,9 +492,20 @@ label {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 460px) {
     .message-container {
         min-width: 0;
         right: 10px;
+    }
+
+    #hero-logo {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #hero-logo {
+        font-size: 2.25rem;
     }
 }
