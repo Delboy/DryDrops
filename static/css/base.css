@@ -501,6 +501,10 @@ label {
     #hero-logo {
         font-size: 3rem;
     }
+
+    .hero-box {
+        top: 20px;
+    }
 }
 
 @media (max-width: 380px) {
