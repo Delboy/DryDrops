@@ -116,7 +116,12 @@ footer {
 #mc_embed_signup{
     font:14px 'Roboto Serif',Arial,sans-serif;  
     width:100%;
-    padding-left: 0px;
+}
+
+.optionalParent {
+    float: right;
+    position: relative;
+    left: 30px;
 }
 
 /******* Index Page  *******/
@@ -460,12 +465,10 @@ label {
     .qty-btns {
         width: 95%;
     }
-}
 
-@media (min-width: 991px) {
-    #mc_embed_signup .button{
-        position: relative;
-        left: 30px;
+    .optionalParent {
+        float: left;
+        left: 0px;
     }
 }
 
