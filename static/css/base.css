@@ -124,6 +124,17 @@ footer {
     left: 30px;
 }
 
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    background-color: whitesmoke !important;
+    float: right !important;
+}
+
+#mc_embed_signup #mce-success-response {
+    width: 100%;
+    margin-bottom: 1em !important;
+    display: block !important;
+}
+
 /******* Index Page  *******/
 .hero-img {
     background: url('/media/bottles.jpg') ;
