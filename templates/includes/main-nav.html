@@ -1,13 +1,20 @@
+<!-- url's are defined here so that they can be used in 'if' statments -->
+<!-- code inspired from https://tekshinobi.com/setting-active-navbar-link-in-django-template/ -->
+{% url 'home' as home %}
+{% url 'products' as products %}
+{% url 'about' as about %}
+{% url 'contact' as contact %}
+
 <div class="collapse navbar-collapse text-center mt-2 mt-lg-0" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item">
-            <a class="font-weight-bold color-burgundy mx-lg-3" href="{% url 'home' %}">
+            <a class="font-weight-bold color-burgundy mx-lg-3 {% if request.path == home %} active {% endif %}" href="{% url 'home' %}">
                 Home
             </a>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold color-burgundy mx-lg-3" href="#" id="shop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold color-burgundy mx-lg-3 {% if request.path == products %} active {% endif %}" href="#" id="shop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Shop
             </a>
             <div class="dropdown-menu border-0">
@@ -20,13 +27,13 @@
         </li>
 
         <li class="nav-item">
-            <a class="font-weight-bold color-burgundy mx-lg-3" href="{% url 'about' %}">
+            <a class="font-weight-bold color-burgundy mx-lg-3 {% if request.path == about %} active {% endif %}" href="{% url 'about' %}">
                 About Us
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="font-weight-bold color-burgundy mx-lg-3" href="{% url 'contact' %}">
+            <a class="font-weight-bold color-burgundy mx-lg-3 {% if request.path == contact %} active {% endif %}" href="{% url 'contact' %}">
                 Contact
             </a>
         </li>

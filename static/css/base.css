@@ -58,6 +58,11 @@ a:hover {
     color:#706563;
 }
 
+.active {
+    border-bottom: 3px solid #6a3937;
+    padding-bottom: 2px;;
+}
+
 /******* Padding and Margins *******/
 .nav-link {
     padding: 0.5rem 1rem;
