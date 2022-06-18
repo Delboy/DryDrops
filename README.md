@@ -124,12 +124,36 @@ These phrases can also be used in the metadata at the head of the page.
 ### Nav Bar
 
 - #### Links
+    - To help navigate the user around, four links to the main sections of the site are present at the top of every page.
+    - The links collapse into a hamburger menu once the screen size becomes too small to fit all the elements comfortably. 
+    - The link to the current page will be highlighted by an underline to help users understand what page they are on.
+    - The Shop link drops down into a sub-menu where the user can navigate to all products or choose from one of the four product categories.
+
+    ![Navbar-Links](assets/images/navbar-links.png) 
 
 - #### Search Bar
+    - The search bar is located in the middle of the navbar and can be used to search all products.
+    - Using the search bar will search both the product's title and description for a match.
+    - On smaller screens, the bar collapses into a search Icon that upon clicking drops down into the full search bar.
+
+    ![Navbar-Search](assets/images/navbar-search.png) 
 
 - #### Account
+    - Located on the right side of the navbar is the account Icon where the user can manage their account.
+    - Clicking the account Icon opens a dropdown menu with options for the user to register or sign in.
+    - If a user is signed in the dropdown options change to 'My Profile' and 'Logout'.
+    - If a user is signed in the Icons text changes from 'My Account' to '*The user's name*'s account.
+    - If the user signed in is a super user then a third option of 'Product Management' is available. 
+
+    ![Navbar-Account](assets/images/navbar-account.png) 
 
 - #### Bag
+    - Located on the right side of the navbar next to the accounts menu is the bag Icon.
+    - Beneath the bag icon users can find a running total of the cost of all the items in their bag.
+    - Once a product is added to the bag, a number displaying the total quantity of items appears, located at the top right of the bag icon.
+    - Clicking the bag icon navigates the user to the shopping bag page which displays a summary of what's been added.
+
+    ![Navbar-Bag](assets/images/navbar-bag.png) 
 
 ### Home Page
 
