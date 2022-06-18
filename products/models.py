@@ -44,6 +44,9 @@ class Product(models.Model):
         blank=True
         )
     featured = models.BooleanField(default=False)
+    review_count = models.DecimalField(
+        max_digits=6, decimal_places=0, null=True, blank=True, default=0
+    )
 
     def __str__(self):
         return self.name

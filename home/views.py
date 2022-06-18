@@ -9,7 +9,7 @@ from products.models import Product
 def index(request):
     """ A view to return the index page """
     top_products = Product.objects.all().exclude(rating=None).order_by(
-        '-rating')
+        '-rating').order_by('-review_count')
     delivery = settings.STANDARD_DELIVERY
 
     context = {

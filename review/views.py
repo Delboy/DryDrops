@@ -62,6 +62,7 @@ def delete_review(request, review_id):
     reviews = Review.objects.all().filter(product=product)
     rating = reviews.aggregate(Avg('rating'))['rating__avg']
     product.rating = rating
+    product.review_count -= 1
     product.save()
     messages.success(request, 'Review successfully deleted!')
     return redirect(reverse('product_detail', args=[review.product.id]))
