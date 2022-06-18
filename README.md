@@ -184,7 +184,6 @@ These phrases can also be used in the metadata at the head of the page.
     ![Hero-Top-Products](assets/images/home-top-products.png)
 
 - #### Footer 
-
     - The footer appears at the bottom of every page.
     - The footer is broken up into 4 sections. The logo, quick links, Contact Us, and Newsletter.
     - The Quick Links section has links to all parts of the site.
@@ -197,18 +196,42 @@ These phrases can also be used in the metadata at the head of the page.
 ### Accounts
 
 - #### Register Page
+    - The register page is used to create an account.
+    - Once submitting the form an authentication link will be emailed to the address the user provided. 
+
+    ![Accounts-Register](assets/images/accounts-register.png)
 
 - #### Login Page
+    - The login page is used to log in users with an existing account.
+    - A Forgot Password link is also present that enables users to recover their password.
+
+    ![Accounts-Login](assets/images/accounts-login.png)
 
 - #### Log out Page
+    - The logout page is used to log out users who are signed in.
+
+    ![Accounts-Logout](assets/images/accounts-logout.png)
 
 ### Profile
 
 - #### Delivery Details
+    - The delivery details section stores the user's delivery address and phone number.
+    - The information provided here is used to autofill the delivery address when placing an order.
+
+    ![Profiles-Delivery](assets/images/profiles-delivery.png)
 
 - #### Order History
+    - The order history section is a table that keeps a record of every order the user has placed.
+    - The table displays the order number, date it was ordered, items ordered, quantities of items and the order total.
+    - Clicking the order number will take the user to a more detailed summary of the order.
+    - A scroll bar appears once the user has more orders than the box can contain. 
+
+    ![Profiles-Order-History](assets/images/profiles-order-history.png)
 
 - #### Favorite Items
+    - The favorite items section keeps a list of all products that the user has liked.
+
+    ![Profiles-Favorites](assets/images/profiles-favourites.png)
 
 ### All Products
 
@@ -277,3 +300,9 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Contact Info 
 
 - #### Messaging
+
+### Toasts and Pop-ups
+
+- #### Toasts
+
+- #### Pop-ups
