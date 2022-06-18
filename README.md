@@ -156,8 +156,9 @@ These phrases can also be used in the metadata at the head of the page.
     ![Navbar-Bag](assets/images/navbar-bag.png) 
 
 ### Home Page
-
+    
 - #### Hero Image
+    
 
 - #### Categories
 

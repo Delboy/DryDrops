@@ -159,10 +159,6 @@ footer {
     width: -webkit-fill-available;
 }
 
-#hero-logo {
-    font-size: 4rem;
-}
-
 .category-card-img {
     border-top: 5px solid #6a3937;
     border-left: 5px solid #6a3937;
@@ -497,19 +493,42 @@ label {
     }
 }
 
+@media (max-width: 768px) {
+    
+    #hero-logo {
+        font-size: 4.5rem;
+    } 
+
+    #hero-msg {
+        font-size: 3.5rem;
+    } 
+
+    #hero-slogan {
+        font-size: 3rem;
+    } 
+}
+
 @media (max-width: 460px) {
     .message-container {
         min-width: 0;
         right: 10px;
     }
 
-    #hero-logo {
-        font-size: 3rem;
-    }
-
     .hero-box {
         top: 20px;
     }
+
+    #hero-logo {
+        font-size: 3.5rem;
+    } 
+
+    #hero-msg {
+        font-size: 2.5rem;
+    } 
+
+    #hero-slogan {
+        font-size: 2rem;
+    } 
 }
 
 @media (max-width: 380px) {
@@ -517,4 +536,13 @@ label {
     #hero-logo {
         font-size: 2.25rem;
     }
+
+    #hero-msg {
+        font-size: 2rem;
+    } 
+
+    #hero-slogan {
+        font-size: 1.5rem;
+    } 
+    
 }
