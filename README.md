@@ -153,17 +153,33 @@ These phrases can also be used in the metadata at the head of the page.
     - Once a product is added to the bag, a number displaying the total quantity of items appears, located at the top right of the bag icon.
     - Clicking the bag icon navigates the user to the shopping bag page which displays a summary of what's been added.
 
-    ![Navbar-Bag](assets/images/navbar-bag.png) 
+    ![Navbar-Bag](assets/images/navbar-bag.png)
+
+- #### Banner 
+    - A banner running across the top of the navbar informs the user of any current offers.
+
+    ![Navbar-Banner](assets/images/navbar-banner.jpg)
+
 
 ### Home Page
     
 - #### Hero Image
-    
+    - The hero image welcomes the user with a short message advertising what the site sells along with the website's slogan.
+    - A message informing the user that they receive free delivery on their first order when if sign up is also present.
+    - A button labeled 'Shop Now' takes user to the products page.
+    - The image will change depending on the size of the screen.
 
+    ![Hero-Image](assets/images/home-hero.png)
+    
 - #### Categories
+    - The categories section lists the four categories of products that are stocked.
+    - Clicking one of the categories takes the user to the shop displaying only products from that category. 
+
+    ![Hero-Categories](assets/images/home-categories.png)
 
 - #### Top Products
-
+    
+    
 - #### Footer 
 
 ### Accounts
