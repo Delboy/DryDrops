@@ -178,8 +178,9 @@ These phrases can also be used in the metadata at the head of the page.
     ![Hero-Categories](assets/images/home-categories.png)
 
 - #### Top Products
-    
-    
+    - The Top products section lists the top 4 products based on customer reviews.
+    - The list will order by the highest rating first. If any products have the same rating they will be put in order of how many reviews they have received.   
+
 - #### Footer 
 
 ### Accounts
