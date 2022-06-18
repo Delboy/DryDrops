@@ -166,7 +166,7 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Hero Image
     - The hero image welcomes the user with a short message advertising what the site sells along with the website's slogan.
     - A message informing the user that they receive free delivery on their first order when if sign up is also present.
-    - A button labeled 'Shop Now' takes user to the products page.
+    - A button labeled 'Shop Now' takes the user to the products page.
     - The image will change depending on the size of the screen.
 
     ![Hero-Image](assets/images/home-hero.png)
@@ -181,7 +181,18 @@ These phrases can also be used in the metadata at the head of the page.
     - The Top products section lists the top 4 products based on customer reviews.
     - The list will order by the highest rating first. If any products have the same rating they will be put in order of how many reviews they have received.   
 
+    ![Hero-Top-Products](assets/images/home-top-products.png)
+
 - #### Footer 
+
+    - The footer appears at the bottom of every page.
+    - The footer is broken up into 4 sections. The logo, quick links, Contact Us, and Newsletter.
+    - The Quick Links section has links to all parts of the site.
+    - The Contact Us section lists the company's address, phone number, email and social media account.
+    - Clicking the phone number will call it, clicking the email address will open your default email programme and clicking the social media links will take you to the relevant website.
+    - The Newsletter section has an option to input your email and sign up for the weekly newsletter.
+
+    ![Footer](assets/images/footer.png)
 
 ### Accounts
 
