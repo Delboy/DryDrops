@@ -235,27 +235,81 @@ These phrases can also be used in the metadata at the head of the page.
 
 ### All Products
 
-- #### Categories Sidenav
+- #### Categories Side-nav
+    - The category side-nav section only appears on large screens and lists all the product categories.
+    - Clicking any of the categories in this section filters the products to that option.
+
+    ![Products-Sidenav](assets/images/products-sidenav.png)
 
 - #### What's Hot Carousel
+    - The Whats hot carousel displays any product that an admin has selected to be featured.
+    - Clicking the product will take the user to that product's detail page.
+    - Buttons on the edge of the carousel enable the user to scroll through all the featured products.
+
+    ![Products-Whats-Hot](assets/images/products-whats-hot.png)
 
 - #### Sorting
+    - The sort-by box is located to the top right of the products section on medium and large screens, and centered on smaller screens.
+    - Clicking the box opens up a dropdown menu with various options on how to sort the products. 
+
+    ![Products-sort](assets/images/products-sort.png)
 
 - #### Products
+    - The products page is fully responsive, adjusting how many products are on each row depending on the user's screen size.
+    - Each product card shows an image of the product, its title, price, category, and rating.
+    - An 'Add to Bag' button can be used to add the item to the bag.
+    - Any products that have been liked by the user displays a red heart in the top right corner. 
+    - If the user is a superuser, admin buttons will appear at the bottom of the product card.
+    - If the user is a superuser and the product has been featured, a featured banner will appear across the product card. 
+
+    ![Products-Products](assets/images/products-products.png)
 
 ### Products Details
 
-- #### Product Image
-
 - #### Product Info
+    - The product info section shows information about the product along with buttons to add the item to the user's favorite list, and buttons to add the item to the bag in multiple quantities.
+    - The product's rating is an average of all the product's reviews and displays the result in stars. Next to the stars is also a number indicating how many reviews the product has received in total. 
+    - Clicking the products category will take users to the products page showing only items from that category.
+    - If the user is a super user, admin buttons will appear underneath the image.
+
+    ![Products-Product-Info](assets/images/products-product-info.png)
 
 - #### Like Button
+    - The like button is located underneath the product's title.
+    - The heart button renders as empty if either the user is signed out or the product is not liked by the user.
+    - Liking a product fills in the heart and adds the product to the user's favorite items list on their profile page.
+    - Unliking a product unfills the heart and removes the product from the user's favourite items list on their profile page.
+    - If the heart is clicked when no user is signed in, an 'Account Required' modal pops up informing the user that they need to either sign in or create an account to use that feature.
+     
+    ![Products-Like](assets/images/products-like.png)
 
 - #### Quantity Buttons
+    - The quantity buttons are located underneath the product details and are used to add items to the bag.
+    - The plus and minus buttons increase and decrease the input value. 
+    - If the value is set to 1 the minus quantity will be disabled. Respectively if the value is set to 99 the plus button is disabled.
+    - Clicking the 'Add to Bag' button takes the number in the input field and adds that amount of products to the bag.
+    - Trying to add an amount less than one or above 99, renders an error message informing the user of the parameters needed to be successful.
+    - Underneath the input is a link that takes users back to the store.  
+
+    ![Products-Quantity-Button](assets/images/products-qty-btns.png)
+
 
 - #### Customer Reviews
+    - If the product has received any reviews they will appear underneath the product details.
+    - The reviews consist of the number of stars awarded by the user, their written comment, followed by the user name with the date and time of when they added the comment.
+    - If the user is signed in and they have left a review on a product, that review will also have edit and delete buttons. Users can use these to manage their reviews.
+
+     ![Products-Reviews](assets/images/products-reviews.png)
 
 - #### Add Review
+    - The add review form is located next to the product's reviews on large screens or underneath on small screens.
+    - The form consists of two fields, rating and review.
+    - Leaving out either the rating or the review notifies the user that the fields are required.  
+    - The user can rate the product between 1 and 5 stars. Clicking a star fills the star and every star before it.
+    - Any profanity in the review will cause the form to fail and a toast will inform the user.
+    - To stop users leaving multiple reviews on one product, the form only renders when no reviews for that product from that user exist.
+
+    ![Products-Add-Review](assets/images/products-add-review.png)
 
 ### Product Management
 
