@@ -64,7 +64,15 @@
     <!-- Banner -->
     <div class="row delivery-banner text-center">
       <div class="col text-white">
-        <h4 class="my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
+        {% if user.is_authenticated and not user_has_orders %}
+          <h4 class="my-1">Thank you for signing up! You have free delivery on your first order!</h4>
+        {% elif total > free_delivery_threshold %}
+          <h4 class="my-1">Congratulations! You have free delivery on this order!</h4>
+        {%  elif free_delivery_delta is 0 %}
+          <h4 class="my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
+        {% elif free_delivery_delta > 0 %}
+          <h4 class="my-1">You can get free delivery by spending £{{ free_delivery_delta }} more!</h4>
+        {% endif %}
       </div>
     </div>
     <div class="row pt-2 pb-1 bg-white d-none d-lg-flex">
