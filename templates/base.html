@@ -62,10 +62,10 @@
 <body class="d-flex flex-column min-vh-100">
   <header>
     <!-- Banner -->
-    <div class="row delivery-banner text-center">
+    <div class="row delivery-banner fixed-top text-center">
       <div class="col text-white">
         {% if user.is_authenticated and not user_has_orders %}
-          <h4 class="my-1">Thank you for signing up! You have free delivery on your first order!</h4>
+          <h4 class="my-1">You have free delivery on your first order!</h4>
         {% elif total > free_delivery_threshold %}
           <h4 class="my-1">Congratulations! You have free delivery on this order!</h4>
         {%  elif free_delivery_delta is 0 %}
@@ -75,7 +75,7 @@
         {% endif %}
       </div>
     </div>
-    <div class="row pt-2 pb-1 bg-white d-none d-lg-flex">
+    <div class="row pt-5 pb-1 bg-white d-none d-lg-flex">
       <!-- Logo -->
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 mb-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link">

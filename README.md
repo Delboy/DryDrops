@@ -158,6 +158,7 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Banner 
     - A banner running across the top of the navbar informs the user of any current offers.
     - The banner message will change to reflect how close the user is to achieving the offer.
+    - The banner sticks to the top of the page at all times to keep the user constantly aware of how far they are from achieving the offer. 
 
     ![Navbar-Banner](assets/images/navbar-banner.jpg)
 

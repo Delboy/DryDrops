@@ -79,8 +79,8 @@ a:hover {
 }
 
 .delivery-banner {
-    background-color: #3b0d11;
-    opacity: 80%;
+    background-color: #748386;
+    opacity: 95%;
 }
 
 .mobile-nav-ul {
@@ -527,6 +527,12 @@ label {
     } 
 }
 
+@media (max-width: 576px) {
+    .delivery-banner h4{
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 460px) {
     .message-container {
         min-width: 0;
@@ -551,6 +557,9 @@ label {
 }
 
 @media (max-width: 380px) {
+    .delivery-banner h4{
+        font-size: .75rem;
+    }
 
     #hero-logo {
         font-size: 2.25rem;
