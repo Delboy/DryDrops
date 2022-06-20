@@ -126,13 +126,10 @@
     </div>
 </div>
 
-{% include 'products/includes/scroll-up-arrow-box.html' %}
-
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'products/includes/scroll-arrow-script.html'%}
 <script>
     // Sort Script
     $('#sort-selector').change(function () {

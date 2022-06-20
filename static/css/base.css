@@ -353,6 +353,7 @@ label {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity .75s linear;
+    z-index: 99999999;
 }
 
 .arrow-box {
