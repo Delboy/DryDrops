@@ -77,9 +77,8 @@
             {% endif %}
             {% if user.is_authenticated and not user_has_orders %}
             <p class="text-success">FREE DELIVERY on your first order!</p>
-            <p class="text-danger"><s>Delivery: £{{ pre_delivery|floatformat:2 }}</s></p>
             {% endif %}
-            {% if total > free_delivery_threshold %}
+            {% if delivery is 0 %}
             <p class="text-danger"><s>Delivery: £{{ pre_delivery|floatformat:2 }}</s></p>
             {% endif %}
             <p>Delivery: £{{ delivery|floatformat:2 }}</p>
