@@ -142,7 +142,7 @@ These phrases can also be used in the metadata at the head of the page.
     - Located on the right side of the navbar is the account Icon where the user can manage their account.
     - Clicking the account Icon opens a dropdown menu with options for the user to register or sign in.
     - If a user is signed in the dropdown options change to 'My Profile' and 'Logout'.
-    - If a user is signed in the Icons text changes from 'My Account' to '*The user's name*'s account.
+    - If a user is signed in the Icons text changes from 'sign in/up' to 'My Account'.
     - If the user signed in is a super user then a third option of 'Product Management' is available. 
 
     ![Navbar-Account](assets/images/navbar-account.png) 
@@ -298,7 +298,7 @@ These phrases can also be used in the metadata at the head of the page.
 
 - #### Customer Reviews
     - If the product has received any reviews they will appear underneath the product details.
-    - The reviews consist of the number of stars awarded by the user, their written comment, followed by the user name with the date and time of when they added the comment.
+    - The reviews consist of the number of stars awarded by the user, their written comment, followed by the user name and how long ago the comment was left.
     - If the user is signed in and they have left a review on a product, that review will also have edit and delete buttons. Users can use these to manage their reviews.
 
      ![Products-Reviews](assets/images/products-reviews.png)
@@ -309,7 +309,7 @@ These phrases can also be used in the metadata at the head of the page.
     - Leaving out either the rating or the review notifies the user that the fields are required.  
     - The user can rate the product between 1 and 5 stars. Clicking a star fills the star and every star before it.
     - Any profanity in the review will cause the form to fail and a toast will inform the user.
-    - To stop users leaving multiple reviews on one product, the form only renders when no reviews for that product from that user exist.
+    - To stop users leaving multiple reviews on one product, the form only renders when no reviews for that product, from that user exist.
 
     ![Products-Add-Review](assets/images/products-add-review.png)
 
