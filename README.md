@@ -316,10 +316,32 @@ These phrases can also be used in the metadata at the head of the page.
 ### Product Management
 
 - #### Add Product
+    - The add product page is accessed by the account dropdown menu, under product management. It is only accessible by superusers.
+    - The form lists all the necessary fields to create a new product. 
+    - The user must fill out all the fields that are labeled 'required' with an Asterix. If the form is submitted with any of these fields left blank then an error message will appear above that particular field, notifying the user of the issue.
+    - The SKU field must be unique. An error message will appear if an already existing SKU is attempted.
+    - If a price is added with more than 6 digits the form will fail and an error message will appear under the price field.
+    - The featured checkbox can be checked so that the item will appear in the 'What's Hot' section on the products page.
+    - The user has the option to add an image. If none is chosen then a default image is used.
+    - Clicking the 'Add Product' button at the bottom of the form will create the product providing there are no errors on the from.
+
+    ![Products-Management-Add](assets/images/product-management-add.png)
 
 - #### Edit Product
+    - The Edit Product page can be accessed from two places. By clicking the 'edit' button at the bottom of the product's card. Or by clicking the edit button located under the image on the products detail page.
+    - Accessing the page loads what is essentially the add product page, with the details of the product already filled in. 
+    - The image field displays a thumbnail of the current image and has a checkbox option to remove it. Checking this will change the image to the default image.
+    - Clicking the 'Update Product' button will save any changes made to the existing product.  
+
+    ![Products-Management-Edit](assets/images/product-management-edit.png)
 
 - #### Delete Product
+    - The Delete Product button can be found in two places. One is next to the 'edit' button at the bottom of the product's card. The second is to the right of the 'edit' button on the products detail page. 
+    - Clicking either of the delete buttons will bring up a warning modal, asking the user if they are sure they want to delete the product, and informing them that it is irreversible. 
+    - Once the warning modal has been activated if the user then clicks the delete button the product will be removed from the database. 
+    - If however, the user presses the cancel button, the modal is closed and no effect has taken place. 
+
+    ![Products-Management-Delete](assets/images/product-management-delete.png)
 
 ### Bag
 
