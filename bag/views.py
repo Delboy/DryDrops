@@ -18,7 +18,7 @@ def add_to_bag(request, item_id):
     """ A view that handles adding items to the bag """
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('quantity') or 1)
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
@@ -35,7 +35,7 @@ def adjust_bag(request, item_id):
     """ Adjust item's quantity in bag """
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('quantity') or 1)
     bag = request.session.get('bag', {})
 
     if quantity > 0:
