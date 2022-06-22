@@ -375,14 +375,44 @@ These phrases can also be used in the metadata at the head of the page.
 ### Checkout
 
 - #### Details
+    - The details section appears on the left on large screens or underneath the order summary on smaller screens.
+    - Here the user fills out his or her contact details, delivery address, and card number.
+    - If the user is anonymous, a link to create an account or login will be present.
+    - If the user is signed in a checkbox to save the delivery information can be checked.
+    - If the user is signed in and has delivery information checked the delivery details and email address will be automatically filled in. 
+    - Any field with an Asterix is required. If a user tries to complete the form with any of these fields left blank the affected field will highlight that it needs to be filled in.   
+
+    ![Checkout-Details](assets/images/checkout-details.png)
 
 - #### Order Summary
+    - The order summary section appears on the right on large screens or at the top on smaller screens. 
+    - This section lists all the items about to be purchased, along with the quanity, subtotal and a grand total.
+    - Next to the order summary title will be a number reflecting the total number of items that appear in the order. 
+    - Clicking the image or title of any items in the summary will take the user to that product's detail page. 
+
+    ![Checkout-Order-Summary](assets/images/checkout-order-summary.png)
 
 - #### Payment
+    - Underneath the delivery details is the card payment box which is run by [Stripe](https://dashboard.stripe.com/login). 
+    - Only numbers can be entered card payment box and incorrect card numbers will automatically show an invalid card number error.
+    - The site can be tested by using the dummy card number 4242 4242 4242 4242 with the expiry date 04/24 and the CVC code 242.
+    - At the end of the section is a button to complete the order or to return back to the bag. There is also a warning message informing the user of how much their card is about to be charged.
+
+    ![Checkout-Payment](assets/images/checkout-payment.png)
+
 
 - #### Loading Spinner
+    - Upon clicking the complete order button, as long as the form is valid, a loading spinner will render until the information is processed completely. 
+    
+    ![Checkout-Spinner](assets/images/checkout-spinner.png)
 
 - #### Confirmation 
+    - Once the order has been processed the user is taken to the checkout success page.
+    - This page summarises the completed order. It lists the order number, order date, the items ordered with their quantities, the delivery address, and the billing info. 
+    - A confirmation email is also sent to the email address provided, and this is noted at the top of the page. 
+    - At the end of the summary is a button that the user can use to take them back to the main shop.99
+    
+     ![Checkout-Confirmation](assets/images/checkout-confirmation.png)
 
 ### About Us
 
@@ -403,3 +433,5 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Toasts
 
 - #### Pop-ups
+
+### Webhooks
