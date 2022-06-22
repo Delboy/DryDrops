@@ -439,13 +439,30 @@ These phrases can also be used in the metadata at the head of the page.
 ### Contact
 
 - #### Contact Info 
+    - The contact info has all of Dry Drops contact information, including their address, phone number, email address and social media links. 
+    - Hovering over the social media links changes their color. Clicking the links takes you to the respective website which opens in a new tab.
+    - The facebook link particularly takes you to the websites business page on facebook. 
+
+    ![Contact-info](assets/images/contact-info.png)
 
 - #### Messaging
+    - The message section enables the user to send an email directly to dry drops.
+    - All the fields are required. Failing to fill out any field will result in a message highlighting which field has been left blank.
+    - Once all the fields are completed, hitting the 'Send Message' button will send the message. 
+    - Both Dry Drops and the user will receive an email on completion, laying out who send the message and what was said.  
+
+    ![Contact-Messaging](assets/images/contact-msg.png)
 
 ### Toasts and Pop-ups
 
 - #### Toasts
+    - Toasts appear in the top right-hand corner of the display informing the user of any actions they have performed.
+    - The bottom right corner of the toast box will change color depending on whether the message is portraying a successful action, general info, warning, or an error. 
+
+    ![Toast](assets/images/toast.png)
 
 - #### Pop-ups
+    - If there is no user signed in, the session is new, and 8 seconds elapse, a pop-up will appear one time.
+    - The pop-up message informs the user of the free delivery offer to new user's first order and has a link to the registration page. 
 
-### Webhooks
+    ![Pop-up](assets/images/pop-up.png)
