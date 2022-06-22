@@ -387,6 +387,11 @@ label {
     border-radius: 0;
 }
 
+/******* About Us Page *******/
+.charity:hover {
+    opacity: 80%;
+}
+
 /******* Toasts and modals *******/
 .message-container {
     position: fixed;

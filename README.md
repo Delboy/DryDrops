@@ -417,10 +417,24 @@ These phrases can also be used in the metadata at the head of the page.
 ### About Us
 
 - #### Image
+    - The about us page features an image of the fictional founder of Dry Drops, Jack Daniels.
+    - Underneath the image is a link to both the contact us page, and the products page.
+
+    ![About-us-image](assets/images/about-us-img.png)
 
 - #### Bio
+    - The bio section runs next to the image, or underneath if on a small screen.
+    - The bio gives a fictional account of how Dry Drops was founded. This was used to create an opportunity to use keywords related to the site's business to help boost search ratings.
+
+    ![About-us-bio](assets/images/about-us-bio.png)
 
 - #### Links
+    - At the bottom of the page are links to 3 different alcohol and substance abuse charities.
+    - These links were included to increase the search rating of the website. 
+    - Hovering over these links will lighten their appearance.
+    - Clicking the links will open up the respective website in another tab. This is to stop the user from being taken away from the main site.  
+
+    ![About-us-links](assets/images/about-us-links.png)
 
 ### Contact
 
