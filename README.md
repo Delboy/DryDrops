@@ -6,6 +6,8 @@ This fully responsive website was built using the Django framework in Python.
 
 The payment system uses a service called Stripe. To test this system, dummy card details can be used. A list of these can be found [here](https://stripe.com/docs/testing#cards).
 
+![Responsive](assets/images/responsive.png)
+
 ## User Experience (UX)
 
 A list of my user stories and their tasks can be found [here](https://github.com/delboy/drydrops/issues).
@@ -466,3 +468,63 @@ These phrases can also be used in the metadata at the head of the page.
     - The pop-up message informs the user of the free delivery offer to new user's first order and has a link to the registration page. 
 
     ![Pop-up](assets/images/pop-up.png)
+
+## Technologies
+
+### Languages used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://www.python.org/)
+
+### Libraries and Programs Used
+
+- [Git](https://git-scm.com/)
+    - Version control.
+- [GitHub](https://github.com/)
+    - For storing code and deploying the site.
+- [Gitpod](https://www.gitpod.io/)
+    - Used for building and editing my code.
+- [Django](https://www.djangoproject.com/)
+    - A python based framework that was used to develop the site.
+- [Bootstrap](https://getbootstrap.com/)
+    - For help designing the html templates.
+- [Google Fonts](https://fonts.google.com/)
+    - Used to style the website's logo.
+- [Font Awesome](https://fontawesome.com/)
+    - Used to obtain the icons used.
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+    - Used to help fix problem areas and identify bugs.
+- [AWS](https://aws.amazon.com/)
+    - Used to store static files and images.
+- [Favicon.io](https://favicon.io/)
+    - Used to generate the site's favicon.
+- [SQlite](https://www.sqlite.org/index.html)
+    - Used for debugging.
+- [PostgreSQL](https://www.postgresql.org/)
+    - Database used through heroku.
+- [SmartDraw](https://cloud.smartdraw.com/)
+    - To draw out the database schema.
+- [Balsamiq](https://balsamiq.com/)
+    - To create the wireframes.
+- [W3C Markup Validation Service](https://validator.w3.org/) 
+    - Used to validate HTML code.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - Used to validate CSS code.
+- [Pep8](http://pep8online.com/)
+    - Used to validate Python code.
+- [JSHint](https://jshint.com/)
+    - Used to validate JS code.
+- [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+    - Used to help render forms.
+- [Profanity Filter](https://github.com/ReconCubed/django-profanity-filter)
+    - App used to remove profanity from comments.
+- [Tinyjpg](https://tinyjpg.com/)
+    - Used to compress images.
+- [Screen to Gif](https://www.screentogif.com/)
+    - Used to create gifs for my readme.
+- [Stripe](https://stripe.com/en-gb)
+    - Used to take payments and generate webhooks.
+- [Heroku](https://www.heroku.com/)
+    - To deploy the project.
