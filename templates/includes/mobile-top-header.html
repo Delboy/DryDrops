@@ -1,3 +1,5 @@
+{% load humanize %}
+
 <ul class="mobile-nav-ul d-lg-none pt-4 pt-sm-5">
     <li class="list-inline-item">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
@@ -63,7 +65,7 @@
                 {% endif %}
                 <p class="my-0 font-weight-bold">
                     {% if grand_total %}
-                    £{{ grand_total|floatformat:2 }}
+                    £{{ grand_total|floatformat:2 | intcomma }}
                     {% else %}
                     £0.00
                     {% endif %}

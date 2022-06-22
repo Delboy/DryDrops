@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
+{% load humanize %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -58,7 +59,7 @@
                 </div>
                 <div class="col-4 col-md-3">{{ item.product.name }}</div>
                 <div class="col-4 col-md-3 text-center">{{ item.quantity }}</div>
-                <div class="col-4 col-md-3">£{{ item.product.price | calc_subtotal:item.quantity }}</div>
+                <div class="col-4 col-md-3">£{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</div>
             </div>
             
             {% endfor %}
@@ -139,7 +140,7 @@
 
             <div class="row">
                 <div class="col">
-                    <p class="mb-1">Order Total: £{{ order.order_total }}</p>
+                    <p class="mb-1">Order Total: £{{ order.order_total |intcomma }}</p>
                 </div>
             </div>
 
@@ -151,7 +152,7 @@
 
             <div class="row">
                 <div class="col-12 col-md-4">
-                    <h3 class="mb-1 font-weight-bold">Grand Total: £{{ order.grand_total }}</h3>
+                    <h3 class="mb-1 font-weight-bold">Grand Total: £{{ order.grand_total | intcomma }}</h3>
                 </div>
             </div>
         </div>
