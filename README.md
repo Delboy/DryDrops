@@ -13,7 +13,7 @@ The payment system uses a service called Stripe. To test this system, dummy card
 A list of my user stories and their tasks can be found [here](https://github.com/delboy/drydrops/issues).
 
 ### EPIC | Navigation
-- As a shopper, I can navigate around the site so that I easily view the desired content.
+- As a shopper, I can navigate around the site so that I can easily view the desired content.
 - As a shopper, I can view a list of products so that I can choose what products to purchase.
 - As a shopper, I can click on a product to see its details so that I can view the description, price and any customer reviews.
 - As a shopper, I can easily identify different product categories so that I can quickly view the type of products I'm looking for.
@@ -528,3 +528,5 @@ These phrases can also be used in the metadata at the head of the page.
     - Used to take payments and generate webhooks.
 - [Heroku](https://www.heroku.com/)
     - To deploy the project.
+
+    
