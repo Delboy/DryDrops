@@ -150,21 +150,34 @@
 ### EPIC | Purchasing
 *As a shopper, I can add items to my bag in different quantities so that I can store the items until I'm ready to buy*
 - On the product's detail page, shoppers can adjust the quantity by using the buttons located on either side of the input, or by typing in the amount and clicking the 'Add to bag' button, to add the item to the bag.
-- On the products page, at the bottom of the products card, is an 'Add to Bag' button which adds 1 item to the bag. 
+
+![Products-qty-btns](assets/images/products-qty-btns.png)
+
+- At the bottom of the products card, is an 'Add to Bag' button which adds 1 item to the bag. 
+
+![Add-To-Bag-btn](assets/images/add-to-bag.png)
 
 *As a shopper, I can view my bag so that I can identify the total cost of the transaction and the items I will be purchasing*
 - Clicking the bag icon in the top right corner will take shoppers to their bag.
 - The Shopping bag page lists the items stored, along with the subtotal of each item, delivery costs, and the grand total to pay. 
 
+![Bag](assets/images/bag.png)
+
 *As a shopper, I can adjust the quantity of the items in my bag so that I can easily make changes before I purchase*
 - On the shopping bag page, shoppers can adjust the product's quantity by adjusting it with the buttons located on either side of the input, or by typing in the amount, and then clicking the 'update' button.
 - Alternatively, shoppers can remove the item by clicking the red trash can icon. 
 
+![Update-Bag](assets/images/update-bag.png)
+
 *As a shopper, I can always see a running subtotal so that I can keep an eye on how much I'm spending*
 - The bag icon will update automatically to reflect the total, along with how many items are in the bag.
 
+![Bag-icon](assets/images/bag-icon.png)
+
 *As a shopper, I can see a summary of my purchase before I buy so that I know exactly what I'm ordering and how much it all costs*
 - Once shoppers are happy with the items in the bag they can proceed to the secure checkout. This will list a summary of their purchases and a run down of the costs before the shopper pays. 
+
+![Checkout-Order-Summary](assets/images/checkout-order-summary.png)
 
 *As a shopper, I can pay for goods as a guest so that I can still use the site without having to sign up for an account*
 - Shoppers do not need an account to purchase any items. Regardless of whether a user is signed in, the checkout process remains the same. 
@@ -172,9 +185,13 @@
 *As a shopper, I can easily enter my payment details so that I can check out quickly with no problems*
  - Paying for goods is as simple as entering the user's card details into the payment box on the checkout page and clicking the 'Complete Order' button. 
 
+ ![Checkout-Payment](assets/images/checkout-payment.png)
+
 *As a shopper, I can view confirmation of my purchases so that I know the order was received and can review what I've purchased*
 - After an order has been completed, the user will be taken to a confirmation page with a summary of the order.
 - In addition to the confirmation page, users will be sent an email detailing the order.
+
+![Checkout-Confirmation](assets/images/checkout-confirmation.png)
 
 *As a shopper, I can receive an email of my order so that I can keep it in my records*
 - Once an order is completed, the user will receive a confirmation email detailing the order.
