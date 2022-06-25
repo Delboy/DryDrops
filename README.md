@@ -325,7 +325,7 @@ These phrases can also be used in the metadata at the head of the page.
     - If a price is added with more than 6 digits the form will fail and an error message will appear under the price field.
     - The featured checkbox can be checked so that the item will appear in the 'What's Hot' section on the products page.
     - The user has the option to add an image. If none is chosen then a default image is used.
-    - Clicking the 'Add Product' button at the bottom of the form will create the product providing there are no errors on the from.
+    - Clicking the 'Add Product' button at the bottom of the form will create the product providing there are no errors on the form.
 
     ![Products-Management-Add](assets/images/product-management-add.png)
 
@@ -396,7 +396,7 @@ These phrases can also be used in the metadata at the head of the page.
 
 - #### Payment
     - Underneath the delivery details is the card payment box which is run by [Stripe](https://dashboard.stripe.com/login). 
-    - Only numbers can be entered card payment box and incorrect card numbers will automatically show an invalid card number error.
+    - Only numbers can be entered into the card payment box. Incorrect card numbers will automatically show an invalid card number error.
     - The site can be tested by using the dummy card number 4242 4242 4242 4242 with the expiry date 04/24 and the CVC code 242.
     - At the end of the section is a button to complete the order or to return back to the bag. There is also a warning message informing the user of how much their card is about to be charged.
 
@@ -412,7 +412,7 @@ These phrases can also be used in the metadata at the head of the page.
     - Once the order has been processed the user is taken to the checkout success page.
     - This page summarises the completed order. It lists the order number, order date, the items ordered with their quantities, the delivery address, and the billing info. 
     - A confirmation email is also sent to the email address provided, and this is noted at the top of the page. 
-    - At the end of the summary is a button that the user can use to take them back to the main shop.99
+    - At the end of the summary is a button that the user can use to take them back to the main shop.
     
      ![Checkout-Confirmation](assets/images/checkout-confirmation.png)
 

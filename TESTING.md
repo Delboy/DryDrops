@@ -233,4 +233,222 @@
 
 ## Feature Testing
 
+### Nav Bar
+
+- #### Links
+    - The links collapse into a hamburger menu once the screen size becomes too small to fit all the elements comfortably. 
+    - The link to the current page will be highlighted by an underline to help users understand what page they are on.
+    - The Shop link drops down into a sub-menu where the user can navigate to all products or choose from one of the four product categories.
+
+- #### Search Bar
+    - Using the search bar will search both the product's title and description for a match.
+    - On smaller screens, the bar collapses into a search Icon that upon clicking drops down into the full search bar.
+
+- #### Account
+    - Clicking the account Icon opens a dropdown menu with options for the user to register or sign in.
+    - If a user is signed in the dropdown options change to 'My Profile' and 'Logout'.
+    - If a user is signed in the Icons text changes from 'sign in/up' to 'My Account'.
+    - If the user signed in is a super user then a third option of 'Product Management' is available. 
+
+- #### Bag
+    - Beneath the bag icon users can find a running total of the cost of all the items in their bag.
+    - Once a product is added to the bag, a number displaying the total quantity of items appears, located at the top right of the bag icon.
+    - Clicking the bag icon navigates the user to the shopping bag page which displays a summary of what's been added.
+
+- #### Banner 
+    - The banner message will change to reflect how close the user is to achieving the offer. 
+
+### Home Page
+    
+- #### Hero Image
+    - A button labeled 'Shop Now' takes the user to the products page.
+    - The image will change depending on the size of the screen.
+
+- #### Categories
+    - Clicking one of the categories takes the user to the shop displaying only products from that category. 
+
+- #### Top Products
+    - The list will order by the highest rating first. If any products have the same rating they will be put in order of how many reviews they have received.   
+
+- #### Footer 
+    - The Quick Links section has links to all parts of the site.
+    - Clicking the phone number will call it, clicking the email address will open your default email programme and clicking the social media links will take you to the relevant website.
+    - The Newsletter section has an option to input your email and sign up for the weekly newsletter.
+
+### Accounts
+
+- #### Register Page
+    - Once submitting the form an authentication link will be emailed to the address the user provided. 
+
+- #### Login Page
+    - The login page is used to log in users with an existing account.
+    - A Forgot Password link is also present that enables users to recover their password.
+
+- #### Log out Page
+    - The logout page is used to log out users who are signed in.
+
+### Profile
+
+- #### Delivery Details
+    - The delivery details section stores the user's delivery address and phone number.
+   
+- #### Order History
+    - The table displays the order number, date it was ordered, items ordered, quantities of items and the order total.
+    - Clicking the order number will take the user to a more detailed summary of the order.
+    - A scroll bar appears once the user has more orders than the box can contain. 
+
+- #### Favorite Items
+    - The favorite items section keeps a list of all products that the user has liked.
+
+### All Products
+
+- #### Categories Side-nav
+    - The category side-nav section only appears on large screens and lists all the product categories.
+    - Clicking any of the categories in this section filters the products to that option.
+
+- #### What's Hot Carousel
+    - The Whats hot carousel displays any product that an admin has selected to be featured.
+    - Clicking the product will take the user to that product's detail page.
+    - Buttons on the edge of the carousel enable the user to scroll through all the featured products.
+
+- #### Sorting
+    - The sort-by box is located to the top right of the products section on medium and large screens, and centered on smaller screens.
+    - Clicking the box opens up a dropdown menu with various options on how to sort the products. 
+
+- #### Products
+    - The products page is fully responsive, adjusting how many products are on each row depending on the user's screen size.
+    - Each product card shows an image of the product, its title, price, category, and rating.
+    - An 'Add to Bag' button can be used to add the item to the bag.
+    - Any products that have been liked by the user displays a red heart in the top right corner. 
+    - If the user is a superuser, admin buttons will appear at the bottom of the product card.
+    - If the user is a superuser and the product has been featured, a featured banner will appear across the product card. 
+
+### Products Details
+
+- #### Product Info
+    - The product info section shows information about the product along with buttons to add the item to the user's favorite list, and buttons to add the item to the bag in multiple quantities.
+    - The product's rating is an average of all the product's reviews and displays the result in stars. Next to the stars is also a number indicating how many reviews the product has received in total. 
+    - Clicking the products category will take users to the products page showing only items from that category.
+    - If the user is a super user, admin buttons will appear underneath the image.
+
+- #### Like Button
+    - The heart button renders as empty if either the user is signed out or the product is not liked by the user.
+    - Liking a product fills in the heart and adds the product to the user's favorite items list on their profile page.
+    - Unliking a product unfills the heart and removes the product from the user's favourite items list on their profile page.
+    - If the heart is clicked when no user is signed in, an 'Account Required' modal pops up informing the user that they need to either sign in or create an account to use that feature.
+
+- #### Quantity Buttons
+    - The plus and minus buttons increase and decrease the input value. 
+    - If the value is set to 1 the minus quantity will be disabled. Respectively if the value is set to 99 the plus button is disabled.
+    - Clicking the 'Add to Bag' button takes the number in the input field and adds that amount of products to the bag.
+    - Trying to add an amount less than one or above 99, renders an error message informing the user of the parameters needed to be successful.
+    - Underneath the input is a link that takes users back to the store.  
+
+- #### Customer Reviews
+    - If the product has received any reviews they will appear underneath the product details.
+    - The reviews consist of the number of stars awarded by the user, their written comment, followed by the user name and how long ago the comment was left.
+    - If the user is signed in and they have left a review on a product, that review will also have edit and delete buttons. Users can use these to manage their reviews.
+
+- #### Add Review
+    - Leaving out either the rating or the review notifies the user that the fields are required.  
+    - The user can rate the product between 1 and 5 stars. Clicking a star fills the star and every star before it.
+    - Any profanity in the review will cause the form to fail and a toast will inform the user.
+    - To stop users leaving multiple reviews on one product, the form only renders when no reviews for that product, from that user exist.
+
+
+### Product Management
+
+- #### Add Product
+    - The add product page is accessed by the account dropdown menu, under product management. It is only accessible by superusers.
+    - The user must fill out all the fields that are labeled 'required' with an Asterix. If the form is submitted with any of these fields left blank then an error message will appear above that particular field, notifying the user of the issue.
+    - The SKU field must be unique. An error message will appear if an already existing SKU is attempted.
+    - If a price is added with more than 6 digits the form will fail and an error message will appear under the price field.
+    - The featured checkbox can be checked so that the item will appear in the 'What's Hot' section on the products page.
+    - The user has the option to add an image. If none is chosen then a default image is used.
+    - Clicking the 'Add Product' button at the bottom of the form will create the product providing there are no errors on the form.
+
+    
+
+- #### Edit Product
+    - The Edit Product page can be accessed from two places. By clicking the 'edit' button at the bottom of the product's card. Or by clicking the edit button located under the image on the products detail page.
+    - Accessing the page loads what is essentially the add product page, with the details of the product already filled in. 
+    - The image field displays a thumbnail of the current image and has a checkbox option to remove it. Checking this will change the image to the default image.
+    - Clicking the 'Update Product' button will save any changes made to the existing product.  
+
+- #### Delete Product
+    - The Delete Product button can be found in two places. One is next to the 'edit' button at the bottom of the product's card. The second is to the right of the 'edit' button on the products detail page. 
+    - Clicking either of the delete buttons will bring up a warning modal, asking the user if they are sure they want to delete the product, and informing them that it is irreversible. 
+    - Once the warning modal has been activated if the user then clicks the delete button the product will be removed from the database. 
+    - If however, the user presses the cancel button, the modal is closed and no effect has taken place. 
+
+### Bag
+
+- #### Items
+    - Clicking either the image or the product's title will take you to that product's detail page. 
+
+- #### Quantity and Price
+    - The quantity element has buttons either side for the user to increase or decrease the total of that item in the bag.
+    - The minus quantity button will be disabled if the quantity of the item is one. Respectively the plus button will also be disabled if the quantity of the item is 99.
+    - Clicking the 'update' button saves any changes to the quantity and updates the item's subtotal.
+    - Clicking the red trash can icon removes the item completely from the user's bag. 
+    - Manually inputting the number zero or anything below and clicking 'update' will remove the item from the bag. 
+    - Manually inputting a number above 99 and clicking 'update' will result in an error message informing the user of the correct parameters. 
+    
+- #### Totals and messaging
+    - In between the bag total and the delivery total, users will either find a message informing them of how much more they need to spend to receive free delivery, or it will show how much delivery they would of paid if they didn't receive the offer. This message will also be different if it is the user's first ever order, in which case it will display 'FREE DELIVERY on your first order!'. 
+    - Beneath the grand total is two buttons. From here the user can either continue to the checkout or return to the products page by clicking 'Continue Shopping'.
+
+### Checkout
+
+- #### Details
+    - If the user is anonymous, a link to create an account or login will be present.
+    - If the user is signed in a checkbox to save the delivery information can be checked.
+    - If the user is signed in and has delivery information checked the delivery details and email address will be automatically filled in. 
+    - Any field with an Asterix is required. If a user tries to complete the form with any of these fields left blank the affected field will highlight that it needs to be filled in.   
+
+- #### Order Summary
+    - Clicking the image or title of any items in the summary will take the user to that product's detail page. 
+
+- #### Payment
+    - Only numbers can be entered into the card payment box. Incorrect card numbers will automatically show an invalid card number error.
+    - The site can be tested by using the dummy card number 4242 4242 4242 4242 with the expiry date 04/24 and the CVC code 242.
+    - At the end of the section is a button to complete the order or to return back to the bag. There is also a warning message informing the user of how much their card is about to be charged.
+
+- #### Loading Spinner
+    - Upon clicking the complete order button, as long as the form is valid, a loading spinner will render until the information is processed completely. 
+    
+- #### Confirmation 
+    - Once the order has been processed the user is taken to the checkout success page. 
+    - A confirmation email is also sent to the email address provided, and this is noted at the top of the page. 
+    - At the end of the summary is a button that the user can use to take them back to the main shop.
+    
+### About Us
+
+- #### Image
+    - Underneath the image is a link to both the contact us page, and the products page.
+
+- #### Links
+    - Hovering over these links will lighten their appearance.
+    - Clicking the links will open up the respective website in another tab. This is to stop the user from being taken away from the main site.  
+
+### Contact
+
+- #### Contact Info  
+    - Hovering over the social media links changes their color. Clicking the links takes you to the respective website which opens in a new tab.
+    - The facebook link particularly takes you to the websites business page on facebook. 
+
+- #### Messaging
+    - All the fields are required. Failing to fill out any field will result in a message highlighting which field has been left blank.
+    - Once all the fields are completed, hitting the 'Send Message' button will send the message. 
+    - Both Dry Drops and the user will receive an email on completion, laying out who send the message and what was said.  
+
+### Toasts and Pop-ups
+
+- #### Toasts
+    - Toasts appear in the top right-hand corner of the display informing the user of any actions they have performed.
+    - The bottom right corner of the toast box will change color depending on whether the message is portraying a successful action, general info, warning, or an error. 
+
+- #### Pop-ups
+    - If there is no user signed in, the session is new, and 8 seconds elapse, a pop-up will appear one time.
+    
 ## Validators
