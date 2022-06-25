@@ -118,22 +118,34 @@
 ### EPIC | Admin
 *As an admin, I can add products so that I can update the site's inventory*
 - Admins can navigate to the 'Product Management' page under the accounts menu.
+
+![Admin-menu](assets/images/admin-menu.png)
+
 - On this page, the user can add new products by filling out a short form. 
+
+![Product-management-add](assets/images/product-management-add.png)
 
 *As an admin, I can edit a product so that I can keep the products information up to date*
 - If an admin is logged in, products will show an 'Edit' button on both their product card and their details page.
 - Clicking either of these buttons will take the admin to the 'Edit Product' page where admins can update the product's info.
 
+![Product-management-add](assets/images/product-management-edit.png)
+
 *As an admin, I can delete a product so that I can remove products no longer available*
-- If an admin is logged in, the products will show a 'Delete' button on both their product card and their details page. 
+- If an admin is logged in, the products will show a 'Delete' button on both their product card and their details page.
 - Clicking this button will prompt a modal, asking the user if they are sure they want to delete the product.
 - Clicking delete on the modal will remove the product from the database.
+
+![Product-management-add](assets/images/product-management-delete.png)
 
 *As an admin, I can feature products so that I can display them on the home page*
 - If an admin is logged in, the products will show a 'feature' button on both their product card and their details page.
 - Clicking this button will toggle the item's 'Featured' status.
-- Featured products will appear in the 'Whats Hot' section on the products page.
+- Featured products will appear in the 'Whats Hot' section on the home and products page.
 - Featured items will have a banner around the product's image, only visible by admins.
+
+![Hot-Products-Home](assets/images/hot-products-home.png)
+
 
 ### EPIC | Purchasing
 *As a shopper, I can add items to my bag in different quantities so that I can store the items until I'm ready to buy*

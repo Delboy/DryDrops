@@ -80,9 +80,9 @@
                                     {% endif %}
                                     <p class="font-weight-bold mt-2">{{ product.name|truncatechars:32 }}</p>
                                     <!-- Product Rating -->
-                                    <div class="product-rating">{% include 'products/includes/product-rating.html' %}
+                                    <div class="product-rating d-inline">{% include 'products/includes/product-rating.html' %}
                                     </div>
-                                    <p class="font-weight-bold float-right">£{{ product.price }}</p>
+                                    <p class="font-weight-bold d-inline float-right">£{{ product.price }}</p>
                                 </a>
                             </div>
                             {% endfor %}
