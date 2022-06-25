@@ -236,48 +236,86 @@
 ### Nav Bar
 
 - #### Links
-    - The links collapse into a hamburger menu once the screen size becomes too small to fit all the elements comfortably. 
-    - The link to the current page will be highlighted by an underline to help users understand what page they are on.
-    - The Shop link drops down into a sub-menu where the user can navigate to all products or choose from one of the four product categories.
+    Checked that:
+    - The links change color when hovered over.
+    - The link to the current page is highlighted by an underline.
+    - The Shop link drops down into a sub-menu displaying all products and the four product categories.
+    - The links collapse into a hamburger menu once the screen size becomes too small. 
+
+    ![Nav-bar-links](assets/gifs/nav-bar-links.gif)
 
 - #### Search Bar
-    - Using the search bar will search both the product's title and description for a match.
+    Checked that:
+    - The search bar will search both the product's title and description for a match.
     - On smaller screens, the bar collapses into a search Icon that upon clicking drops down into the full search bar.
 
+    ![Search-bar](assets/gifs/search-bar.gif)
+
 - #### Account
+    Checked that:
+    - Hovering over the account icon changes its color.
     - Clicking the account Icon opens a dropdown menu with options for the user to register or sign in.
     - If a user is signed in the dropdown options change to 'My Profile' and 'Logout'.
     - If a user is signed in the Icons text changes from 'sign in/up' to 'My Account'.
     - If the user signed in is a super user then a third option of 'Product Management' is available. 
 
+    ![Account-icon](assets/gifs/account-icon.gif)
+
 - #### Bag
-    - Beneath the bag icon users can find a running total of the cost of all the items in their bag.
+    Checked that:
+    - Beneath the bag icon is a running total of the cost of all the items in the bag.
     - Once a product is added to the bag, a number displaying the total quantity of items appears, located at the top right of the bag icon.
     - Clicking the bag icon navigates the user to the shopping bag page which displays a summary of what's been added.
 
+    ![Bag-icon](assets/gifs/bag-icon.gif)
+
 - #### Banner 
+    Checked that:
     - The banner message will change to reflect how close the user is to achieving the offer. 
+
+    ![Banner](assets/gifs/banner.gif)
 
 ### Home Page
     
 - #### Hero Image
-    - A button labeled 'Shop Now' takes the user to the products page.
-    - The image will change depending on the size of the screen.
+    Checked that:
+    - The button labeled 'Shop Now' takes the user to the products page.
+    - Hovering over the 'Shop Now' button changes its color.
+    - The image changes depending on the size of the screen.
+
+    ![Hero-Box](assets/gifs/hero-box.gif)
 
 - #### Categories
+    Checked that:
+    - Hovering over the categories lightens the image.
     - Clicking one of the categories takes the user to the shop displaying only products from that category. 
 
+    ![Home-Categories](assets/gifs/home-categories.gif)
+
 - #### Top Products
-    - The list will order by the highest rating first. If any products have the same rating they will be put in order of how many reviews they have received.   
+    Checked that:
+    - The list orders by the highest rating first. 
+    - If any products have the same rating they will be put in order of how many reviews they have received.
+    - Clicking the product takes you to its detail page.
+
+    ![Top-Products](assets/gifs/top-products.gif)
 
 - #### Hot Products
+    Checked that:
     - The hot products section lists any products that have been featured by an admin.
-    - On large screens, this section will display as a list, whereas smaller screens will display the items in a carousel.
+    - On large screens, the section displays as a list, whereas smaller screens displays the items in a carousel.
+    - Clicking the products takes you to its detail page.
 
-- #### Footer 
-    - The Quick Links section has links to all parts of the site.
-    - Clicking the phone number will call it, clicking the email address will open your default email programme and clicking the social media links will take you to the relevant website.
+    ![Hot-Products](assets/gifs/hot-products.gif)
+
+- #### Footer
+    Checked that:
+    - All the links change color when hovered over.
+    - All the links in the Quick Links section work.
+    - Clicking the phone number will call it, clicking the email address opens your default email programme, and clicking the social media links takes you to the relevant website.
     - The Newsletter section has an option to input your email and sign up for the weekly newsletter.
+
+    ![Footer](assets/gifs/footer.gif)
 
 ### Accounts
 
