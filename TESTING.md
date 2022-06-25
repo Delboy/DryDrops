@@ -208,16 +208,28 @@
 - A review section is located at the bottom of each product's detail page. Here the user can leave a rating and review.
 - Once a review has been left, it will be visible in the review section for everyone to see. 
 
+![Products-add-review](assets/images/products-add-review.png)
+<br>
+
+![Products-reviews](assets/images/products-reviews.png)
+
 *As a user, I can sign up for the website's newsletter so that I can keep up to date with new products and promotions*
 - In the footer is a 'Newsletter' section. Here the user can input their email address to sign up.
+
+![Newsletter](assets/images/newsletter.png)
 
 *As a user, I can connect to the site's social media pages so that I can follow them and keep up to date with their products and promotions*
 - On the 'Contact Us' page, users can find links to all the company's social media links.
 - These links can also be found in the 'Contact Us' section located in the footer.
 
+![Contact-info](assets/images/contact-info.png)
+![Contact-us-footer](assets/images/contact-us-footer.png)
+
 *As a user, I can contact the business so that I can find out any information that I require*
 - The contact us page lists the company's address, phone number, email, and social media links. 
 - The contact us page also features a messaging form that users can fill out to send a direct email to the company.
+
+![Contact-page](assets/images/contact-page.png)
 
 ## Feature Testing
 
