@@ -270,6 +270,10 @@
 - #### Top Products
     - The list will order by the highest rating first. If any products have the same rating they will be put in order of how many reviews they have received.   
 
+- #### Hot Products
+    - The hot products section lists any products that have been featured by an admin.
+    - On large screens, this section will display as a list, whereas smaller screens will display the items in a carousel.
+
 - #### Footer 
     - The Quick Links section has links to all parts of the site.
     - Clicking the phone number will call it, clicking the email address will open your default email programme and clicking the social media links will take you to the relevant website.

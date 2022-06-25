@@ -187,6 +187,12 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Hero-Top-Products](assets/images/home-top-products.png)
 
+- #### Hot Products
+    - The hot products section lists any products that have been featured by an admin.
+    - On large screens, this section will display as a list, whereas smaller screens will display the items in a carousel.
+
+    ![Hero-Hot-Products](assets/images/home-hot-products.png)
+
 - #### Footer 
     - The footer appears at the bottom of every page.
     - The footer is broken up into 4 sections. The logo, quick links, Contact Us, and Newsletter.
