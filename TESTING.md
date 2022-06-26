@@ -375,25 +375,37 @@
 ### All Products
 
 - #### Categories Side-nav
+    Checked that:
     - The category side-nav section only appears on large screens and lists all the product categories.
     - Clicking any of the categories in this section filters the products to that option.
 
+    ![side-nav](assets/gifs/side-nav.gif)
+
 - #### What's Hot Carousel
+    Checked that:
     - The Whats hot carousel displays any product that an admin has selected to be featured.
     - Clicking the product will take the user to that product's detail page.
     - Buttons on the edge of the carousel enable the user to scroll through all the featured products.
 
+    ![Whats-hot](assets/gifs/whats-hot.gif)
+
 - #### Sorting
-    - The sort-by box is located to the top right of the products section on medium and large screens, and centered on smaller screens.
-    - Clicking the box opens up a dropdown menu with various options on how to sort the products. 
+    Checked that:
+    - Clicking the box opens up a dropdown menu with various options on how to sort the products.
+    - Clicking each option sorts the products in the way described.
+
+    ![Sort](assets/gifs/sort.gif)
 
 - #### Products
-    - The products page is fully responsive, adjusting how many products are on each row depending on the user's screen size.
+    Checked that:
+    - The products page is fully responsive, adjusting how many products are on each row depending on the screen size.
     - Each product card shows an image of the product, its title, price, category, and rating.
     - An 'Add to Bag' button can be used to add the item to the bag.
     - Any products that have been liked by the user displays a red heart in the top right corner. 
     - If the user is a superuser, admin buttons will appear at the bottom of the product card.
     - If the user is a superuser and the product has been featured, a featured banner will appear across the product card. 
+
+    ![products](assets/gifs/products.gif)
 
 ### Products Details
 
