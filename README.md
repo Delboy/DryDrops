@@ -233,6 +233,7 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Order History
     - The order history section is a table that keeps a record of every order the user has placed.
     - The table displays the order number, date it was ordered, items ordered, quantities of items and the order total.
+    - Hovering over the truncated order number reveals the whole order number.
     - Clicking the order number will take the user to a more detailed summary of the order.
     - A scroll bar appears once the user has more orders than the box can contain. 
 

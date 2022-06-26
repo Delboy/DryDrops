@@ -320,27 +320,57 @@
 ### Accounts
 
 - #### Register Page
-    - Once submitting the form an authentication link will be emailed to the address the user provided. 
+    Checked that:
+    - Submitting the registration form sends an authentication link to the email provided.
+    - Clicking the confirmation link confirms the account.
+    - After creating an account the user can use his details to sign in. 
+
+    ![Registration](assets/gifs/restration.gif)
 
 - #### Login Page
-    - The login page is used to log in users with an existing account.
-    - A Forgot Password link is also present that enables users to recover their password.
+    Checked that:
+    - The login page is can be used to log in users with an existing account.
+    - Users can sign in with either their username or their email address.
+    - Toast messages inform the user of their status.
+    - The 'Forgot Password' link enables the user to recover their password.
+    - When logged in the account icon label turns from 'Sign in/up' to 'My Account'.
+
+    ![Log-in](assets/gifs/log-in.gif)
 
 - #### Log out Page
-    - The logout page is used to log out users who are signed in.
+    Checked that:
+    - The logout page logs out users who are signed in.
+    - The account icon label turns from 'My Account' to 'Sign in/up'.
+    - Toast messages inform the user of their status.
+
+    ![Log-out](assets/gifs/log-out.gif)
 
 ### Profile
 
 - #### Delivery Details
+    Checked that:
     - The delivery details section stores the user's delivery address and phone number.
+    - The saved delivery details auto-fill the delivery form at the checkout.
+    - A toast message informs the user that the delivery details have been updated.
+
+    ![Delivery-details](assets/gifs/delivery-details.gif)
    
 - #### Order History
+    Checked that:
     - The table displays the order number, date it was ordered, items ordered, quantities of items and the order total.
     - Clicking the order number will take the user to a more detailed summary of the order.
-    - A scroll bar appears once the user has more orders than the box can contain. 
+    - Hovering over the truncated order number reveals the whole order number.
+    - A scroll bar appears once the user has more orders than the box can contain.
+    - The order summary page has a button to take the user back to their profile page. 
+
+    ![Order History](assets/gifs/order-history.gif)
 
 - #### Favorite Items
+    Checked that:
     - The favorite items section keeps a list of all products that the user has liked.
+
+    ![fav-items](assets/gifs/fav-items.gif)
+
 
 ### All Products
 
