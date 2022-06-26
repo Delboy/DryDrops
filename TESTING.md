@@ -619,24 +619,35 @@
 
 ### HTML
 
-- Home Page
-    - ![home-w3](assets/images/home-w3.png)
-- Products Page
-    - ![products-w3](assets/images/products-w3.png)
-- Product Details
-    - ![product-details-w3](assets/images/product-details-w3.png)
-- About Us
-    - ![about-us-w3](assets/images/about-us-w3.png)
-- Contact
-    - ![contact-w3](assets/images/contact-w3.png)
-- Bag
-    - ![bag-w3](assets/images/bag-w3.png)
-- Checkout 
-    - ![checkout-w3](assets/images/checkout-w3.png)
-- Checkout Success
-    - ![checkout-success-w3](assets/images/checkout-success-w3.png)
-- Product Management 
-    - ![add-product-w3](assets/images/add-product-w3.png)
-    - The add product page shows two errors. These are to do with the image upload widget and thus changing the code breaks the field.
-- Edit Review
-    - ![edit-review-w3](assets/images/edit-review-w3.png)
+- All Pages were checked with the official [W3C validator](https://validator.w3.org/). 
+
+#### Home Page
+![home-w3](assets/images/home-w3.png)
+#### Products Page
+![products-w3](assets/images/products-w3.png)
+#### Product Details
+![product-details-w3](assets/images/product-details-w3.png)
+#### About Us
+![about-us-w3](assets/images/about-us-w3.png)
+#### Contact
+![contact-w3](assets/images/contact-w3.png)
+#### Bag
+![bag-w3](assets/images/bag-w3.png)
+#### Checkout 
+![checkout-w3](assets/images/checkout-w3.png)
+#### Checkout Success
+![checkout-success-w3](assets/images/checkout-success-w3.png)
+#### Product Management 
+- The add product page shows two errors. These are to do with the image upload widget and thus changing the code breaks the field.
+![add-product-w3](assets/images/add-product-w3.png)    
+#### Edit Review
+![edit-review-w3](assets/images/edit-review-w3.png)
+
+### CSS
+
+- All CSS was checked with the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/). 
+
+#### Base CSS
+![base-css-jigsaw](assets/images/base-css-jigsaw.png)
+#### Checkout CSS
+![checkout-css-jigsaw](assets/images/checkout-css-jigsaw.png)
