@@ -573,11 +573,17 @@
 ### About Us
 
 - #### Image
+    Checked that:
     - Underneath the image is a link to both the contact us page, and the products page.
 
+    ![About-image](assets/gifs/about-img.gif)
+
 - #### Links
+    Checked that:
     - Hovering over these links will lighten their appearance.
-    - Clicking the links will open up the respective website in another tab. This is to stop the user from being taken away from the main site.  
+    - Clicking the links will open up the respective website in another tab.
+
+    ![Charity-links](assets/gifs/charity-links.gif) 
 
 ### Contact
 
