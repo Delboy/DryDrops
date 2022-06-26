@@ -201,8 +201,6 @@
 *As a user, I can save my favorite products so that they are easily accessible for future purchases*
 - Users can click a 'Add to Favourites' heart-shaped button, which is underneath the product's title on the product's detail page.
 - Clicking the heart will render the product 'liked' and subsequently fill in the heart. Alternatively clicking the heart when the product is already liked will empty the heart and remove its liked status.
-<!-- - Liked products will render a small red heart in the top right corner of the product's image.
-- Clicking the heart when the user does not have an account or is not signed in, will prompt a modal that asks the user to sign up or to sign in to use that feature.  -->
 
 *As a user, I can leave reviews on products so that I can share my experience with others*
 - A review section is located at the bottom of each product's detail page. Here the user can leave a rating and review.
@@ -306,7 +304,7 @@
     - On large screens, the section displays as a list, whereas smaller screens displays the items in a carousel.
     - Clicking the products takes you to its detail page.
 
-    ![Hot-Products](assets/gifs/hot-products.gif)
+    ![Hot-Products](assets/gifs/home-whats-hot.gif)
 
 - #### Footer
     Checked that:
@@ -325,7 +323,7 @@
     - Clicking the confirmation link confirms the account.
     - After creating an account the user can use his details to sign in. 
 
-    ![Registration](assets/gifs/restration.gif)
+    ![Registration](assets/gifs/registration.gif)
 
 - #### Login Page
     Checked that:
@@ -456,7 +454,7 @@
     - Any profanity in the review will cause the form to fail and a toast will inform the user.
     - The form only renders when no reviews for that product, from that user exist.
 
-    ![Add-Review](assets/gifs/add-reviews.gif)
+    ![Add-Review](assets/gifs/add-review.gif)
 
 ### Product Management
 
