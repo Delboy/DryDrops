@@ -496,19 +496,34 @@
 ### Bag
 
 - #### Items
+    Checked that:
+    - The bag page displays all items that the user has added to it. 
+    - The page lists the items added, displaying it's image, followed by it's title and SKU.
     - Clicking either the image or the product's title will take you to that product's detail page. 
+    - Adding an item to the bag triggers a toast message informing the user of their actions.
+
+     ![Bag-items](assets/gifs/bag-items.gif)
 
 - #### Quantity and Price
-    - The quantity element has buttons either side for the user to increase or decrease the total of that item in the bag.
+    Checked that:
+    - The quantity element has buttons either side and increases or decreases the total.
     - The minus quantity button will be disabled if the quantity of the item is one. Respectively the plus button will also be disabled if the quantity of the item is 99.
     - Clicking the 'update' button saves any changes to the quantity and updates the item's subtotal.
     - Clicking the red trash can icon removes the item completely from the user's bag. 
     - Manually inputting the number zero or anything below and clicking 'update' will remove the item from the bag. 
     - Manually inputting a number above 99 and clicking 'update' will result in an error message informing the user of the correct parameters. 
+
+    ![Quantity-Buttons-Bag](assets/gifs/qty-btns-bag.gif)
     
 - #### Totals and messaging
-    - In between the bag total and the delivery total, users will either find a message informing them of how much more they need to spend to receive free delivery, or it will show how much delivery they would of paid if they didn't receive the offer. This message will also be different if it is the user's first ever order, in which case it will display 'FREE DELIVERY on your first order!'. 
-    - Beneath the grand total is two buttons. From here the user can either continue to the checkout or return to the products page by clicking 'Continue Shopping'.
+    Checked that:
+    - In between the bag total and the delivery total a message informing the user of how much more they need to spend to receive free delivery is visible.
+    - The message shows how much delivery the user would of paid if they didn't receive the offer. 
+    - If it's the user's first ever order, the message displays 'FREE DELIVERY on your first order!'. 
+    - The checkout button takes the user to the checkout.
+    - The 'Continue Shopping' link takes users back to the store.
+
+    ![Totals](assets/gifs/totals.gif)
 
 ### Checkout
 
