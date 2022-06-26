@@ -461,27 +461,37 @@
 ### Product Management
 
 - #### Add Product
-    - The add product page is accessed by the account dropdown menu, under product management. It is only accessible by superusers.
-    - The user must fill out all the fields that are labeled 'required' with an Asterix. If the form is submitted with any of these fields left blank then an error message will appear above that particular field, notifying the user of the issue.
-    - The SKU field must be unique. An error message will appear if an already existing SKU is attempted.
-    - If a price is added with more than 6 digits the form will fail and an error message will appear under the price field.
-    - The featured checkbox can be checked so that the item will appear in the 'What's Hot' section on the products page.
-    - The user has the option to add an image. If none is chosen then a default image is used.
-    - Clicking the 'Add Product' button at the bottom of the form will create the product providing there are no errors on the form.
+    Checked that:
+    - The add product page is accessed by the account dropdown menu, under product management.
+    - If the form is submitted with any of these fields left blank then an error message appears above that particular field, notifying the user of the issue.
+    - An error message appears if an already existing SKU is attempted.
+    - If a price is added with more than 6 digits the form fails and an error message appears under the price field.
+    - If the featured checkbox is checked the item becomes featured.
+    - If no image is chosen the default image is used.
+    - Clicking the 'Add Product' button at the bottom of the form creates the product.
+    - A toast message informs the user if the product is added successfully.
+
+    ![Add-Product](assets/gifs/add-product.gif)
 
     
-
 - #### Edit Product
-    - The Edit Product page can be accessed from two places. By clicking the 'edit' button at the bottom of the product's card. Or by clicking the edit button located under the image on the products detail page.
-    - Accessing the page loads what is essentially the add product page, with the details of the product already filled in. 
+    Checked that:
+    - The Edit Product page can be accessed from two places. The bottom of the product's card and under the image on the products detail page.
+    - Accessing the page loads the add product page with the details of the product already filled in. 
     - The image field displays a thumbnail of the current image and has a checkbox option to remove it. Checking this will change the image to the default image.
-    - Clicking the 'Update Product' button will save any changes made to the existing product.  
+    - Clicking the 'Update Product' button saves any changes made to the existing product.  
+
+    ![Edit-Product](assets/gifs/edit-product.gif)
 
 - #### Delete Product
-    - The Delete Product button can be found in two places. One is next to the 'edit' button at the bottom of the product's card. The second is to the right of the 'edit' button on the products detail page. 
-    - Clicking either of the delete buttons will bring up a warning modal, asking the user if they are sure they want to delete the product, and informing them that it is irreversible. 
-    - Once the warning modal has been activated if the user then clicks the delete button the product will be removed from the database. 
-    - If however, the user presses the cancel button, the modal is closed and no effect has taken place. 
+    Checked that:
+    - The Delete Product button can be found in two places. Next to the 'edit' button at the bottom of the product's card, and to the right of the 'edit' button on the products detail page. 
+    - Clicking either of the delete buttons brings up a warning modal, asking the user if they are sure they want to delete the product, and informing them that it is irreversible. 
+    - Once the warning modal has been activated, the delete button deletes the product from the database. 
+    - Pressing the cancel button closes the modal.
+    - A toast message appears, informing the user that the product has been deleted.
+
+    ![Delete-Product](assets/gifs/delete-product.gif)
 
 ### Bag
 

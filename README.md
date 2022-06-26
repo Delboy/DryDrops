@@ -299,6 +299,7 @@ These phrases can also be used in the metadata at the head of the page.
     - The plus and minus buttons increase and decrease the input value. 
     - If the value is set to 1 the minus quantity will be disabled. Respectively if the value is set to 99 the plus button is disabled.
     - Clicking the 'Add to Bag' button takes the number in the input field and adds that amount of products to the bag.
+    - Clicking that 'Add to Bag' button when the input is blank adds one item to the bag.
     - Trying to add an amount less than one or above 99, renders an error message informing the user of the parameters needed to be successful.
     - Underneath the input is a link that takes users back to the store.  
 
