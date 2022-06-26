@@ -620,17 +620,17 @@
 ### HTML
 
 - Home Page
-    ![Home-w3](assets/images/home-w3.gif)
+    ![home-w3](assets/images/home-w3.gif)
 - Products Page
-
+    ![products-w3](assets/images/products-w3.gif)
 - Product Details
-
+    ![product-details-w3](assets/images/product-details-w3.gif)
 - About Us
-
+    ![about-us-w3](assets/images/about-us-w3.gif)
 - Contact
-
+    ![contact-w3](assets/images/contact-w3.gif)
 - Bag
-
+    ![bag-w3](assets/images/bag-w3.gif)
 - Checkout 
 
 - Checkout Success
