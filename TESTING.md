@@ -651,3 +651,27 @@
 ![base-css-jigsaw](assets/images/base-css-jigsaw.png)
 #### Checkout CSS
 ![checkout-css-jigsaw](assets/images/checkout-css-jigsaw.png)
+#### Profile CSS
+![profile-css-jigsaw](assets/images/profile-css-jigsaw.png)
+
+
+### JSHINT
+
+- All Javascript was passed through [Jshint](https://jshint.com/).
+
+### Base
+![jshint-base](assets/images/jshint-base.png)
+### Products
+![jshint-products](assets/images/jshint-products.png)
+### Edit Review
+![jshint-edit-review](assets/images/jshint-edit-review.png)
+### Bag 
+![jshint-bag](assets/images/jshint-bag.png)
+### Quantity Btns
+![jshint-qty-btns](assets/images/jshint-qty-btns.png)
+### Checkout
+![jshint-checkout](assets/images/jshint-checkout.png)
+### Profile
+![jshint-profile](assets/images/jshint-profile.png)
+### Scroll Arrow
+![jshint-scroll-arrow](assets/images/jshint-scroll-arrow.png)
