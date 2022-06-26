@@ -620,7 +620,7 @@
 ### HTML
 
 - Home Page
-
+    ![Home-w3](assets/images/home-w3.gif)
 - Products Page
 
 - Product Details
