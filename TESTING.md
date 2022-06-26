@@ -528,26 +528,47 @@
 ### Checkout
 
 - #### Details
+    Checked that:
     - If the user is anonymous, a link to create an account or login will be present.
-    - If the user is signed in a checkbox to save the delivery information can be checked.
-    - If the user is signed in and has delivery information checked the delivery details and email address will be automatically filled in. 
-    - Any field with an Asterix is required. If a user tries to complete the form with any of these fields left blank the affected field will highlight that it needs to be filled in.   
+    - If the user is signed in a checkbox to save the delivery information can be checked, and if checked the information is saved.
+    - If the user is signed in and has delivery information saved, the delivery details and email address are automatically filled in. 
+
+    ![Saved-details](assets/gifs/saved-details.gif)
+
+    - Any field with an Asterix is required. If a user tries to complete the form with any of these fields left blank the affected field is highlighted that it needs to be filled in.  
+
+    ![Required-details](assets/gifs/required-details.gif)
 
 - #### Order Summary
-    - Clicking the image or title of any items in the summary will take the user to that product's detail page. 
+    Checked that:
+    - Clicking the image or title of any items in the summary takes the user to that product's detail page.
+    - This section lists all the items about to be purchased, along with the quantity, subtotal and a grand total.
+    - Next to the order summary title will be a number reflecting the total number of items that appear in the order.
+
+    ![Order-summary](assets/gifs/order-summary.gif)
 
 - #### Payment
-    - Only numbers can be entered into the card payment box. Incorrect card numbers will automatically show an invalid card number error.
+    Checked that:
+    - Only numbers can be entered into the card payment box. Incorrect card numbers automatically show an invalid card number error.
     - The site can be tested by using the dummy card number 4242 4242 4242 4242 with the expiry date 04/24 and the CVC code 242.
-    - At the end of the section is a button to complete the order or to return back to the bag. There is also a warning message informing the user of how much their card is about to be charged.
+    - At the end of the section is a button to complete the order or to return back to the bag. 
+    - There is a warning message informing the user of how much their card is about to be charged.
+
+    ![Payment](assets/gifs/payment.gif)
 
 - #### Loading Spinner
-    - Upon clicking the complete order button, as long as the form is valid, a loading spinner will render until the information is processed completely. 
+    Checked that:
+    - Upon clicking the complete order button, as long as the form is valid, a loading spinner renders until the information is processed completely.
+
+    ![Spinner](assets/gifs/spinner.gif) 
     
-- #### Confirmation 
+- #### Confirmation
+    Checked that: 
     - Once the order has been processed the user is taken to the checkout success page. 
     - A confirmation email is also sent to the email address provided, and this is noted at the top of the page. 
     - At the end of the summary is a button that the user can use to take them back to the main shop.
+
+    ![Confirmation](assets/gifs/confirmation.gif)
     
 ### About Us
 
