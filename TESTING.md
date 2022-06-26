@@ -587,14 +587,20 @@
 
 ### Contact
 
-- #### Contact Info  
+- #### Contact Info
+    Checked that:
     - Hovering over the social media links changes their color. Clicking the links takes you to the respective website which opens in a new tab.
-    - The facebook link particularly takes you to the websites business page on facebook. 
+    - The facebook link takes you to the websites business page on facebook. 
+
+    ![Contact-info](assets/gifs/contact-info.gif) 
 
 - #### Messaging
-    - All the fields are required. Failing to fill out any field will result in a message highlighting which field has been left blank.
-    - Once all the fields are completed, hitting the 'Send Message' button will send the message. 
-    - Both Dry Drops and the user will receive an email on completion, laying out who send the message and what was said.  
+    Checked that:
+    - All the fields are required. Failing to fill out any field results in a message highlighting which field has been left blank.
+    - Once all the fields are completed, hitting the 'Send Message' button sends the message. 
+    - Both Dry Drops and the user will receive an email on completion, laying out who sent the message and what they said.  
+
+    ![Messaging](assets/gifs/messaging.gif)
 
 ### Toasts and Pop-ups
 
