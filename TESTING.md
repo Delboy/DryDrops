@@ -675,3 +675,9 @@
 ![jshint-profile](assets/images/jshint-profile.png)
 ### Scroll Arrow
 ![jshint-scroll-arrow](assets/images/jshint-scroll-arrow.png)
+
+### Pylint
+
+- Pylint only showing errors that can be ignored.
+
+![pylint](assets/images/pylint.png)
