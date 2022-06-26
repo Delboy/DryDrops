@@ -616,3 +616,23 @@
      ![Pop-up](assets/gifs/pop-up.gif)
     
 ## Validators
+
+### HTML
+
+- Home Page
+
+- Products Page
+
+- Product Details
+
+- About Us
+
+- Contact
+
+- Bag
+
+- Checkout 
+
+- Checkout Success
+
+- Product Management 

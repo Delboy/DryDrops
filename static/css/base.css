@@ -493,7 +493,7 @@ label {
 }
 
 @media (max-width: 1106px) {
-    #delivery-charge {
+    .delivery-charge {
         display: block !important;
     }
 
@@ -517,7 +517,7 @@ label {
         left: 0px;
     }
 
-    #delivery-charge {
+    .delivery-charge {
         display: inline !important;
     }
 
