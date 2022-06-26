@@ -410,35 +410,53 @@
 ### Products Details
 
 - #### Product Info
+    Checked that:
     - The product info section shows information about the product along with buttons to add the item to the user's favorite list, and buttons to add the item to the bag in multiple quantities.
-    - The product's rating is an average of all the product's reviews and displays the result in stars. Next to the stars is also a number indicating how many reviews the product has received in total. 
+    - The product's rating is an average of all the product's reviews and displays the result in stars. 
+    - A number indicating how many reviews the product has received in total is next to the rating. 
     - Clicking the products category will take users to the products page showing only items from that category.
     - If the user is a super user, admin buttons will appear underneath the image.
 
+    ![product-info](assets/gifs/product-info.gif)
+
 - #### Like Button
+    Checked that:
     - The heart button renders as empty if either the user is signed out or the product is not liked by the user.
     - Liking a product fills in the heart and adds the product to the user's favorite items list on their profile page.
     - Unliking a product unfills the heart and removes the product from the user's favourite items list on their profile page.
+    - A toast message informs the user when a product has been added or removed from the list of their favourite items.
     - If the heart is clicked when no user is signed in, an 'Account Required' modal pops up informing the user that they need to either sign in or create an account to use that feature.
 
+    ![like-Button](assets/gifs/like-btn.gif)
+
 - #### Quantity Buttons
+    Checked that:
     - The plus and minus buttons increase and decrease the input value. 
     - If the value is set to 1 the minus quantity will be disabled. Respectively if the value is set to 99 the plus button is disabled.
     - Clicking the 'Add to Bag' button takes the number in the input field and adds that amount of products to the bag.
     - Trying to add an amount less than one or above 99, renders an error message informing the user of the parameters needed to be successful.
+    - Clicking that 'Add to Bag' button when the input is blank adds one item to the bag.
     - Underneath the input is a link that takes users back to the store.  
 
+    ![Quantity-buttons](assets/gifs/qty-btns.gif)
+
 - #### Customer Reviews
-    - If the product has received any reviews they will appear underneath the product details.
+    Checked that:
+    - If the product has received any reviews they appear underneath the product details.
     - The reviews consist of the number of stars awarded by the user, their written comment, followed by the user name and how long ago the comment was left.
-    - If the user is signed in and they have left a review on a product, that review will also have edit and delete buttons. Users can use these to manage their reviews.
+    - If the user is signed in and they have left a review on a product, that review will also have edit and delete buttons. 
+    - Users can use these buttons to manage their reviews.
+
+    ![Reviews](assets/gifs/reviews.gif)
 
 - #### Add Review
+    Checked that:
     - Leaving out either the rating or the review notifies the user that the fields are required.  
     - The user can rate the product between 1 and 5 stars. Clicking a star fills the star and every star before it.
     - Any profanity in the review will cause the form to fail and a toast will inform the user.
-    - To stop users leaving multiple reviews on one product, the form only renders when no reviews for that product, from that user exist.
+    - The form only renders when no reviews for that product, from that user exist.
 
+    ![Add-Review](assets/gifs/add-reviews.gif)
 
 ### Product Management
 
