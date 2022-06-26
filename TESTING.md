@@ -605,10 +605,16 @@
 ### Toasts and Pop-ups
 
 - #### Toasts
+    Checked that:
     - Toasts appear in the top right-hand corner of the display informing the user of any actions they have performed.
     - The bottom right corner of the toast box will change color depending on whether the message is portraying a successful action, general info, warning, or an error. 
 
+    ![Toasts](assets/gifs/toasts.gif)
+
 - #### Pop-ups
+    Checked that:
     - If there is no user signed in, the session is new, and 8 seconds elapse, a pop-up will appear one time.
+
+     ![Pop-up](assets/gifs/pop-up.gif)
     
 ## Validators

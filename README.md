@@ -389,7 +389,7 @@ These phrases can also be used in the metadata at the head of the page.
     - Here the user fills out his or her contact details, delivery address, and card number.
     - If the user is anonymous, a link to create an account or login will be present.
     - If the user is signed in a checkbox to save the delivery information can be checked.
-    - If the user is signed in and has delivery information checked the delivery details and email address will be automatically filled in. 
+    - If the user is signed in and has delivery information saved, the delivery details and email address will be automatically filled in. 
     - Any field with an Asterix is required. If a user tries to complete the form with any of these fields left blank the affected field will highlight that it needs to be filled in.   
 
     ![Checkout-Details](assets/images/checkout-details.png)
