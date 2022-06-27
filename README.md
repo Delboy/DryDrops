@@ -469,7 +469,7 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Contact-Messaging](assets/images/contact-msg.png)
 
-### Toasts and Pop-ups
+### Toasts, Pop-ups, and scroll arrow
 
 - #### Toasts
     - Toasts appear in the top right-hand corner of the display informing the user of any actions they have performed.
@@ -482,6 +482,10 @@ These phrases can also be used in the metadata at the head of the page.
     - The pop-up message informs the user of the free delivery offer for any new user's first order and has a link to the registration page. 
 
     ![Pop-up](assets/images/pop-up.png)
+
+- #### Scroll Arrow
+    - On medium screens and smaller, once the user has scrolled past a certain point, an arrow will appear at the bottom center of the screen.
+    - Clicking the arrow scrolls the user back to the top of the page. 
 
 ## Technologies
 

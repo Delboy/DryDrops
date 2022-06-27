@@ -67,9 +67,10 @@
     * [Contact](#contact)
         - [Contact-info](#contact-info)
         - [Messaging](#messaging)
-    * [Toasts and pop-ups](#toasts-and-pop-ups)
+    * [Toasts and pop-ups](#toasts-pop-ups-and-scroll-arrow)
         - [Toasts](#toasts)
         - [Pop-ups](#pop-ups)
+        - [Scroll Arrow](#scroll-arrow)
 - [Bugs](#bugs)
     * [Fixed](#fixed)
     * [Unfixed](#unfixed)
@@ -757,7 +758,7 @@
 
     ![Messaging](assets/gifs/messaging.gif)
 
-### Toasts and Pop-ups
+### Toasts, Pop-ups, and scroll arrow
 
 - #### Toasts
     Checked that:
@@ -771,7 +772,14 @@
     - If there is no user signed in, the session is new, and 8 seconds elapse, a pop-up will appear one time.
 
      ![Pop-up](assets/gifs/pop-up.gif)
+
+- #### Scroll Arrow
+    Checked that:
+    - On medium screens and smaller, once the user has scrolled past a certain point, an arrow will appear at the bottom center of the screen.
+    - Clicking the arrow scrolls the user back to the top of the page. 
     
+    ![Scroll Arrow](assets/gifs/scroll-arrow.gif)
+
 ## Bugs
 
 ### Fixed
