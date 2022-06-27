@@ -63,7 +63,7 @@
 ![Products-sort](assets/images/products-sort.png)
 
 *As a shopper, I can view products I have saved so that I can navigate to them easily without having to find them again*
-- Liked products will appear in the user's favorite items list, located on the user's profile page.
+- Liked products will appear in the user's favourite items list, located on the user's profile page.
 
 ![Favourite-items](assets/images/favourite-items.png)
 
@@ -141,7 +141,7 @@
 *As an admin, I can feature products so that I can display them on the home page*
 - If an admin is logged in, the products will show a 'feature' button on both their product card and their details page.
 - Clicking this button will toggle the item's 'Featured' status.
-- Featured products will appear in the 'Whats Hot' section on the home and products page.
+- Featured products will appear in the "What's Hot" section on the home and products page.
 - Featured items will have a banner around the product's image, only visible by admins.
 
 ![Hot-Products-Home](assets/images/hot-products-home.png)
@@ -198,7 +198,7 @@
 
 
 ### EPIC | Interaction
-*As a user, I can save my favorite products so that they are easily accessible for future purchases*
+*As a user, I can save my favourite products so that they are easily accessible for future purchases*
 - Users can click a 'Add to Favourites' heart-shaped button, which is underneath the product's title on the product's detail page.
 - Clicking the heart will render the product 'liked' and subsequently fill in the heart. Alternatively clicking the heart when the product is already liked will empty the heart and remove its liked status.
 
@@ -235,7 +235,7 @@
 
 - #### Links
     Checked that:
-    - The links change color when hovered over.
+    - The links change colour when hovered over.
     - The link to the current page is highlighted by an underline.
     - The Shop link drops down into a sub-menu displaying all products and the four product categories.
     - The links collapse into a hamburger menu once the screen size becomes too small. 
@@ -251,7 +251,7 @@
 
 - #### Account
     Checked that:
-    - Hovering over the account icon changes its color.
+    - Hovering over the account icon changes its colour.
     - Clicking the account Icon opens a dropdown menu with options for the user to register or sign in.
     - If a user is signed in the dropdown options change to 'My Profile' and 'Logout'.
     - If a user is signed in the Icons text changes from 'sign in/up' to 'My Account'.
@@ -277,8 +277,8 @@
     
 - #### Hero Image
     Checked that:
-    - The button labeled 'Shop Now' takes the user to the products page.
-    - Hovering over the 'Shop Now' button changes its color.
+    - The button labelled 'Shop Now' takes the user to the products page.
+    - Hovering over the 'Shop Now' button changes its colour.
     - The image changes depending on the size of the screen.
 
     ![Hero-Box](assets/gifs/hero-box.gif)
@@ -308,7 +308,7 @@
 
 - #### Footer
     Checked that:
-    - All the links change color when hovered over.
+    - All the links change colour when hovered over.
     - All the links in the Quick Links section work.
     - Clicking the phone number will call it, clicking the email address opens your default email programme, and clicking the social media links takes you to the relevant website.
     - The Newsletter section has an option to input your email and sign up for the weekly newsletter.
@@ -327,7 +327,7 @@
 
 - #### Login Page
     Checked that:
-    - The login page is can be used to log in users with an existing account.
+    - The login page can be used to log in users with an existing account.
     - Users can sign in with either their username or their email address.
     - Toast messages inform the user of their status.
     - The 'Forgot Password' link enables the user to recover their password.
@@ -363,9 +363,9 @@
 
     ![Order History](assets/gifs/order-history.gif)
 
-- #### Favorite Items
+- #### Favourite Items
     Checked that:
-    - The favorite items section keeps a list of all products that the user has liked.
+    - The favourite items section keeps a list of all products that the user has liked.
 
     ![fav-items](assets/gifs/fav-items.gif)
 
@@ -381,7 +381,7 @@
 
 - #### What's Hot Carousel
     Checked that:
-    - The Whats hot carousel displays any product that an admin has selected to be featured.
+    - The What's hot carousel displays any product that an admin has selected to be featured.
     - Clicking the product will take the user to that product's detail page.
     - Buttons on the edge of the carousel enable the user to scroll through all the featured products.
 
@@ -409,7 +409,7 @@
 
 - #### Product Info
     Checked that:
-    - The product info section shows information about the product along with buttons to add the item to the user's favorite list, and buttons to add the item to the bag in multiple quantities.
+    - The product info section shows information about the product along with buttons to add the item to the user's favourite list, and buttons to add the item to the bag in multiple quantities.
     - The product's rating is an average of all the product's reviews and displays the result in stars. 
     - A number indicating how many reviews the product has received in total is next to the rating. 
     - Clicking the products category will take users to the products page showing only items from that category.
@@ -420,7 +420,7 @@
 - #### Like Button
     Checked that:
     - The heart button renders as empty if either the user is signed out or the product is not liked by the user.
-    - Liking a product fills in the heart and adds the product to the user's favorite items list on their profile page.
+    - Liking a product fills in the heart and adds the product to the user's favourite items list on their profile page.
     - Unliking a product unfills the heart and removes the product from the user's favourite items list on their profile page.
     - A toast message informs the user when a product has been added or removed from the list of their favourite items.
     - If the heart is clicked when no user is signed in, an 'Account Required' modal pops up informing the user that they need to either sign in or create an account to use that feature.
@@ -433,7 +433,7 @@
     - If the value is set to 1 the minus quantity will be disabled. Respectively if the value is set to 99 the plus button is disabled.
     - Clicking the 'Add to Bag' button takes the number in the input field and adds that amount of products to the bag.
     - Trying to add an amount less than one or above 99, renders an error message informing the user of the parameters needed to be successful.
-    - Clicking that 'Add to Bag' button when the input is blank adds one item to the bag.
+    - Clicking the 'Add to Bag' button when the input is blank adds one item to the bag.
     - Underneath the input is a link that takes users back to the store.  
 
     ![Quantity-buttons](assets/gifs/qty-btns.gif)
@@ -452,7 +452,7 @@
     - Leaving out either the rating or the review notifies the user that the fields are required.  
     - The user can rate the product between 1 and 5 stars. Clicking a star fills the star and every star before it.
     - Any profanity in the review will cause the form to fail and a toast will inform the user.
-    - The form only renders when no reviews for that product, from that user exist.
+    - The form only renders when no reviews for that product from that user exist.
 
     ![Add-Review](assets/gifs/add-review.gif)
 
@@ -474,7 +474,7 @@
     
 - #### Edit Product
     Checked that:
-    - The Edit Product page can be accessed from two places. The bottom of the product's card and under the image on the products detail page.
+    - The Edit Product page can be accessed from two places. The bottom of the product's card and under the image on the product's detail page.
     - Accessing the page loads the add product page with the details of the product already filled in. 
     - The image field displays a thumbnail of the current image and has a checkbox option to remove it. Checking this will change the image to the default image.
     - Clicking the 'Update Product' button saves any changes made to the existing product.  
@@ -483,7 +483,7 @@
 
 - #### Delete Product
     Checked that:
-    - The Delete Product button can be found in two places. Next to the 'edit' button at the bottom of the product's card, and to the right of the 'edit' button on the products detail page. 
+    - The Delete Product button can be found in two places. Next to the 'edit' button at the bottom of the product's card, and to the right of the 'edit' button on the product's detail page. 
     - Clicking either of the delete buttons brings up a warning modal, asking the user if they are sure they want to delete the product, and informing them that it is irreversible. 
     - Once the warning modal has been activated, the delete button deletes the product from the database. 
     - Pressing the cancel button closes the modal.
@@ -516,7 +516,7 @@
 - #### Totals and messaging
     Checked that:
     - In between the bag total and the delivery total a message informing the user of how much more they need to spend to receive free delivery is visible.
-    - The message shows how much delivery the user would of paid if they didn't receive the offer. 
+    - The message shows how much delivery the user would have paid if they didn't receive the offer. 
     - If it's the user's first ever order, the message displays 'FREE DELIVERY on your first order!'. 
     - The checkout button takes the user to the checkout.
     - The 'Continue Shopping' link takes users back to the store.
@@ -597,8 +597,8 @@
 
 - #### Contact Info
     Checked that:
-    - Hovering over the social media links changes their color. Clicking the links takes you to the respective website which opens in a new tab.
-    - The facebook link takes you to the websites business page on facebook. 
+    - Hovering over the social media links changes their colour. Clicking the links takes you to the respective website which opens in a new tab.
+    - The facebook link takes you to the website's business page on facebook. 
 
     ![Contact-info](assets/gifs/contact-info.gif) 
 
@@ -615,7 +615,7 @@
 - #### Toasts
     Checked that:
     - Toasts appear in the top right-hand corner of the display informing the user of any actions they have performed.
-    - The bottom right corner of the toast box will change color depending on whether the message is portraying a successful action, general info, warning, or an error. 
+    - The bottom right corner of the toast box will change colour depending on whether the message is portraying a successful action, general info, warning, or an error. 
 
     ![Toasts](assets/gifs/toasts.gif)
 
@@ -688,13 +688,13 @@
 
 ### PEP8
 
-- PEP8 only showing the type of errors that can be ignored.
+- PEP8 only shows the type of errors that can be ignored.
 
 ![pylint](assets/images/pylint.png)
 
 ### Lighthouse
 
-- Lighthouse registered green on all areas.
+- Lighthouse registered green in all areas.
 
 ![Lighthouse](assets/images/lighthouse.png)
 
@@ -704,7 +704,7 @@
 
 - The total under the bag icon was displaying £5 when the bag was empty. This was happening because the logic was written so that if the total was less than the threshold amount to get free delivery, you have to pay a £5 delivery charge. This meant that even when the basket was ZERO it was adding £5 to the basket as a delivery charge. I fixed this by changing the logic to not include delivery if the bag total is £0.
 
-- On the shopping bag page, when you hovered over the quantity input box, the margins changed. To stop this I hid the overflow from the body and html elements in CSS. This however then conflicted with the script that enabled the arrow button to scroll to the top of the page. So I deleted the hidden overflow CSS and came to realise that it was a container div with the container-fluid class that was causing the input shake. I deleted the container and the problem was solved.
+- On the shopping bag page, when you hover over the quantity input box, the margins change. To stop this I hid the overflow from the body and html elements in CSS. This however conflicted with the script that enabled the arrow button to scroll to the top of the page. So I deleted the hidden overflow CSS and came to realise that it was a container div with the container-fluid class that was causing the input shake. I deleted the container and the problem was solved.
 
 - When viewing the shopping bag with more than one item, only the last item's update button was working correctly. The reason this was happening was that the jquery script to locate the product's quantity form, was searching solely on their class name. This meant it always defaulted to the last form found, and because the items were generated from a for loop, it would always be the last item in the bag. That would explain why only the last items update button was working and not the rest. I fixed it by changing the jquery selector to work its way up the tree from the update button being clicked, ensuring that the right form was found.
 
@@ -714,7 +714,7 @@
 
 - When submitting a review of 5 stars, random elements all over the page would turn yellow and stars would appear randomly. I realised I had accidentally pasted an i class element with no closing tags in the product-ratings html. 
 
-- The quantity buttons on the product detail page were not responding - Somehow the qty-input class from the input box had been removed. Soon as I re-entered them, they began working.
+- The quantity buttons on the product detail page were not responding - Somehow the qty-input class from the input box had been removed. As soon as I re-entered them, they began working.
 
 - The message inside the toast for viewing previous orders wasn't showing the date but instead a placeholder. This was because I forgot to make the string an f string. Also, the date of the order was given to the millisecond so I formatted it to just show the day, month, year, hour, minute, second.
 
@@ -724,14 +724,14 @@
 
 - Modals on the products page were malfunctioning and rendering behind products. I figured out that it was the change of opacity when products were hovered over that was causing the issue. I was unsure about having a change in opacity in the first place so I decided to remove it and it fixed the issue.
 
-- Top products were showing lowest rated first. I noticed this only happened when using Heroku, which was running Postgres, as the problem didn't exist when using a local server that was using SQlite. It turns out that Heroku was putting items with no rating ahead of results. So inside the view I changed the sort filter to exclude any with a rating of 'None'. 
+- Top products were showing the lowest rated items first. I noticed this only happened when using Heroku, which was running Postgres, as the problem didn't exist when using a local server that was using SQlite. It turns out that Heroku was putting items with no rating ahead of results. So inside the view I changed the sort filter to exclude any with a rating of 'None'. 
 
-- Free delivery on new user's first order was displaying the delivery charge as 0 but was charging delivery. I realised I had written logic to work out delivery costs in the bag but not for the order model. I added a 'first_order' boolean field to the order model. This defaulted to false but updated to true if user had no previous orders. I could then use that field to help work out the correct delivery charge.
+- Free delivery on a new user's first order was displaying the delivery charge as 0 but was charging delivery. I realised I had written logic to work out delivery costs in the bag but not for the order model. I added a 'first_order' boolean field to the order model. This defaulted to false but updated to true if the user had no previous orders. I could then use that field to help work out the correct delivery charge.
 
-- Clicking the subscribe button or social media links inside the footer on medium screens or below, caused the page to scroll to the top. This was because the box containing the arrow that is used to scroll users back to the top of the page, spanned the entire width of the screen. The subscribe button, and social media links lined up with the arrow box, meaning that wherever you pressed inside the box you were actually triggering the arrow. I reduced the width of the arrow box which solved the problem.
+- Clicking the subscribe button or social media links inside the footer on medium screens or below, causes the page to scroll to the top. This was because the box containing the arrow that is used to scroll users back to the top of the page, spanned the entire width of the screen. The subscribe button, and social media links lined up with the arrow box, meaning that wherever you pressed inside the box you were actually triggering the arrow. I reduced the width of the arrow box which solved the problem.
 
-- When the scroll up arrow is clicked on the home page, nothing happens. I originally had the arrow box html and script on every page that I thought would needed it. In the end I decided that it would actually be useful on every page so I wrote the code needed onto the base template and deleted all the code elsewhere. However in doing so, I forgot to delete the box and the script from the index page. Once I had removed that it worked fine.
+- When the scroll up arrow is clicked on the home page, nothing happens. I originally had the arrow box html and script on every page that I thought would need it. In the end I decided that it would actually be useful on every page so I wrote the code needed onto the base template and deleted all the code elsewhere. However in doing so, I forgot to delete the box and the script from the index page. Once I had removed that it worked fine.
 
-- When trying to add products to the bag, or adjust the products quantity, if putting a blank input instead of number you receive an error message - 'ValueError at /bag/add/1/, invalid literal for int() with base 10:'. I added ‘or 1’ to the bags view when requesting the input value. This meant if the input was blank it would default to 1, thus solving the issue. 
+- When trying to add products to the bag, or adjust the product's quantity, if putting a blank input instead of number you receive an error message - 'ValueError at /bag/add/1/, invalid literal for int() with base 10:'. I added ‘or 1’ to the bag's view when requesting the input value. This meant if the input was blank it would default to 1, thus solving the issue. 
 
-- Webhooks were resulting in a 500 error, sometimes stating ERROR: Product matching query does not exist. This had me baffled for hours. I'm still not sure where the problem lied. Deleting all the webhooks secret codes and re-rolling them on stripes website, then saving the new codes fixed the issue. So it must of been something their side. 
+- Webhooks were resulting in a 500 error, sometimes stating ERROR: Product matching query does not exist. This had me baffled for hours. I'm still not sure where the problem lied. Deleting all the webhooks secret codes and re-rolling them on stripes website, then saving the new codes fixed the issue. So it must have been something on their side. 

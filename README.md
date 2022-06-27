@@ -49,7 +49,7 @@ A list of my user stories and their tasks can be found [here](https://github.com
 
 
 ### EPIC | Interaction
-- As a user, I can save my favorite products so that they are easily accessible for future purchases.
+- As a user, I can save my favourite products so that they are easily accessible for future purchases.
 - As a user, I can leave reviews on products so that I can share my experience with others.
 - As a user, I can sign up for the website's newsletter so that I can keep up to date with new products and promotions.
 - As a user, I can connect to the site's social media pages so that I can follow them and keep up to date with their products and promotions.
@@ -59,7 +59,7 @@ A list of my user stories and their tasks can be found [here](https://github.com
 
 ### Colour Scheme
 
-- I wanted the color scheme to be similar to the color of dark ales and wines to fit in with the site's theme, so the main color I chose was a dark reddish-brown, along with a lighter shade and a couple more neutral tones to balance it out.  
+- I wanted the colour scheme to be similar to the colour of dark ales and wines to fit in with the site's theme, so the main colour I chose was a dark reddish-brown, along with a lighter shade and a couple more neutral tones to balance it out.  
 
  ![Colour Scheme](assets/images/colour-scheme.png)
 
@@ -116,7 +116,7 @@ The initial keywords and phrases I came up with were:
 - Drinks for recovering alcoholics
 - Alcohol-free beverages
 - Alcohol-free drinks for pregnant women
-- Drinks that are suitable for people practicing sobriety
+- Drinks that are suitable for people practising sobriety
 - Drinks that are suitable for people who are straight edge
 
 These phrases can also be used in the metadata at the head of the page.
@@ -143,8 +143,8 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Account
     - Located on the right side of the navbar is the account Icon where the user can manage their account.
     - Clicking the account Icon opens a dropdown menu with options for the user to register or sign in.
-    - If a user is signed in the dropdown options change to 'My Profile' and 'Logout'.
-    - If a user is signed in the Icons text changes from 'sign in/up' to 'My Account'.
+    - If a user is signed in, the dropdown options change to 'My Profile' and 'Logout'.
+    - If a user is signed in, the Icons text changes from 'sign in/up' to 'My Account'.
     - If the user signed in is a super user then a third option of 'Product Management' is available. 
 
     ![Navbar-Account](assets/images/navbar-account.png) 
@@ -170,7 +170,7 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Hero Image
     - The hero image welcomes the user with a short message advertising what the site sells along with the website's slogan.
     - A message informing the user that they receive free delivery on their first order when if sign up is also present.
-    - A button labeled 'Shop Now' takes the user to the products page.
+    - A button labelled 'Shop Now' takes the user to the products page.
     - The image will change depending on the size of the screen.
 
     ![Hero-Image](assets/images/home-hero.png)
@@ -183,7 +183,7 @@ These phrases can also be used in the metadata at the head of the page.
 
 - #### Top Products
     - The Top products section lists the top 4 products based on customer reviews.
-    - The list will order by the highest rating first. If any products have the same rating they will be put in order of how many reviews they have received.   
+    - The list will be ordered by the highest rated first. If any products have the same rating they will be put in order of how many reviews they have received.   
 
     ![Hero-Top-Products](assets/images/home-top-products.png)
 
@@ -239,10 +239,10 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Profiles-Order-History](assets/images/profiles-order-history.png)
 
-- #### Favorite Items
-    - The favorite items section keeps a list of all products that the user has liked.
+- #### Favourite Items
+    - The favourite items section keeps a list of all products that the user has liked.
 
-    ![Profiles-Favorites](assets/images/profiles-favourites.png)
+    ![Profiles-Favourites](assets/images/profiles-favourites.png)
 
 ### All Products
 
@@ -253,7 +253,7 @@ These phrases can also be used in the metadata at the head of the page.
     ![Products-Sidenav](assets/images/products-sidenav.png)
 
 - #### What's Hot Carousel
-    - The Whats hot carousel displays any product that an admin has selected to be featured.
+    - The What's hot carousel displays any product that an admin has selected to be featured.
     - Clicking the product will take the user to that product's detail page.
     - Buttons on the edge of the carousel enable the user to scroll through all the featured products.
 
@@ -278,7 +278,7 @@ These phrases can also be used in the metadata at the head of the page.
 ### Products Details
 
 - #### Product Info
-    - The product info section shows information about the product along with buttons to add the item to the user's favorite list, and buttons to add the item to the bag in multiple quantities.
+    - The product info section shows information about the product along with buttons to add the item to the user's favourite list, and buttons to add the item to the bag in multiple quantities.
     - The product's rating is an average of all the product's reviews and displays the result in stars. Next to the stars is also a number indicating how many reviews the product has received in total. 
     - Clicking the products category will take users to the products page showing only items from that category.
     - If the user is a super user, admin buttons will appear underneath the image.
@@ -288,7 +288,7 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Like Button
     - The like button is located underneath the product's title.
     - The heart button renders as empty if either the user is signed out or the product is not liked by the user.
-    - Liking a product fills in the heart and adds the product to the user's favorite items list on their profile page.
+    - Liking a product fills in the heart and adds the product to the user's favourite items list on their profile page.
     - Unliking a product unfills the heart and removes the product from the user's favourite items list on their profile page.
     - If the heart is clicked when no user is signed in, an 'Account Required' modal pops up informing the user that they need to either sign in or create an account to use that feature.
      
@@ -299,7 +299,7 @@ These phrases can also be used in the metadata at the head of the page.
     - The plus and minus buttons increase and decrease the input value. 
     - If the value is set to 1 the minus quantity will be disabled. Respectively if the value is set to 99 the plus button is disabled.
     - Clicking the 'Add to Bag' button takes the number in the input field and adds that amount of products to the bag.
-    - Clicking that 'Add to Bag' button when the input is blank adds one item to the bag.
+    - Clicking the 'Add to Bag' button when the input is blank adds one item to the bag.
     - Trying to add an amount less than one or above 99, renders an error message informing the user of the parameters needed to be successful.
     - Underneath the input is a link that takes users back to the store.  
 
@@ -319,7 +319,7 @@ These phrases can also be used in the metadata at the head of the page.
     - Leaving out either the rating or the review notifies the user that the fields are required.  
     - The user can rate the product between 1 and 5 stars. Clicking a star fills the star and every star before it.
     - Any profanity in the review will cause the form to fail and a toast will inform the user.
-    - To stop users leaving multiple reviews on one product, the form only renders when no reviews for that product, from that user exist.
+    - To stop users leaving multiple reviews on one product, the form only renders when no reviews for that product from that user exist.
 
     ![Products-Add-Review](assets/images/products-add-review.png)
 
@@ -328,7 +328,7 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Add Product
     - The add product page is accessed by the account dropdown menu, under product management. It is only accessible by superusers.
     - The form lists all the necessary fields to create a new product. 
-    - The user must fill out all the fields that are labeled 'required' with an Asterix. If the form is submitted with any of these fields left blank then an error message will appear above that particular field, notifying the user of the issue.
+    - The user must fill out all the fields that are labelled 'required' with an Asterix. If the form is submitted with any of these fields left blank then an error message will appear above that particular field, notifying the user of the issue.
     - The SKU field must be unique. An error message will appear if an already existing SKU is attempted.
     - If a price is added with more than 6 digits the form will fail and an error message will appear under the price field.
     - The featured checkbox can be checked so that the item will appear in the 'What's Hot' section on the products page.
@@ -348,7 +348,7 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Delete Product
     - The Delete Product button can be found in two places. One is next to the 'edit' button at the bottom of the product's card. The second is to the right of the 'edit' button on the products detail page. 
     - Clicking either of the delete buttons will bring up a warning modal, asking the user if they are sure they want to delete the product, and informing them that it is irreversible. 
-    - Once the warning modal has been activated if the user then clicks the delete button the product will be removed from the database. 
+    - Once the warning modal has been activated, if the user then clicks the delete button the product will be removed from the database. 
     - If however, the user presses the cancel button, the modal is closed and no effect has taken place. 
 
     ![Products-Management-Delete](assets/images/product-management-delete.png)
@@ -377,7 +377,7 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Totals and messaging
     - At the end of the line items is a summary of the costs.
     - The summary features the bags total, delivery charges and the grand total to pay.
-    - In between the bag total and the delivery total, users will either find a message informing them of how much more they need to spend to receive free delivery, or it will show how much delivery they would of paid if they didn't receive the offer. This message will also be different if it is the user's first ever order, in which case it will display 'FREE DELIVERY on your first order!'. 
+    - In between the bag total and the delivery total, users will either find a message informing them of how much more they need to spend to receive free delivery, or it will show how much delivery they would have paid if they didn't receive the offer. This message will also be different if it is the user's first ever order, in which case it will display 'FREE DELIVERY on your first order!'. 
     - Beneath the grand total is two buttons. From here the user can either continue to the checkout or return to the products page by clicking 'Continue Shopping'.
 
     ![Bag-Qty-Totals](assets/images/bag-totals.png)
@@ -396,7 +396,7 @@ These phrases can also be used in the metadata at the head of the page.
 
 - #### Order Summary
     - The order summary section appears on the right on large screens or at the top on smaller screens. 
-    - This section lists all the items about to be purchased, along with the quanity, subtotal and a grand total.
+    - This section lists all the items about to be purchased, along with the quantity, subtotal and a grand total.
     - Next to the order summary title will be a number reflecting the total number of items that appear in the order. 
     - Clicking the image or title of any items in the summary will take the user to that product's detail page. 
 
@@ -456,7 +456,7 @@ These phrases can also be used in the metadata at the head of the page.
 
 - #### Contact Info 
     - The contact info has all of Dry Drops contact information, including their address, phone number, email address and social media links. 
-    - Hovering over the social media links changes their color. Clicking the links takes you to the respective website which opens in a new tab.
+    - Hovering over the social media links changes their colour. Clicking the links takes you to the respective website which opens in a new tab.
     - The facebook link particularly takes you to the websites business page on facebook. 
 
     ![Contact-info](assets/images/contact-info.png)
@@ -465,7 +465,7 @@ These phrases can also be used in the metadata at the head of the page.
     - The message section enables the user to send an email directly to dry drops.
     - All the fields are required. Failing to fill out any field will result in a message highlighting which field has been left blank.
     - Once all the fields are completed, hitting the 'Send Message' button will send the message. 
-    - Both Dry Drops and the user will receive an email on completion, laying out who send the message and what was said.  
+    - Both Dry Drops and the user will receive an email on completion, laying out who sent the message and what was said.  
 
     ![Contact-Messaging](assets/images/contact-msg.png)
 
@@ -473,13 +473,13 @@ These phrases can also be used in the metadata at the head of the page.
 
 - #### Toasts
     - Toasts appear in the top right-hand corner of the display informing the user of any actions they have performed.
-    - The bottom right corner of the toast box will change color depending on whether the message is portraying a successful action, general info, warning, or an error. 
+    - The bottom right corner of the toast box will change colour depending on whether the message is portraying a successful action, general info, warning, or an error. 
 
     ![Toast](assets/images/toast.png)
 
 - #### Pop-ups
     - If there is no user signed in, the session is new, and 8 seconds elapse, a pop-up will appear one time.
-    - The pop-up message informs the user of the free delivery offer to new user's first order and has a link to the registration page. 
+    - The pop-up message informs the user of the free delivery offer for any new user's first order and has a link to the registration page. 
 
     ![Pop-up](assets/images/pop-up.png)
 
