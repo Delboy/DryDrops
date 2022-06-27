@@ -735,3 +735,7 @@
 - When trying to add products to the bag, or adjust the product's quantity, if putting a blank input instead of number you receive an error message - 'ValueError at /bag/add/1/, invalid literal for int() with base 10:'. I added ‘or 1’ to the bag's view when requesting the input value. This meant if the input was blank it would default to 1, thus solving the issue. 
 
 - Webhooks were resulting in a 500 error, sometimes stating ERROR: Product matching query does not exist. This had me baffled for hours. I'm still not sure where the problem lied. Deleting all the webhooks secret codes and re-rolling them on stripes website, then saving the new codes fixed the issue. So it must have been something on their side. 
+
+### Unfixed
+
+- When reviewing a product, once a star is clicked the hover effect of the unfilled stars stops working. 
