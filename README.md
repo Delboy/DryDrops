@@ -424,6 +424,12 @@ These phrases can also be used in the metadata at the head of the page.
     
      ![Checkout-Confirmation](assets/images/checkout-confirmation.png)
 
+- #### Webhooks
+    - Using the [Stripe](https://stripe.com/en-gb) website, webhooks have been set up to confirm an order goes through after payment.
+    - Once an order is placed, a webhook will search the database to confirm the order exists. If it cannot find the original order, it will create one using the information provided by the user in the original instance.
+
+    ![Webhook](assets/images/checkout-webhook.png)
+
 ### About Us
 
 - #### Image

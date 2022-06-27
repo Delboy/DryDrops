@@ -567,6 +567,16 @@
     - At the end of the summary is a button that the user can use to take them back to the main shop.
 
     ![Confirmation](assets/gifs/confirmation.gif)
+
+- #### Webhooks
+    Checked that:
+    - Once an order is placed, a webhook will search the database to confirm the order exists. 
+
+    ![Webhook](assets/gifs/webhook.gif)
+
+    - If it cannot find the original order, it will create one using the information provided by the user in the original instance.
+
+    ![Webhook-Fail](assets/gifs/webhook-fail.gif)
     
 ### About Us
 
