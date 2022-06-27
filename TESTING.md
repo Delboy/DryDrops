@@ -686,8 +686,52 @@
 ### Scroll Arrow
 ![jshint-scroll-arrow](assets/images/jshint-scroll-arrow.png)
 
-### Pylint
+### PEP8
 
-- Pylint only showing errors that can be ignored.
+- PEP8 only showing the type of errors that can be ignored.
 
 ![pylint](assets/images/pylint.png)
+
+### Lighthouse
+
+- Lighthouse registered green on all areas.
+
+![Lighthouse](assets/images/lighthouse.png)
+
+## Bugs
+
+### Fixed
+
+- The total under the bag icon was displaying £5 when the bag was empty. This was happening because the logic was written so that if the total was less than the threshold amount to get free delivery, you have to pay a £5 delivery charge. This meant that even when the basket was ZERO it was adding £5 to the basket as a delivery charge. I fixed this by changing the logic to not include delivery if the bag total is £0.
+
+- On the shopping bag page, when you hovered over the quantity input box, the margins changed. To stop this I hid the overflow from the body and html elements in CSS. This however then conflicted with the script that enabled the arrow button to scroll to the top of the page. So I deleted the hidden overflow CSS and came to realise that it was a container div with the container-fluid class that was causing the input shake. I deleted the container and the problem was solved.
+
+- When viewing the shopping bag with more than one item, only the last item's update button was working correctly. The reason this was happening was that the jquery script to locate the product's quantity form, was searching solely on their class name. This meant it always defaulted to the last form found, and because the items were generated from a for loop, it would always be the last item in the bag. That would explain why only the last items update button was working and not the rest. I fixed it by changing the jquery selector to work its way up the tree from the update button being clicked, ensuring that the right form was found.
+
+- I had a problem where users were not being allowed access to delete or edit comments they had left. The reason this was happening was that the code 'user.id = review.user.id', was being used to determine whether the user and the owner of the review was the same person. When looking into the review model, I remembered that the user field was a foreign key to the profiles model and not the user model, so in fact what I needed was the code to read 'user.id = review.user.user.id'. Once corrected in both the template and the view it worked fine. 
+
+- The review section was allowing users to leave more than one review. Upon inspection, I realised I had the filter to check if a review by that user already existed wrong. In the view, I was filtering by user=request.user.id, when I actually needed user=user_profile.id. 
+
+- When submitting a review of 5 stars, random elements all over the page would turn yellow and stars would appear randomly. I realised I had accidentally pasted an i class element with no closing tags in the product-ratings html. 
+
+- The quantity buttons on the product detail page were not responding - Somehow the qty-input class from the input box had been removed. Soon as I re-entered them, they began working.
+
+- The message inside the toast for viewing previous orders wasn't showing the date but instead a placeholder. This was because I forgot to make the string an f string. Also, the date of the order was given to the millisecond so I formatted it to just show the day, month, year, hour, minute, second.
+
+- Users not logged in couldn't view the products. The review section was looking for what user was logged in to check if they had left a review for that product. I needed to update the product detail view to check if the user was authenticated before adding the reviewed template filters. 
+
+- When trying to delete a review, sometimes it would trigger the delete modal for the product and not the review. The product and review modal was using a template {{ product.id }} and {{ review.id }}, meaning that the modals could sometimes have the exact same ID. This is what was causing the incorrect modal to display. I renamed the modals so that they couldn't end up the same which fixed the issue.
+
+- Modals on the products page were malfunctioning and rendering behind products. I figured out that it was the change of opacity when products were hovered over that was causing the issue. I was unsure about having a change in opacity in the first place so I decided to remove it and it fixed the issue.
+
+- Top products were showing lowest rated first. I noticed this only happened when using Heroku, which was running Postgres, as the problem didn't exist when using a local server that was using SQlite. It turns out that Heroku was putting items with no rating ahead of results. So inside the view I changed the sort filter to exclude any with a rating of 'None'. 
+
+- Free delivery on new user's first order was displaying the delivery charge as 0 but was charging delivery. I realised I had written logic to work out delivery costs in the bag but not for the order model. I added a 'first_order' boolean field to the order model. This defaulted to false but updated to true if user had no previous orders. I could then use that field to help work out the correct delivery charge.
+
+- Clicking the subscribe button or social media links inside the footer on medium screens or below, caused the page to scroll to the top. This was because the box containing the arrow that is used to scroll users back to the top of the page, spanned the entire width of the screen. The subscribe button, and social media links lined up with the arrow box, meaning that wherever you pressed inside the box you were actually triggering the arrow. I reduced the width of the arrow box which solved the problem.
+
+- When the scroll up arrow is clicked on the home page, nothing happens. I originally had the arrow box html and script on every page that I thought would needed it. In the end I decided that it would actually be useful on every page so I wrote the code needed onto the base template and deleted all the code elsewhere. However in doing so, I forgot to delete the box and the script from the index page. Once I had removed that it worked fine.
+
+- When trying to add products to the bag, or adjust the products quantity, if putting a blank input instead of number you receive an error message - 'ValueError at /bag/add/1/, invalid literal for int() with base 10:'. I added ‘or 1’ to the bags view when requesting the input value. This meant if the input was blank it would default to 1, thus solving the issue. 
+
+- Webhooks were resulting in a 500 error, sometimes stating ERROR: Product matching query does not exist. This had me baffled for hours. I'm still not sure where the problem lied. Deleting all the webhooks secret codes and re-rolling them on stripes website, then saving the new codes fixed the issue. So it must of been something their side. 
