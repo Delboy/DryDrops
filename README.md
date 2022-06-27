@@ -149,7 +149,7 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Navbar-Account](assets/images/navbar-account.png) 
 
-- #### Bag
+- #### Bag Icon
     - Located on the right side of the navbar next to the accounts menu is the bag Icon.
     - Beneath the bag icon users can find a running total of the cost of all the items in their bag.
     - Once a product is added to the bag, a number displaying the total quantity of items appears, located at the top right of the bag icon.
@@ -543,4 +543,6 @@ These phrases can also be used in the metadata at the head of the page.
 - [Heroku](https://www.heroku.com/)
     - To deploy the project.
 
-    
+## Testing 
+
+Testing and results can be found [here](TESTING.md)

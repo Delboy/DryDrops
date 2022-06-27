@@ -1,5 +1,153 @@
 # Dry Drops - Testing
 
+## Contents 
+
+- [Validators](#validators)
+    * [HTML](#html)
+    * [CSS](#css)
+    * [Jshint](#jshint)
+    * [PEP8](#pep8)
+    * [Lighthouse](#lighthouse)
+- [User story testing](#user-story-testing)
+    * [EPIC | Navigation](#EPIC-|-navigation)
+    * [EPIC | Accounts](#EPIC-|-accounts)
+    * [EPIC | Admin](#EPIC-|-admin)
+    * [EPIC | Purchasing](#EPIC-|-purchasing)
+    * [EPIC | Interaction](#EPIC-|-interaction)
+- [Feature Testing](#feature-testing)
+    * [Nav Bar](#nav-bar)
+        - [links](#links)
+        - [Search bar](#search-bar)
+        - [Account](#account)
+        - [Bag Icon](#bag-icon)
+        - [Banner](#banner)
+    * [Home page](#home-page)
+        - [Hero Image](#hero-image)
+        - [Categories](#categories)
+        - [Top Products](#top-products)
+        - [Hot Products](#hot-products)
+        - [Footer](#footer)
+    * [Accounts](#accounts)
+        - [Register Page](#register-page)
+        - [login Page](#login-page)
+        - [log-out-page](#log-out-page)
+    * [Profile](#profile)
+        - [Delivery Details](#delivery-details)
+        - [Order History](#order-history)
+        - [Favourite Items](#favourite-items)
+    * [All Products](#all-products)
+        - [Categories Side-Nav](#categories-side-nav)
+        - [What's Hot Carousel](#whats-hot-carousel)
+        - [Sorting](#sorting)
+        - [Products](#products)
+    * [Product Details](#product-details)
+        - [Product Info](#product-info)
+        - [Like Button](#like-button)
+        - [Quantity Buttons](#quantity-buttons)
+        - [Customer Reviews](#customer-reviews)
+        - [Add review](#add-review)
+    * [Product Management](#product-management)
+        - [Add Product](#add-product)
+        - [Edit Product](#edit-product)
+        - [Delete Product](#delete-product)
+    * [Bag](#bag)
+        - [Items](#items)
+        - [Quantity and Price](#quantity-and-price)
+        - [Totals and Messaging](#totals-and-messaging)
+    * [Checkout](#checkout)
+        - [Details](#details)
+        - [Order Summary](#order-summary)
+        - [Payment](#payment)
+        - [Loading Spinner](#loading-spinner)
+        - [Confirmation](#confirmation)
+        - [Webhooks](#webhooks)
+    * [About Us](#about-us)
+        - [Image](#image)
+        - [Links](#links)
+    * [Contact](#contact)
+        - [Contact-info](#contact-info)
+        - [Messaging](#messaging)
+    * [Toasts and pop-ups](#toasts-and-pop-ups)
+        - [Toasts](#toasts)
+        - [Pop-ups](#pop-ups)
+- [Bugs](#bugs)
+    * [Fixed](#fixed)
+    * [Unfixed](#unfixed)
+
+## Validators
+
+### HTML
+
+- All Pages were checked with the official [W3C validator](https://validator.w3.org/). 
+
+#### Home Page
+![home-w3](assets/images/home-w3.png)
+#### Products Page
+![products-w3](assets/images/products-w3.png)
+#### Product Details
+![product-details-w3](assets/images/product-details-w3.png)
+#### About Us
+![about-us-w3](assets/images/about-us-w3.png)
+#### Contact
+![contact-w3](assets/images/contact-w3.png)
+#### Bag
+![bag-w3](assets/images/bag-w3.png)
+#### Checkout 
+![checkout-w3](assets/images/checkout-w3.png)
+#### Checkout Success
+![checkout-success-w3](assets/images/checkout-success-w3.png)
+#### Product Management 
+- The add product page shows two errors. These are to do with the image upload widget and thus changing the code breaks the field.
+![add-product-w3](assets/images/add-product-w3.png)    
+#### Edit Review
+![edit-review-w3](assets/images/edit-review-w3.png)
+
+### CSS
+
+- All CSS was checked with the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/). 
+
+#### Base CSS
+![base-css-jigsaw](assets/images/base-css-jigsaw.png)
+#### Checkout CSS
+![checkout-css-jigsaw](assets/images/checkout-css-jigsaw.png)
+#### Profile CSS
+![profile-css-jigsaw](assets/images/profile-css-jigsaw.png)
+
+
+### JSHINT
+
+- All Javascript was passed through [Jshint](https://jshint.com/).
+
+### Base
+![jshint-base](assets/images/jshint-base.png)
+### Products
+![jshint-products](assets/images/jshint-products.png)
+### Edit Review
+![jshint-edit-review](assets/images/jshint-edit-review.png)
+### Bag 
+![jshint-bag](assets/images/jshint-bag.png)
+### Quantity Btns
+![jshint-qty-btns](assets/images/jshint-qty-btns.png)
+### Checkout
+![jshint-checkout](assets/images/jshint-checkout.png)
+### Profile
+![jshint-profile](assets/images/jshint-profile.png)
+### Scroll Arrow
+![jshint-scroll-arrow](assets/images/jshint-scroll-arrow.png)
+
+### PEP8
+
+- PEP8 only shows the type of errors that can be ignored.
+
+![pylint](assets/images/pylint.png)
+
+### Lighthouse
+
+- Lighthouse registered green in all areas.
+
+![Lighthouse](assets/images/lighthouse.png)
+
+
 ## User Story Testing
 
 ### EPIC | Navigation
@@ -259,7 +407,7 @@
 
     ![Account-icon](assets/gifs/account-icon.gif)
 
-- #### Bag
+- #### Bag Icon
     Checked that:
     - Beneath the bag icon is a running total of the cost of all the items in the bag.
     - Once a product is added to the bag, a number displaying the total quantity of items appears, located at the top right of the bag icon.
@@ -368,7 +516,6 @@
     - The favourite items section keeps a list of all products that the user has liked.
 
     ![fav-items](assets/gifs/fav-items.gif)
-
 
 ### All Products
 
@@ -625,79 +772,6 @@
 
      ![Pop-up](assets/gifs/pop-up.gif)
     
-## Validators
-
-### HTML
-
-- All Pages were checked with the official [W3C validator](https://validator.w3.org/). 
-
-#### Home Page
-![home-w3](assets/images/home-w3.png)
-#### Products Page
-![products-w3](assets/images/products-w3.png)
-#### Product Details
-![product-details-w3](assets/images/product-details-w3.png)
-#### About Us
-![about-us-w3](assets/images/about-us-w3.png)
-#### Contact
-![contact-w3](assets/images/contact-w3.png)
-#### Bag
-![bag-w3](assets/images/bag-w3.png)
-#### Checkout 
-![checkout-w3](assets/images/checkout-w3.png)
-#### Checkout Success
-![checkout-success-w3](assets/images/checkout-success-w3.png)
-#### Product Management 
-- The add product page shows two errors. These are to do with the image upload widget and thus changing the code breaks the field.
-![add-product-w3](assets/images/add-product-w3.png)    
-#### Edit Review
-![edit-review-w3](assets/images/edit-review-w3.png)
-
-### CSS
-
-- All CSS was checked with the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/). 
-
-#### Base CSS
-![base-css-jigsaw](assets/images/base-css-jigsaw.png)
-#### Checkout CSS
-![checkout-css-jigsaw](assets/images/checkout-css-jigsaw.png)
-#### Profile CSS
-![profile-css-jigsaw](assets/images/profile-css-jigsaw.png)
-
-
-### JSHINT
-
-- All Javascript was passed through [Jshint](https://jshint.com/).
-
-### Base
-![jshint-base](assets/images/jshint-base.png)
-### Products
-![jshint-products](assets/images/jshint-products.png)
-### Edit Review
-![jshint-edit-review](assets/images/jshint-edit-review.png)
-### Bag 
-![jshint-bag](assets/images/jshint-bag.png)
-### Quantity Btns
-![jshint-qty-btns](assets/images/jshint-qty-btns.png)
-### Checkout
-![jshint-checkout](assets/images/jshint-checkout.png)
-### Profile
-![jshint-profile](assets/images/jshint-profile.png)
-### Scroll Arrow
-![jshint-scroll-arrow](assets/images/jshint-scroll-arrow.png)
-
-### PEP8
-
-- PEP8 only shows the type of errors that can be ignored.
-
-![pylint](assets/images/pylint.png)
-
-### Lighthouse
-
-- Lighthouse registered green in all areas.
-
-![Lighthouse](assets/images/lighthouse.png)
-
 ## Bugs
 
 ### Fixed
