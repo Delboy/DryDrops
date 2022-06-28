@@ -71,6 +71,8 @@ I will be using two fonts from Google Fonts.
 
 ### Imagery
 
+All the static images on the site are centered around alcoholic beverages and follow the colour scheme as close as I could. 
+
 ### Wireframes
 
 Wireframes for each page are linked here:
