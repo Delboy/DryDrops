@@ -57,6 +57,10 @@ A list of my user stories and their tasks can be found [here](https://github.com
 
 ## Design
 
+### Business Model
+
+The business model for this store would be a B2C (Business to Customer) model, as the business would be selling products directly from themselves to the customer.  
+
 ### Colour Scheme
 
 - I wanted the colour scheme to be similar to the colour of dark ales and wines to fit in with the site's theme, so the main colour I chose was a dark reddish-brown, along with a lighter shade and a couple more neutral tones to balance it out.  
@@ -94,7 +98,25 @@ Wireframes for each page are linked here:
 
 ![Database Schema](assets/images/schema.png)
 
+### Marketing 
+
+The site uses two different marketing strategies. Social media, and a newsletter that users can sign up to.
+
+- Links to all the social media sites can be found both inside the footer and on the contact page.
+
+- The facebook link takes you to the Dry Drops business page which can be found [here](https://www.facebook.com/Drydropscom-105548042197433)*.
+<br>
+<i>*Note, this link may be broken as facebook regulary deletes inactive business pages.</i>
+
+![Facebook](assets/images/facebook.png)
+
+- The newsletter sign up form can also be found in the footer. This service is powered by [Mailchimp](https://mailchimp.com/en-gb/).
+
+![Newsletter](assets/images/newsletter.png)
+
 ### Search Engine Optimisation
+
+I have created a sitemap.xml and robots.txt file to help aid search engines locate the site. To keep users information safe, any pages that could contain sensitive information has been disallowed in the robots.txt.
 
 The purpose of the About Us page was not so much designed in mind to inform the user, but more so to have an opportunity to use some keywords, and link the user to any other relevant website, all to help boost the site's ranking in search engine results. 
 
