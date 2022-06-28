@@ -574,3 +574,117 @@ These phrases can also be used in the metadata at the head of the page.
 ## Testing 
 
 Testing and results can be found [here](TESTING.md)
+
+## Deployment
+
+### Github
+
+First you will need to create a new repository.
+
+    1. Log into Github.
+    2. On the 'Repositories' tab click 'New'. This takes you to the create a new repository page.
+    3. Name the repository and click 'Create repositry'.
+    4. Your new repsoitory is now set up and ready to use.
+
+### Django
+
+This project uses the Django frame work. To install django, follow these steps:
+
+1. In your IDE type the command:  
+    `pip3 install django`
+2. Then to name your project type:  
+    `django-admin startproject *Your project name here*`  
+This will add your django project folder to your file explorer
+3. Next you will need to add a gitignore file. To do this enter the command line:  
+    `touch .gitignore`
+4. Inside this file add these 3 lines:  
+    ``` 
+    *.sqlite3
+    *.pyc
+    __pycache__
+    ```
+5. To check everything is up and running, run the command:  
+    `python3 manage.py runserver`
+    This should expose port 8000. Open that port and you should be welcomed by Django's success page.
+6. Next you need to perform the initial migrations. This is done by running the command:
+    `python3 manage.py migrate`
+7. Finally, in order to have access to the admin panel you will need to create a superuser. This is done by running the command:
+    `python3 manage.py createsuperuser`
+    This will then ask you to create a username and password with an optional email address.
+8. Once these steps are completed you can push your changes to github by running the commands, in order:
+    ```
+    git add .
+    git commit -m "initial commit"
+    git push
+    ```
+
+#### All Auth
+
+Inside the django framework is a package called Allauth. This package handles all the registration and sign in processes. The steps to install Allauth can be found [here](https://django-allauth.readthedocs.io/en/latest/installation.html).
+
+### Heroku
+
+1. First you will need to sign in to Heroku. If you do not have an account you can sign up for free [here](https://signup.heroku.com/).
+2. Once you are logged in, click the button 'New' and select 'Create new app'.
+3. Name the app, then select what region is closest to you and click 'Create App'.
+4. Then on the resources tab, navigate to the 'Add-ons' section and search for 'Heroku Postgres'.
+5. Select 'Heroku Postgres', then under 'Plan name' choose 'Hobby Dev - Free' and click 'Submit Order Form'.
+
+To use Postgres you will need to install dj_database_url and psycopg2. This should be done in whatever IDE you are using.
+
+1. In your IDE type the command:  
+    `pip3 install dj_database_url`
+2. Then once that is installed type the command:  
+    `pip3 install psycopg2-binary`
+3. Then, to make sure heroku installs all your apps requirements when you deploy it, run the command:  
+    `pip3 freeze > requirements.txt`
+4. Next, navigate to your setting.py file in your main project folder. At the top of the file add the line:  
+    ```
+    import dj_database_url
+    ```
+5. Then scroll down the file till you find your database settings. Comment out the default configuration and underneath insert the code:  
+    ```
+    DATABASES = {
+        'defualt': dj_database_url.parse(*Enter Database URL here*)
+    }
+    ```
+    The database URL can be found in the settings tab of your app in heroku, under Config Vars. Make sure to have the link in quotation marks.  
+    **Important!** If you want to migrate any data from your current database to the postgress database in heroku, make sure you run this line before connecting to herokus database:  
+    `./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json`  
+6. Once thats saved, you will now need to run migrations because you have connected to a new database. This is done by running the command:  
+    `python3 manage.py migrate`
+    If you had previously saved your data to import into the postgres database, you can now run the command:  
+    `./manage.py loaddata db.json`
+7. Now that's setup you will now need to create a superuser for the new database. The command is:  
+    `python3 manage.py createsuperuser`
+8. Before you commit these changes, you will need to remove the Databases section in the settings.py and uncomment the original database. This is to stop your Postgres database URL from ending up in version control.
+9. Now we can create an if statement in our settings.py to run the postgres database when using the app on heroku or sqlite if not. Scroll back to the database section and refactor the code to look like this:  
+    ```
+    if 'DATABASE_URL' in os.environ:
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+    else:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+    }
+    ```
+10. Next we will have to install another package called gunicorn, which will act as our webserver. To do so, run the commmand:  
+    `pip3 install gunicorn`
+    And then remember to freeze the requirements with:  
+    `pip3 freeze > requirements.txt`
+11. Now we can create our Procfile to tell Heroku to create a web dyno. In your root directory create a file named 'Procfile' and inside insert the code:  
+    `web: gunicorn **'your_projects_name_here'**.wsgi:application
+12. Then, back in heroku, navigate to settings and in the config vars input the key DISABLE_COLLECTSTATIC with the value 1, and click 'Add'.
+This is to stop heroku from collecting any static files when you deploy.
+13. You will also need to add heroku to your allowed hosts in your settings.py. Back in your project, in the settings file, scroll down to ALLOWED_HOSTS, and inside the brackets insert the url to your app, followed by 'localhost'. It should look something like this:     
+    ```
+    ALLOWED_HOSTS = ['your-project-name.herokuapp.com', 'localhost']
+    ```
+14. Now add, commit and push these changes, followed by a push to heroku with the command:  
+    `git push heroku main'
+    Your app will now be deployed, all be it without any static files, but this will be fixed when setting up AWS, documented bellow. 
+15. If you want your project to be automatically deployed to heroku when pushing your work to github you can. To do so, In heroku go to the deploy tab, and in the 'deployment method' section connect it to github. You will need to search for your repository and once found click 'connect'. Then scroll down and click 'Enable automatic deploys'. Now when you push to github your code will automatically deploy to heroku aswel. 
