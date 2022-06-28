@@ -70,7 +70,10 @@
     * [Toasts and pop-ups](#toasts-pop-ups-and-scroll-arrow)
         - [Toasts](#toasts)
         - [Pop-ups](#pop-ups)
+    * [Other](#other)
         - [Scroll Arrow](#scroll-arrow)
+        - [Newsletter](#newsletter)
+    
 - [Bugs](#bugs)
     * [Fixed](#fixed)
     * [Unfixed](#unfixed)
@@ -758,7 +761,7 @@
 
     ![Messaging](assets/gifs/messaging.gif)
 
-### Toasts, Pop-ups, and scroll arrow
+### Toasts, Pop-ups
 
 - #### Toasts
     Checked that:
@@ -773,12 +776,20 @@
 
      ![Pop-up](assets/gifs/pop-up.gif)
 
+### Other
+
 - #### Scroll Arrow
     Checked that:
     - On medium screens and smaller, once the user has scrolled past a certain point, an arrow will appear at the bottom center of the screen.
     - Clicking the arrow scrolls the user back to the top of the page. 
     
     ![Scroll Arrow](assets/gifs/scroll-arrow.gif)
+
+- #### Newsletter 
+    Checked that:
+    - Signing up to the newsletter registers the email given in [Mailchimp](https://mailchimp.com/en-gb/).
+
+    ![Mailchimp](assets/gifs/mailchimp.gif)
 
 ## Bugs
 
