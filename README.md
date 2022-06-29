@@ -599,6 +599,25 @@ First you will need to create a new repository.
     3. Name the repository and click 'Create repositry'.
     4. Your new repsoitory is now set up and ready to use.
 
+#### Forking
+
+    To fork the project you must;
+    1. Sign in to Github and go to my [repository](https://github.com/Delboy/drydrops)
+    2. Locate the Fork button at the top right of the page.
+    3. Click the button then click 'Create fork'. 
+    4. The fork is now in your repositories.
+
+#### Clone
+    To clone the project you must;
+
+    1. Sign in to Github and go to my [repository](https://github.com/Delboy/drydrops)
+    2. Above the list of files click 'Code'.
+    3. This will bring up a few options as to how you would like to clone. You can select HTTPS, SSH or Github CLI, then click the clipboard icon to copy the URL.
+    4. Open git bash
+    5. Type 'git clone' and then paste the URL you copied. Press Enter.
+
+    For more information on cloning check out the github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    
 ### Django
 
 This project uses the Django frame work. To install django, follow these steps:
