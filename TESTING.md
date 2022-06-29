@@ -74,6 +74,7 @@
         - [Scroll Arrow](#scroll-arrow)
         - [404 page](#404-page)
         - [Newsletter](#newsletter)
+        - [Responsive](#responsiveness)
     
 - [Bugs](#bugs)
     * [Fixed](#fixed)
@@ -602,7 +603,7 @@
     - Only owners of the review can edit or delete them.
 
     ![Edit-review-access](assets/gifs/edit-review-access.gif)
-    
+
     ![Delete-review-access](assets/gifs/delete-review-access.gif)
     
 
@@ -816,6 +817,12 @@
     - Signing up to the newsletter registers the email given in [Mailchimp](https://mailchimp.com/en-gb/).
 
     ![Mailchimp](assets/gifs/mailchimp.gif)
+
+- #### Responsiveness 
+    Checked that:
+    - Every page on the site is fully responsive.
+
+    ![Responsive](assets/gifs/responsive.gif)
 
 ## Bugs
 

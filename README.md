@@ -524,6 +524,9 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![404](assets/images/404.png)
 
+- #### Responsiveness 
+    - Every page on the site is fully responsive. This allows all manner of devices from phones, to monitors, to use the site.  
+
 ## Technologies
 
 ### Languages used
