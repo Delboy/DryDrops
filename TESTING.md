@@ -623,6 +623,10 @@
 
     ![Add-Product](assets/gifs/add-product.gif)
 
+     - It is only accessible by superusers.
+
+    ![Add-product-Access](assets/gifs/add-product-access.gif)
+
     
 - #### Edit Product
     Checked that:
@@ -633,6 +637,10 @@
 
     ![Edit-Product](assets/gifs/edit-product.gif)
 
+    - The Edit product page can only be accessed by superusers. 
+
+    ![Edit-product-Access](assets/gifs/edit-product-access.gif)
+
 - #### Delete Product
     Checked that:
     - The Delete Product button can be found in two places. Next to the 'edit' button at the bottom of the product's card, and to the right of the 'edit' button on the product's detail page. 
@@ -642,6 +650,10 @@
     - A toast message appears, informing the user that the product has been deleted.
 
     ![Delete-Product](assets/gifs/delete-product.gif)
+
+    - Only superusers can delete products.
+
+    ![Delete-product-Access](assets/gifs/delete-product-access.gif)
 
 ### Bag
 

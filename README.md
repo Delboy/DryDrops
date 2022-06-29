@@ -359,9 +359,11 @@ These phrases can also be used in the metadata at the head of the page.
     - The user has the option to add an image. If none is chosen then a default image is used.
     - Clicking the 'Add Product' button at the bottom of the form will create the product providing there are no errors on the form.
 
+
     ![Products-Management-Add](assets/images/product-management-add.png)
 
 - #### Edit Product
+    - The Edit product page can only be accessed by superusers. 
     - The Edit Product page can be accessed from two places. By clicking the 'edit' button at the bottom of the product's card. Or by clicking the edit button located under the image on the products detail page.
     - Accessing the page loads what is essentially the add product page, with the details of the product already filled in. 
     - The image field displays a thumbnail of the current image and has a checkbox option to remove it. Checking this will change the image to the default image.
@@ -370,6 +372,7 @@ These phrases can also be used in the metadata at the head of the page.
     ![Products-Management-Edit](assets/images/product-management-edit.png)
 
 - #### Delete Product
+    - Only superusers can delete products.
     - The Delete Product button can be found in two places. One is next to the 'edit' button at the bottom of the product's card. The second is to the right of the 'edit' button on the products detail page. 
     - Clicking either of the delete buttons will bring up a warning modal, asking the user if they are sure they want to delete the product, and informing them that it is irreversible. 
     - Once the warning modal has been activated, if the user then clicks the delete button the product will be removed from the database. 
