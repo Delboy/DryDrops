@@ -334,6 +334,7 @@ These phrases can also be used in the metadata at the head of the page.
     - If the product has received any reviews they will appear underneath the product details.
     - The reviews consist of the number of stars awarded by the user, their written comment, followed by the user name and how long ago the comment was left.
     - If the user is signed in and they have left a review on a product, that review will also have edit and delete buttons. Users can use these to manage their reviews.
+    - Only owners of the review can edit or delete them.
 
      ![Products-Reviews](assets/images/products-reviews.png)
 

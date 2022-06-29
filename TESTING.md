@@ -599,6 +599,13 @@
 
     ![Reviews](assets/gifs/reviews.gif)
 
+    - Only owners of the review can edit or delete them.
+
+    ![Edit-review-access](assets/gifs/edit-review-access.gif)
+    
+    ![Delete-review-access](assets/gifs/delete-review-access.gif)
+    
+
 - #### Add Review
     Checked that:
     - Leaving out either the rating or the review notifies the user that the fields are required.  
