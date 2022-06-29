@@ -617,7 +617,7 @@ First you will need to create a new repository.
     5. Type 'git clone' and then paste the URL you copied. Press Enter.
 
     For more information on cloning check out the github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-    
+
 ### Django
 
 This project uses the Django frame work. To install django, follow these steps:
@@ -877,14 +877,14 @@ For payments and webhooks to work, you will need a stripe account which you can 
 #### Webhooks
 
 1. To set up a webhook, sign into your stripe account and click 'Developers' located in the top right of the navbar.
-2. Then in the sidenav under the Developers title, click on 'Webhooks', then 'Add endpoint'.
+2. Then in the side-nav under the Developers title, click on 'Webhooks', then 'Add endpoint'.
 3. On the next page you will need to input the link to your heroku app followed by /checkout/wh/. It should look something like this:  
     ```
     https://your-app-name.herokuapp.com/checkout/wh/
     ```
 4. Then click '+ Select events' and check the 'Select all events' checkbox at the top before clicking 'Add events' at the bottom. Once this is done finish the form by clicking 'Add endpoint'.
 5. Your webhook is now created and you should see that it has generated a secret key. You will need this to add to your heroku config vars.
-6. Head over to your app in heroku and navigate to the convig vars section under settings. You will need the secret key you just generated for your webhook, in addition to your Publishable key and secret key that you can find in the API keys section back in stripe.
+6. Head over to your app in heroku and navigate to the config vars section under settings. You will need the secret key you just generated for your webhook, in addition to your Publishable key and secret key that you can find in the API keys section back in stripe.
 7. Add these values under these keys:  
     ```
     STRIPE_PUBLIC_KEY = 'insert your stripe publishable key'
@@ -897,5 +897,22 @@ For payments and webhooks to work, you will need a stripe account which you can 
     STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
     STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
     ```
+## Credits
 
+### Code
+    - In trying to edit the carousel's control buttons, I had to use stackoverflow.com where I found this solution [here](https://stackoverflow.com/questions/49391266/change-bootstrap-4-carousel-control-colors).
+    - The CSS to generate the ribbons over feature products was taken from codepen [here](https://codepen.io/nxworld/pen/oLdoWb).
+
+### Media
+    - All static images were taken from [unsplash.com/](https://unsplash.com/).
+    - All product images and descriptions were taken from [drydrinker.com](https://drydrinker.com/)
+
+### Other
+    - This project was heavily inspired by the [Code Institutes](https://codeinstitute.net/) Boutique Ado project. Alot of the functionality of the site was taken from there.
+    - The [Django documentation](https://docs.djangoproject.com/en/4.0/) was vital to help diagnose or solve issues that I had.
+    - [Stackoverflow.com](https://stackoverflow.com/) was also another website instrumental into helping me understand how django works.
+
+## Acknowledgments
+    - Everybody from the Code Institute Slack community who were always on hand to troubleshoot problems. Especially [Ed](https://github.com/Edb83) who was always more than helpful.
+    - My mentor [Spencer](https://github.com/5pence), who has always complimented my work and shown me many helpful tidbits of information to help elevate my code.
 
