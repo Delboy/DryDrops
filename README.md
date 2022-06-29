@@ -493,7 +493,7 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Contact-Messaging](assets/images/contact-msg.png)
 
-### Toasts, Pop-ups, and scroll arrow
+### Toasts, Pop-ups
 
 - #### Toasts
     - Toasts appear in the top right-hand corner of the display informing the user of any actions they have performed.
@@ -507,9 +507,18 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Pop-up](assets/images/pop-up.png)
 
+### Other
+
 - #### Scroll Arrow
     - On medium screens and smaller, once the user has scrolled past a certain point, an arrow will appear at the bottom center of the screen.
     - Clicking the arrow scrolls the user back to the top of the page. 
+
+    ![Scroll-arrow](assets/images/scroll-arrow.png)
+
+- #### 404 page
+    - If any links are broken or the user types in an address that doesn't exist, a 404 error page will render.
+
+    ![404](assets/images/404.png)
 
 ## Technologies
 

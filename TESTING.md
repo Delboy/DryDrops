@@ -72,6 +72,7 @@
         - [Pop-ups](#pop-ups)
     * [Other](#other)
         - [Scroll Arrow](#scroll-arrow)
+        - [404 page](#404-page)
         - [Newsletter](#newsletter)
     
 - [Bugs](#bugs)
@@ -784,6 +785,12 @@
     - Clicking the arrow scrolls the user back to the top of the page. 
     
     ![Scroll Arrow](assets/gifs/scroll-arrow.gif)
+
+- #### 404 page
+    Checked that:
+    - If any links are broken or the user types in an address that doesn't exist, a 404 error page will render.
+
+    ![404](assets/gifs/404.gif)
 
 - #### Newsletter 
     Checked that:
