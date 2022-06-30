@@ -76,7 +76,8 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual products details """
     product = get_object_or_404(Product, pk=product_id)
-    reviews = Review.objects.all().filter(product=product)
+    reviews = Review.objects.all().filter(
+        product=product).order_by('-created_on')
     review_count = len(reviews)
 
     if request.user.is_authenticated:
