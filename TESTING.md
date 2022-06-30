@@ -832,7 +832,7 @@
 
 - #### Scroll Arrow
     Checked that:
-    - On medium screens and smaller, once the user has scrolled past a certain point, an arrow will appear at the bottom center of the screen.
+    - On medium screens and smaller, once the user has scrolled past a certain point, an arrow will appear at the bottom centre of the screen.
     - Clicking the arrow scrolls the user back to the top of the page. 
     
     ![Scroll Arrow](assets/gifs/scroll-arrow.gif)

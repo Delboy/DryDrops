@@ -188,7 +188,7 @@ I will be using two fonts from Google Fonts.
 
 ### Imagery
 
-All the static images on the site are centered around alcoholic beverages and follow the colour scheme as close as I could. 
+All the static images on the site are centred around alcoholic beverages and follow the colour scheme as close as I could. 
 
 ### Wireframes
 
@@ -219,7 +219,7 @@ The site uses two different marketing strategies. Social media, and a newsletter
 
 - The facebook link takes you to the Dry Drops business page which can be found [here](https://www.facebook.com/Drydropscom-105548042197433)*.
 <br>
-<i>*Note, this link may be broken as facebook regulary deletes inactive business pages.</i>
+<i>*Note, this link may be broken as facebook regularly deletes inactive business pages.</i>
 
 ![Facebook](assets/images/facebook.png)
 
@@ -229,7 +229,7 @@ The site uses two different marketing strategies. Social media, and a newsletter
 
 ### Search Engine Optimisation
 
-I have created a sitemap.xml and robots.txt file to help aid search engines locate the site. To keep users information safe, any pages that could contain sensitive information has been disallowed in the robots.txt.
+I have created a sitemap.xml and robots.txt file to help aid search engines locate the site. To keep user's information safe, any pages that could contain sensitive information has been disallowed in the robots.txt.
 
 The purpose of the About Us page was not so much designed in mind to inform the user, but more so to have an opportunity to use some keywords, and link the user to any other relevant website, all to help boost the site's ranking in search engine results. 
 
@@ -411,7 +411,7 @@ These phrases can also be used in the metadata at the head of the page.
     ![Products-Whats-Hot](assets/images/products-whats-hot.png)
 
 - #### Sorting
-    - The sort-by box is located to the top right of the products section on medium and large screens, and centered on smaller screens.
+    - The sort-by box is located to the top right of the products section on medium and large screens, and centred on smaller screens.
     - Clicking the box opens up a dropdown menu with various options on how to sort the products. 
 
     ![Products-sort](assets/images/products-sort.png)
@@ -624,7 +624,7 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Contact Info 
     - The contact info has all of Dry Drops contact information, including their address, phone number, email address and social media links. 
     - Hovering over the social media links changes their colour. Clicking the links takes you to the respective website which opens in a new tab.
-    - The facebook link particularly takes you to the websites business page on facebook. 
+    - The facebook link particularly takes you to the website's business page on facebook. 
 
     ![Contact-info](assets/images/contact-info.png)
 
@@ -657,7 +657,7 @@ These phrases can also be used in the metadata at the head of the page.
 ### Other
 
 - #### Scroll Arrow
-    - On medium screens and smaller, once the user has scrolled past a certain point, an arrow will appear at the bottom center of the screen.
+    - On medium and smaller screens, once the user has scrolled past a certain point, an arrow will appear at the bottom centre of the screen.
     - Clicking the arrow scrolls the user back to the top of the page. 
 
     ![Scroll-arrow](assets/images/scroll-arrow.png)
@@ -746,8 +746,8 @@ First you will need to create a new repository.
 
 1. Log into Github.
 2. On the 'Repositories' tab click 'New'. This takes you to the create a new repository page.
-3. Name the repository and click 'Create repositry'.
-4. Your new repsoitory is now set up and ready to use.
+3. Name the repository and click 'Create repository'.
+4. Your new repository is now set up and ready to use.
 
 #### Forking
 
@@ -770,7 +770,7 @@ For more information on cloning check out the github documentation [here](https:
 
 ### Django
 
-This project uses the Django frame work. To install django, follow these steps:
+This project uses the Django framework. To install django, follow these steps:
 
 1. In your IDE type the command:  
     `pip3 install django`
@@ -822,7 +822,7 @@ To use Postgres you will need to install dj_database_url and psycopg2. This shou
     `pip3 install dj_database_url`
 2. Then once that is installed type the command:  
     `pip3 install psycopg2-binary`
-3. Then, to make sure heroku installs all your apps requirements when you deploy it, run the command:  
+3. Then, to make sure Heroku install all your apps requirements when you deploy it, run the command:  
     `pip3 freeze > requirements.txt`
 4. Next, navigate to your setting.py file in your main project folder. At the top of the file add the line:  
     ```
@@ -831,13 +831,13 @@ To use Postgres you will need to install dj_database_url and psycopg2. This shou
 5. Then scroll down the file till you find your database settings. Comment out the default configuration and underneath insert the code:  
     ```
     DATABASES = {
-        'defualt': dj_database_url.parse(*Enter Database URL here*)
+        'default': dj_database_url.parse(*Enter Database URL here*)
     }
     ```
     The database URL can be found in the settings tab of your app in heroku, under Config Vars. Make sure to have the link in quotation marks.  
-    **Important!** If you want to migrate any data from your current database to the postgress database in heroku, make sure you run this line before connecting to herokus database:  
+    **Important!** If you want to migrate any data from your current database to the Postgres database in Heroku, make sure you run this line before connecting to Postgres:  
     `./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json`  
-6. Once thats saved, you will now need to run migrations because you have connected to a new database. This is done by running the command:  
+6. Once that's saved, you will now need to run migrations because you have connected to a new database. This is done by running the command:  
     `python3 manage.py migrate`
     If you had previously saved your data to import into the postgres database, you can now run the command:  
     `./manage.py loaddata db.json`
@@ -859,7 +859,7 @@ To use Postgres you will need to install dj_database_url and psycopg2. This shou
             }
     }
     ```
-10. Next we will have to install another package called gunicorn, which will act as our webserver. To do so, run the commmand:  
+10. Next we will have to install another package called gunicorn, which will act as our web server. To do so, run the command:  
     `pip3 install gunicorn`
     And then remember to freeze the requirements with:  
     `pip3 freeze > requirements.txt`
@@ -873,25 +873,25 @@ This is to stop heroku from collecting any static files when you deploy.
     ```
 14. Now add, commit and push these changes, followed by a push to heroku with the command:  
     `git push heroku main'
-    Your app will now be deployed, all be it without any static files, but this will be fixed when setting up AWS, documented bellow. 
-15. If you want your project to be automatically deployed to heroku when pushing your work to github you can. To do so, In heroku go to the deploy tab, and in the 'deployment method' section connect it to github. You will need to search for your repository and once found click 'connect'. Then scroll down and click 'Enable automatic deploys'. Now when you push to github your code will automatically deploy to heroku aswel. 
+    Your app will now be deployed, albeit without any static files, but this will be fixed when setting up AWS, documented below. 
+15. If you want your project to be automatically deployed to heroku when pushing your work to github you can. To do so, In heroku go to the deploy tab, and in the 'deployment method' section connect it to github. You will need to search for your repository and once found click 'connect'. Then scroll down and click 'Enable automatic deploys'. Now when you push to github your code will automatically deploy to Heroku as well. 
 
 [Back to top ⇧](#dry-drops)
 
 ### AWS
 
-Amazon web services is used to store all our static and media files. 
+Amazon web services are used to store all our static and media files. 
 
 #### S3
 
-1. Fist you will need to sign up to AWS which you can do [here](https://aws.amazon.com/).
-2. Once you have created an account and logged in, under the All Services>Storage menu, click the link the says S3.
+1. First you will need to sign up to AWS which you can do [here](https://aws.amazon.com/).
+2. Once you have created an account and logged in, under the All Services>Storage menu, click the link that says S3.
 3. On the S3 page you will need to create a new bucket. To do this click the orange button that says 'Create Bucket'.
-4. Name the bucket and select the closest region to you. To keep things simple I recommend naming the bucket after your projects name.
+4. Name the bucket and select the closest region to you. To keep things simple I recommend naming the bucket after your project's name.
 5. Under 'Object Ownership' select 'ACLs enabled' and leave the Object Ownership as Bucket owner preferred. 
 6. Uncheck the 'Block all public access' checkbox and check the warning box to acknowledge that the bucket will be made public, then click create bucket. 
-7. Once created, click the buckets name and navigate to the properties tab. Scroll to the bottom and under 'Static website hosting' click 'edit' and change the Static website hosting option to 'enabled'. Copy the default values for the index and error documents and click 'save changes'.
-8. Now navigate to the perimissions tab, scroll down to th Cross-origin resource sharing (CORS) section, click edit and paste in the following code:  
+7. Once created, click the bucket's name and navigate to the properties tab. Scroll to the bottom and under 'Static website hosting' click 'edit' and change the Static website hosting option to 'enabled'. Copy the default values for the index and error documents and click 'save changes'.
+8. Now navigate to the permissions tab, scroll down to the Cross-origin resource sharing (CORS) section, click edit and paste in the following code:  
     ```
     [
         {
@@ -911,17 +911,17 @@ Amazon web services is used to store all our static and media files.
 9. Then scroll back up to the 'Bucket Policy' section. Click 'edit' and then 'Policy generator'. This should open the AWS policy generator page.
 10. From here under the 'select type of policy' dropdown menu, select 'S3 Bucket Policy'. Then inside 'Principle' allow all principals by typing a *.
 11. From the 'Actions dropdown menu select 'Get object'. Then head back to the previous tab and locate the Bucket ARN number. Copy that, return to the policy generator and paste it in the field labelled Amazon Resource Name (ARN).
-12. Once thats compeleted click 'Add statment', then 'Generate Policy'. Copy the policy thats been generated and paste it in the bucket policy editor.
-13. Before you click save, add a '/*' at the end of your resource key. This is to allow accss to all resources in this bucket.
+12. Once that's completed click 'Add statement', then 'Generate Policy'. Copy the policy that's been generated and paste it into the bucket policy editor.
+13. Before you click save, add a '/*' at the end of your resource key. This is to allow access to all resources in this bucket.
 14. Once those changes are saved, scroll down to the Access control list (ACL) section and click 'edit'.
-15. Next to 'Everyone (public access)', check the 'list' checkbox. This will pop up a warning box that you will also have to check. Once thats done click 'save'. 
+15. Next to 'Everyone (public access)', check the 'list' checkbox. This will pop up a warning box that you will also have to check. Once that's done click 'save'. 
 
 #### IAM
 
 1. Now that your bucket is ready we need to create a user to access it. In the search bar at the top of the window, search for IAM and select it.
 2. Once on the IAM page, click 'User Groups' from the side bar, then click 'Create group'.
 3. Name the group 'manage-*your-project-name*' and click 'Create group' at the bottom of the page. 
-4. Then from the sidebar click 'Polices', then 'Create policy'.
+4. Then from the sidebar click 'Policies', then 'Create policy'.
 5. Go to the JSON tab and click 'import managed policy'. Search for 'S3' and select 'AmazonS3FullAccess' and click import.
 6. Once this is imported you will need to edit it slightly. Go back to your bucket and copy your ARN number. Head back to this policy and update the Resource key to include your ARN, and another line with your ARN followed by a /*. It should end up looking something like this: 
     ```
@@ -955,7 +955,7 @@ Amazon web services is used to store all our static and media files.
 
 #### Connecting AWS to django
 
-Now that you have created a S3 bucket with it's user group attached, we need to connect it to django.
+Now that you have created a S3 bucket with its user group attached, we need to connect it to django.
 
 1. First you will need to install two packages. Boto3 and Django storages. Do this by running these commands:  
     ```
@@ -984,7 +984,7 @@ Now that you have created a S3 bucket with it's user group attached, we need to 
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
     ```
     This is to tell django where our static files will be coming from in production.
-9. Next we need to create a file to tell django that we want to use S3 to store our static files whenever someone runs collectstaticm and that we want any uploaded product images to go there also.
+9. Next we need to create a file to tell django that we want to use S3 to store our static files whenever someone runs collectstatic and also that we want any uploaded product images to go there also.
 10. In the root directory of your project create a file called 'custom_storages.py'. Inside this file you will need to import your settings as well as the s3boto3 storage class. So at the top of the file insert the code:  
     ```
     from django.conf import settings
@@ -1068,7 +1068,7 @@ Stripe is needed to handle the checkout process when a payment is made. You will
     - All product images and descriptions were taken from [drydrinker.com](https://drydrinker.com/)
 
 ### Other
-    - This project was heavily inspired by the [Code Institutes](https://codeinstitute.net/) Boutique Ado project. Alot of the functionality of the site was taken from there.
+    - This project was heavily inspired by the [Code Institutes](https://codeinstitute.net/) Boutique Ado project. A lot of the functionality of the site was taken from there.
     - The [Django documentation](https://docs.djangoproject.com/en/4.0/) was vital to help diagnose or solve issues that I had.
     - [Stackoverflow.com](https://stackoverflow.com/) was also another website instrumental into helping me understand how django works.
 
