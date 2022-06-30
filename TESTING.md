@@ -2,83 +2,87 @@
 
 ## Contents 
 
-- [Validators](#validators)
-    * [HTML](#html)
-    * [CSS](#css)
-    * [Jshint](#jshint)
-    * [PEP8](#pep8)
-    * [Lighthouse](#lighthouse)
-- [User story testing](#user-story-testing)
-    * [EPIC | Navigation](#EPIC-|-navigation)
-    * [EPIC | Accounts](#EPIC-|-accounts)
-    * [EPIC | Admin](#EPIC-|-admin)
-    * [EPIC | Purchasing](#EPIC-|-purchasing)
-    * [EPIC | Interaction](#EPIC-|-interaction)
-- [Feature Testing](#feature-testing)
-    * [Nav Bar](#nav-bar)
-        - [links](#links)
-        - [Search bar](#search-bar)
-        - [Account](#account)
-        - [Bag Icon](#bag-icon)
-        - [Banner](#banner)
-    * [Home page](#home-page)
-        - [Hero Image](#hero-image)
-        - [Categories](#categories)
-        - [Top Products](#top-products)
-        - [Hot Products](#hot-products)
-        - [Footer](#footer)
-    * [Accounts](#accounts)
-        - [Register Page](#register-page)
-        - [login Page](#login-page)
-        - [log-out-page](#log-out-page)
-    * [Profile](#profile)
-        - [Delivery Details](#delivery-details)
-        - [Order History](#order-history)
-        - [Favourite Items](#favourite-items)
-    * [All Products](#all-products)
-        - [Categories Side-Nav](#categories-side-nav)
-        - [What's Hot Carousel](#whats-hot-carousel)
-        - [Sorting](#sorting)
-        - [Products](#products)
-    * [Product Details](#product-details)
-        - [Product Info](#product-info)
-        - [Like Button](#like-button)
-        - [Quantity Buttons](#quantity-buttons)
-        - [Customer Reviews](#customer-reviews)
-        - [Add review](#add-review)
-    * [Product Management](#product-management)
-        - [Add Product](#add-product)
-        - [Edit Product](#edit-product)
-        - [Delete Product](#delete-product)
-    * [Bag](#bag)
-        - [Items](#items)
-        - [Quantity and Price](#quantity-and-price)
-        - [Totals and Messaging](#totals-and-messaging)
-    * [Checkout](#checkout)
-        - [Details](#details)
-        - [Order Summary](#order-summary)
-        - [Payment](#payment)
-        - [Loading Spinner](#loading-spinner)
-        - [Confirmation](#confirmation)
-        - [Webhooks](#webhooks)
-    * [About Us](#about-us)
-        - [Image](#image)
-        - [Links](#links)
-    * [Contact](#contact)
-        - [Contact-info](#contact-info)
-        - [Messaging](#messaging)
-    * [Toasts and pop-ups](#toasts-pop-ups-and-scroll-arrow)
-        - [Toasts](#toasts)
-        - [Pop-ups](#pop-ups)
-    * [Other](#other)
-        - [Scroll Arrow](#scroll-arrow)
-        - [404 page](#404-page)
-        - [Newsletter](#newsletter)
-        - [Responsive](#responsiveness)
-    
-- [Bugs](#bugs)
-    * [Fixed](#fixed)
-    * [Unfixed](#unfixed)
+[Validators](#validators)
+* [HTML](#html)
+* [CSS](#css)
+* [Jshint](#jshint)
+* [PEP8](#pep8)
+* [Lighthouse](#lighthouse)
+
+[User Story Testing](user-story-testing)
+* [EPIC | Navigation](#EPIC-|-navigation)
+* [EPIC | Accounts](#EPIC-|-accounts)
+* [EPIC | Admin](#EPIC-|-admin)
+* [EPIC | Purchasing](#EPIC-|-purchasing)
+* [EPIC | Interaction](#EPIC-|-interaction)
+
+[Feature Testing](#feature-testing)
+* [Nav Bar](#nav-bar)
+    - [links](#links)
+    - [Search bar](#search-bar)
+    - [Account](#account)
+    - [Bag Icon](#bag-icon)
+    - [Banner](#banner)
+* [Home page](#home-page)
+    - [Hero Image](#hero-image)
+    - [Categories](#categories)
+    - [Top Products](#top-products)
+    - [Hot Products](#hot-products)
+    - [Footer](#footer)
+* [Accounts](#accounts)
+    - [Register Page](#register-page)
+    - [login Page](#login-page)
+    - [log-out-page](#log-out-page)
+* [Profile](#profile)
+    - [Delivery Details](#delivery-details)
+    - [Order History](#order-history)
+    - [Favourite Items](#favourite-items)
+* [All Products](#all-products)
+    - [Categories Side-Nav](#categories-side-nav)
+    - [What's Hot Carousel](#whats-hot-carousel)
+    - [Sorting](#sorting)
+    - [Products](#products)
+* [Product Details](#product-details)
+    - [Product Info](#product-info)
+    - [Like Button](#like-button)
+    - [Quantity Buttons](#quantity-buttons)
+    - [Customer Reviews](#customer-reviews)
+    - [Add review](#add-review)
+* [Product Management](#product-management)
+    - [Add Product](#add-product)
+    - [Edit Product](#edit-product)
+    - [Delete Product](#delete-product)
+* [Bag](#bag)
+    - [Items](#items)
+    - [Quantity and Price](#quantity-and-price)
+    - [Totals and Messaging](#totals-and-messaging)
+* [Checkout](#checkout)
+    - [Details](#details)
+    - [Order Summary](#order-summary)
+    - [Payment](#payment)
+    - [Loading Spinner](#loading-spinner)
+    - [Confirmation](#confirmation)
+    - [Webhooks](#webhooks)
+* [About Us](#about-us)
+    - [Image](#image)
+    - [Links](#links)
+* [Contact](#contact)
+    - [Contact-info](#contact-info)
+    - [Messaging](#messaging)
+* [Toasts and pop-ups](#toasts-pop-ups-and-scroll-arrow)
+    - [Toasts](#toasts)
+    - [Pop-ups](#pop-ups)
+* [Other](#other)
+    - [Scroll Arrow](#scroll-arrow)
+    - [404 page](#404-page)
+    - [Newsletter](#newsletter)
+    - [Responsive](#responsiveness)
+
+[Bugs](#bugs)
+* [Fixed](#fixed)
+* [Unfixed](#unfixed)
+
+[Back to top ⇧](#dry-drops---testing)
 
 ## Validators
 
@@ -119,7 +123,6 @@
 #### Profile CSS
 ![profile-css-jigsaw](assets/images/profile-css-jigsaw.png)
 
-
 ### JSHINT
 
 - All Javascript was passed through [Jshint](https://jshint.com/).
@@ -153,6 +156,7 @@
 
 ![Lighthouse](assets/images/lighthouse.png)
 
+[Back to top ⇧](#dry-drops---testing)
 
 ## User Story Testing
 
@@ -221,6 +225,8 @@
 
 ![Favourite-items](assets/images/favourite-items.png)
 
+[Back to top ⇧](#dry-drops---testing)
+
 ### EPIC | Accounts
 *As a User, I can register for an account so that I can use the features afforded to members*
 - Users can click the 'Sign in/up' accounts icon located in the header of the page, and from there click the link 'Register'. 
@@ -269,6 +275,8 @@
 
 ![Accounts-Login](assets/images/accounts-login.png)
 
+[Back to top ⇧](#dry-drops---testing)
+
 ### EPIC | Admin
 *As an admin, I can add products so that I can update the site's inventory*
 - Admins can navigate to the 'Product Management' page under the accounts menu.
@@ -300,6 +308,7 @@
 
 ![Hot-Products-Home](assets/images/hot-products-home.png)
 
+[Back to top ⇧](#dry-drops---testing)
 
 ### EPIC | Purchasing
 *As a shopper, I can add items to my bag in different quantities so that I can store the items until I'm ready to buy*
@@ -350,6 +359,7 @@
 *As a shopper, I can receive an email of my order so that I can keep it in my records*
 - Once an order is completed, the user will receive a confirmation email detailing the order.
 
+[Back to top ⇧](#dry-drops---testing)
 
 ### EPIC | Interaction
 *As a user, I can save my favourite products so that they are easily accessible for future purchases*
@@ -382,6 +392,8 @@
 - The contact us page also features a messaging form that users can fill out to send a direct email to the company.
 
 ![Contact-page](assets/images/contact-page.png)
+
+[Back to top ⇧](#dry-drops---testing)
 
 ## Feature Testing
 
@@ -428,6 +440,8 @@
 
     ![Banner](assets/gifs/banner.gif)
 
+[Back to top ⇧](#dry-drops---testing)
+
 ### Home Page
     
 - #### Hero Image
@@ -470,6 +484,8 @@
 
     ![Footer](assets/gifs/footer.gif)
 
+[Back to top ⇧](#dry-drops---testing)
+
 ### Accounts
 
 - #### Register Page
@@ -498,6 +514,8 @@
 
     ![Log-out](assets/gifs/log-out.gif)
 
+[Back to top ⇧](#dry-drops---testing)
+
 ### Profile
 
 - #### Delivery Details
@@ -523,6 +541,8 @@
     - The favourite items section keeps a list of all products that the user has liked.
 
     ![fav-items](assets/gifs/fav-items.gif)
+
+[Back to top ⇧](#dry-drops---testing)
 
 ### All Products
 
@@ -558,6 +578,8 @@
     - If the user is a superuser and the product has been featured, a featured banner will appear across the product card. 
 
     ![products](assets/gifs/products.gif)
+
+[Back to top ⇧](#dry-drops---testing)
 
 ### Products Details
 
@@ -607,7 +629,6 @@
 
     ![Delete-review-access](assets/gifs/delete-review-access.gif)
     
-
 - #### Add Review
     Checked that:
     - Leaving out either the rating or the review notifies the user that the fields are required.  
@@ -616,6 +637,8 @@
     - The form only renders when no reviews for that product from that user exist.
 
     ![Add-Review](assets/gifs/add-review.gif)
+
+[Back to top ⇧](#dry-drops---testing)
 
 ### Product Management
 
@@ -636,7 +659,6 @@
 
     ![Add-product-Access](assets/gifs/add-product-access.gif)
 
-    
 - #### Edit Product
     Checked that:
     - The Edit Product page can be accessed from two places. The bottom of the product's card and under the image on the product's detail page.
@@ -663,6 +685,8 @@
     - Only superusers can delete products.
 
     ![Delete-product-Access](assets/gifs/delete-product-access.gif)
+
+[Back to top ⇧](#dry-drops---testing)
 
 ### Bag
 
@@ -695,6 +719,8 @@
     - The 'Continue Shopping' link takes users back to the store.
 
     ![Totals](assets/gifs/totals.gif)
+
+[Back to top ⇧](#dry-drops---testing)
 
 ### Checkout
 
@@ -750,7 +776,9 @@
     - If it cannot find the original order, it will create one using the information provided by the user in the original instance.
 
     ![Webhook-Fail](assets/gifs/webhook-fail.gif)
-    
+
+[Back to top ⇧](#dry-drops---testing)
+
 ### About Us
 
 - #### Image
@@ -798,6 +826,8 @@
 
      ![Pop-up](assets/gifs/pop-up.gif)
 
+[Back to top ⇧](#dry-drops---testing)
+
 ### Other
 
 - #### Scroll Arrow
@@ -825,6 +855,8 @@
 
     ![Responsive](assets/gifs/responsive.gif)
 
+[Back to top ⇧](#dry-drops---testing)
+
 ## Bugs
 
 ### Fixed
@@ -839,7 +871,7 @@
 
 - The review section was allowing users to leave more than one review. Upon inspection, I realised I had the filter to check if a review by that user already existed wrong. In the view, I was filtering by user=request.user.id, when I actually needed user=user_profile.id. 
 
-- When submitting a review of 5 stars, random elements all over the page would turn yellow and stars would appear randomly. I realised I had accidentally pasted an i class element with no closing tags in the product-ratings html. 
+- When submitting a review of 5 stars, random elements all over the page would turn yellow and stars would appear randomly. I realised I had accidentally pasted an I class element with no closing tags in the product-ratings html. 
 
 - The quantity buttons on the product detail page were not responding - Somehow the qty-input class from the input box had been removed. As soon as I re-entered them, they began working.
 
@@ -866,3 +898,5 @@
 ### Unfixed
 
 - When reviewing a product, once a star is clicked the hover effect of the unfilled stars stops working. 
+
+[Back to top ⇧](#dry-drops---testing)
