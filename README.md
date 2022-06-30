@@ -166,6 +166,8 @@ A list of my user stories and their tasks can be found [here](https://github.com
 - As a user, I can connect to the site's social media pages so that I can follow them and keep up to date with their products and promotions.
 - As a user, I can contact the business so that I can find out any information that I require.
 
+[Back to top ⇧](#dry-drops)
+
 ## Design
 
 ### Business Model
@@ -256,6 +258,8 @@ The initial keywords and phrases I came up with were:
 
 These phrases can also be used in the metadata at the head of the page.
 
+[Back to top ⇧](#dry-drops)
+
 ## Features
 
 ### Nav Bar
@@ -299,6 +303,7 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Navbar-Banner](assets/images/navbar-banner.jpg)
 
+[Back to top ⇧](#dry-drops)
 
 ### Home Page
     
@@ -338,6 +343,8 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Footer](assets/images/footer.png)
 
+[Back to top ⇧](#dry-drops)
+
 ### Accounts
 
 - #### Register Page
@@ -356,6 +363,8 @@ These phrases can also be used in the metadata at the head of the page.
     - The logout page is used to log out users who are signed in.
 
     ![Accounts-Logout](assets/images/accounts-logout.png)
+
+[Back to top ⇧](#dry-drops)
 
 ### Profile
 
@@ -383,6 +392,8 @@ These phrases can also be used in the metadata at the head of the page.
     - The favourite items section keeps a list of all products that the user has liked.
 
     ![Profiles-Favourites](assets/images/profiles-favourites.png)
+
+[Back to top ⇧](#dry-drops)
 
 ### All Products
 
@@ -414,6 +425,8 @@ These phrases can also be used in the metadata at the head of the page.
     - If the user is a superuser and the product has been featured, a featured banner will appear across the product card. 
 
     ![Products-Products](assets/images/products-products.png)
+
+[Back to top ⇧](#dry-drops)
 
 ### Product Details
 
@@ -464,6 +477,8 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Products-Add-Review](assets/images/products-add-review.png)
 
+[Back to top ⇧](#dry-drops)
+
 ### Product Management
 
 - #### Add Product
@@ -497,6 +512,8 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Products-Management-Delete](assets/images/product-management-delete.png)
 
+[Back to top ⇧](#dry-drops)
+
 ### Bag
 
 - #### Items
@@ -525,6 +542,8 @@ These phrases can also be used in the metadata at the head of the page.
     - Beneath the grand total is two buttons. From here the user can either continue to the checkout or return to the products page by clicking 'Continue Shopping'.
 
     ![Bag-Qty-Totals](assets/images/bag-totals.png)
+
+[Back to top ⇧](#dry-drops)
 
 ### Checkout
 
@@ -574,6 +593,8 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Webhook](assets/images/checkout-webhook.png)
 
+[Back to top ⇧](#dry-drops)
+
 ### About Us
 
 - #### Image
@@ -596,6 +617,8 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![About-us-links](assets/images/about-us-links.png)
 
+[Back to top ⇧](#dry-drops)
+
 ### Contact
 
 - #### Contact Info 
@@ -613,6 +636,8 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Contact-Messaging](assets/images/contact-msg.png)
 
+[Back to top ⇧](#dry-drops)
+
 ### Toasts and Pop-ups
 
 - #### Toasts
@@ -626,6 +651,8 @@ These phrases can also be used in the metadata at the head of the page.
     - The pop-up message informs the user of the free delivery offer for any new user's first order and has a link to the registration page. 
 
     ![Pop-up](assets/images/pop-up.png)
+
+[Back to top ⇧](#dry-drops)
 
 ### Other
 
@@ -642,6 +669,8 @@ These phrases can also be used in the metadata at the head of the page.
 
 - #### Responsiveness 
     - Every page on the site is fully responsive. This allows all manner of devices from phones, to monitors, to use the site.  
+
+[Back to top ⇧](#dry-drops)
 
 ## Technologies
 
@@ -702,6 +731,8 @@ These phrases can also be used in the metadata at the head of the page.
     - Used to take payments and generate webhooks.
 - [Heroku](https://www.heroku.com/)
     - To deploy the project.
+
+[Back to top ⇧](#dry-drops)
 
 ## Testing 
 
@@ -773,6 +804,8 @@ This will add your django project folder to your file explorer
 
 Inside the django framework is a package called Allauth. This package handles all the registration and sign in processes. The steps to install Allauth can be found [here](https://django-allauth.readthedocs.io/en/latest/installation.html).
 
+[Back to top ⇧](#dry-drops)
+
 ### Heroku
 
 Heroku is used to deploy the final project.
@@ -842,6 +875,8 @@ This is to stop heroku from collecting any static files when you deploy.
     `git push heroku main'
     Your app will now be deployed, all be it without any static files, but this will be fixed when setting up AWS, documented bellow. 
 15. If you want your project to be automatically deployed to heroku when pushing your work to github you can. To do so, In heroku go to the deploy tab, and in the 'deployment method' section connect it to github. You will need to search for your repository and once found click 'connect'. Then scroll down and click 'Enable automatic deploys'. Now when you push to github your code will automatically deploy to heroku aswel. 
+
+[Back to top ⇧](#dry-drops)
 
 ### AWS
 
@@ -916,6 +951,8 @@ Amazon web services is used to store all our static and media files.
 13. Select your group that has the policy attached and click 'Next: Tags', 'Next: Review', then 'Create user'.
 14. On the next page, download the CSV file. This contains the user's access key and secret access key which you will need later. 
 
+[Back to top ⇧](#dry-drops)
+
 #### Connecting AWS to django
 
 Now that you have created a S3 bucket with it's user group attached, we need to connect it to django.
@@ -987,6 +1024,8 @@ Now that you have created a S3 bucket with it's user group attached, we need to 
 17. Then under 'Permissions' select the option 'Grant public-read access' and click upload. You may need to also check an acknowledgment warning checkbox too. 
 18. Once that is finished you're all set. All your static files and media files should be automatically linked from django to your S3 bucket.
 
+[Back to top ⇧](#dry-drops)
+
 ### Stripe
 
 Stripe is needed to handle the checkout process when a payment is made. You will need a stripe account which you can sign up for [here](https://stripe.com/en-gb).
@@ -1037,3 +1076,4 @@ Stripe is needed to handle the checkout process when a payment is made. You will
     - Everybody from the Code Institute Slack community who were always on hand to troubleshoot problems. Especially [Ed](https://github.com/Edb83) who was always more than helpful.
     - My mentor [Spencer](https://github.com/5pence), who has always complimented my work and shown me many helpful tidbits of information to help elevate my code.
 
+[Back to top ⇧](#dry-drops)
