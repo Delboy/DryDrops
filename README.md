@@ -8,11 +8,122 @@ The payment system uses a service called Stripe. To test this system, dummy card
 
 ![Responsive](assets/images/responsive.png)
 
+## Contents 
+
+[User Experience (UX)](#user-experience-ux)
+* [User Stories](#user-stories)
+    - [EPIC | Navigation](#EPIC-|-navigation)
+    - [EPIC | Accounts](#EPIC-|-accounts)
+    - [EPIC | Admin](#EPIC-|-admin)
+    - [EPIC | Purchasing](#EPIC-|-purchasing)
+    - [EPIC | Interaction](#EPIC-|-interaction)
+[Design](#design)
+* [Colour Scheme](#colour-scheme)
+* [Typography](#typography)
+* [Imagery](#imagery)
+* [Wireframes](#wireframes)
+* [Database Schema](#database-schema)
+* [Marketing](#marketing)
+* [Search Engine Optimisation](#search-engine-optimisation)
+
+[Features](#features)
+* [Nav Bar](#nav-bar)
+    - [Links](#links)
+    - [Search Bar](#search-bar)
+    - [Account](#account)
+    - [Bag Icon](#bag-icon)
+    - [Banner](#banner)
+* [Home page](#home-page)
+    - [Hero Image](#hero-image)
+    - [Categories](#categories)
+    - [Top Products](#top-products)
+    - [Hot Products](#hot-products)
+    - [Footer](#footer)
+* [Accounts](#accounts)
+    - [Register Page](#register-page)
+    - [Login Page](#login-page)
+    - [Log Out Page](#log-out-page)
+* [Profile](#profile)
+    - [Heading](#heading)
+    - [Delivery Details](#delivery-details)
+    - [Order History](#order-history)
+    - [Favourite Items](#favourite-items)
+* [All Products](#all-products)
+    - [Categories Side-nav](#categories-side-nav)
+    - [What's Hot Carousel](#whats-hot-carousel)
+    - [Sorting](#sorting)
+    - [Products](#products)
+* [Product Details](#product-details)
+    - [Product Info](#product-info)
+    - [Like Button](#like-button)
+    - [Quantity Buttons](#quantity-buttons)
+    - [Customer Reviews](#bag-icon)
+    - [Add Review](#add-review)
+* [Product Management](#product-management)
+    - [Add Product](#add-product)
+    - [Edit Product](#edit-product)
+    - [Delete Product](#delete-product)
+* [Bag](#bag)
+    - [Items](#add-product)
+    - [Quantity and Price](#quantity-and-price)
+    - [Totals and Messaging](#totals-and-messaging)
+* [Checkout](#checkout)
+    - [Details](#details)
+    - [Order Summary](#order-summary)
+    - [Payment](#payment)
+    - [Loading Spinner](#loading-spinner)
+    - [Confirmation](#confirmation)
+    - [Webhooks](#webhooks)
+* [About Us](#about-us)
+    - [Image](#image)
+    - [Bio](#bio)
+    - [Links](#links)
+* [Contact](#contact)
+    - [Contact Info](#contact-info)
+    - [Messaging](#messaging)
+* [Toasts and Pop-ups](#toasts-and-pop-ups)
+    - [Toasts](#toasts)
+    - [Pop-ups](#pop-ups)
+* [Other](#other)
+    - [Scroll Arrow](#scroll-arrow)
+    - [404 Page](#404-page)
+    - [Responsiveness](#responsiveness)
+
+[Technologies](#technologies)
+* [Languages used](#languages-used)
+* [Libraries & Programs Used](#libraries-and-programs-used)
+
+[Testing](#eat-me)
+  
+[Deployment](#deployment)
+* [Github](#github)
+    -[Forking](#forking)
+    -[Clone](#clone)
+* [Django](#django)
+    -[All Auth](#all-auth)
+* [Heroku](#heroku)
+* [AWS](#clone)
+    -[S3](#s3)
+    -[IAM](#iam)
+    -[Connecting AWS to django](#connecting-aws-to-django)
+* [Stripe](#Stripe)
+    -[Payment](#payments)
+    -[Webhooks](#webhooks)
+
+[Credits](#credits)
+* [Code](#code)
+* [Media](#media)
+* [Other](#other)
+
+- [Acknowledgments](#acknowledgments)
+
 ## User Experience (UX)
+
+### User Stories
 
 A list of my user stories and their tasks can be found [here](https://github.com/delboy/drydrops/issues).
 
-### EPIC | Navigation
+#### EPIC | Navigation
 - As a shopper, I can navigate around the site so that I can easily view the desired content.
 - As a shopper, I can view a list of products so that I can choose what products to purchase.
 - As a shopper, I can click on a product to see its details so that I can view the description, price and any customer reviews.
@@ -21,7 +132,7 @@ A list of my user stories and their tasks can be found [here](https://github.com
 - As a shopper, I can sort the products so that I can easily find products based on price, reviews, category, or title.
 - As a shopper, I can view products I have saved so that I can navigate to them easily without having to find them again.
 
-### EPIC | Accounts
+#### EPIC | Accounts
 - As a User, I can register for an account so that I can use the features afforded to members.
 - As a user, I can receive a confirmation email when creating an account so that I know the registration was successful.
 - As a user, I can easily log in and out so that I can access my account.
@@ -30,13 +141,13 @@ A list of my user stories and their tasks can be found [here](https://github.com
 - As a user, I can save my delivery information so that I do not have to refill it out for future orders.
 - As a user, I can recover my password in case I forget it so that I can regain access to my account.
 
-### EPIC | Admin
+#### EPIC | Admin
 - As an admin, I can add products so that I can update the site's inventory.
 - As an admin, I can edit a product so that I can keep the products information up to date.
 - As an admin, I can delete a product so that I can remove products no longer available.
 - As an admin, I can feature products so that I can display them on the home page.
 
-### EPIC | Purchasing
+#### EPIC | Purchasing
 - As a shopper, I can add items to my bag in different quantities so that I can store the items until I'm ready to buy.
 - As a shopper, I can view my bag so that I can identify the total cost of the transaction and the items I will be purchasing.
 - As a shopper, I can adjust the quantity of the items in my bag so that I can easily make changes before I purchase.
@@ -48,7 +159,7 @@ A list of my user stories and their tasks can be found [here](https://github.com
 - As a shopper, I can receive an email of my order so that I can keep it for my records.
 
 
-### EPIC | Interaction
+#### EPIC | Interaction
 - As a user, I can save my favourite products so that they are easily accessible for future purchases.
 - As a user, I can leave reviews on products so that I can share my experience with others.
 - As a user, I can sign up for the website's newsletter so that I can keep up to date with new products and promotions.
@@ -122,7 +233,7 @@ The purpose of the About Us page was not so much designed in mind to inform the 
 
 The initial keywords and phrases I came up with were:
 
-## Short Tail Keywords
+#### Short Tail Keywords
 - Alcohol-Free
 - Teetotal Drinks
 - 0% Alcohol
@@ -134,7 +245,7 @@ The initial keywords and phrases I came up with were:
 - Halal drinks
 - Quitting Alcohol
 
-## Long Tail Keywords
+#### Long Tail Keywords
 - Drinks for quitting alcohol
 - Drinks for designated drivers
 - Drinks for recovering alcoholics
@@ -304,7 +415,7 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Products-Products](assets/images/products-products.png)
 
-### Products Details
+### Product Details
 
 - #### Product Info
     - The product info section shows information about the product along with buttons to add the item to the user's favourite list, and buttons to add the item to the bag in multiple quantities.
@@ -502,7 +613,7 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Contact-Messaging](assets/images/contact-msg.png)
 
-### Toasts, Pop-ups
+### Toasts and Pop-ups
 
 - #### Toasts
     - Toasts appear in the top right-hand corner of the display informing the user of any actions they have performed.
@@ -602,29 +713,29 @@ Testing and results can be found [here](TESTING.md)
 
 First you will need to create a new repository.
 
-    1. Log into Github.
-    2. On the 'Repositories' tab click 'New'. This takes you to the create a new repository page.
-    3. Name the repository and click 'Create repositry'.
-    4. Your new repsoitory is now set up and ready to use.
+1. Log into Github.
+2. On the 'Repositories' tab click 'New'. This takes you to the create a new repository page.
+3. Name the repository and click 'Create repositry'.
+4. Your new repsoitory is now set up and ready to use.
 
 #### Forking
 
-    To fork the project you must;
-    1. Sign in to Github and go to my [repository](https://github.com/Delboy/drydrops)
-    2. Locate the Fork button at the top right of the page.
-    3. Click the button then click 'Create fork'. 
-    4. The fork is now in your repositories.
+To fork the project you must;
+1. Sign in to Github and go to my [repository](https://github.com/Delboy/drydrops)
+2. Locate the Fork button at the top right of the page.
+3. Click the button then click 'Create fork'. 
+4. The fork is now in your repositories.
 
 #### Clone
-    To clone the project you must;
+To clone the project you must;
 
-    1. Sign in to Github and go to my [repository](https://github.com/Delboy/drydrops)
-    2. Above the list of files click 'Code'.
-    3. This will bring up a few options as to how you would like to clone. You can select HTTPS, SSH or Github CLI, then click the clipboard icon to copy the URL.
-    4. Open git bash
-    5. Type 'git clone' and then paste the URL you copied. Press Enter.
+1. Sign in to Github and go to my [repository](https://github.com/Delboy/drydrops)
+2. Above the list of files click 'Code'.
+3. This will bring up a few options as to how you would like to clone. You can select HTTPS, SSH or Github CLI, then click the clipboard icon to copy the URL.
+4. Open git bash
+5. Type 'git clone' and then paste the URL you copied. Press Enter.
 
-    For more information on cloning check out the github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+For more information on cloning check out the github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ### Django
 
@@ -878,7 +989,9 @@ Now that you have created a S3 bucket with it's user group attached, we need to 
 
 ### Stripe
 
-For payments and webhooks to work, you will need a stripe account which you can sign up for [here](https://stripe.com/en-gb).
+Stripe is needed to handle the checkout process when a payment is made. You will need a stripe account which you can sign up for [here](https://stripe.com/en-gb).
+
+#### Payments
 
 1. To set up stripe payments you can follow their guide [here](https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details).
 
