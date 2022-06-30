@@ -423,7 +423,8 @@
 
 - #### Banner 
     Checked that:
-    - The banner message will change to reflect how close the user is to achieving the offer. 
+    - The banner message will change to reflect how close the user is to achieving the offer.
+    - The banner sticks to the top of the page at all times. 
 
     ![Banner](assets/gifs/banner.gif)
 
