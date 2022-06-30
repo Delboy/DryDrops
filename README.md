@@ -248,6 +248,11 @@ These phrases can also be used in the metadata at the head of the page.
 
 ### Profile
 
+- #### Heading
+    - The heading of the page will reflect the user's username.
+
+    ![Profiles-Heading](assets/images/profiles-heading.png)
+
 - #### Delivery Details
     - The delivery details section stores the user's delivery address and phone number.
     - The information provided here is used to autofill the delivery address when placing an order.
