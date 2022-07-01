@@ -23,6 +23,7 @@ The payment system uses a service called Stripe. To test this system, dummy card
 * [Imagery](#imagery)
 * [Wireframes](#wireframes)
 * [Database Schema](#database-schema)
+* [Business Model](#business-model)
 * [Marketing](#marketing)
 * [Search Engine Optimisation](#search-engine-optimisation)
 
@@ -170,10 +171,6 @@ A list of my user stories and their tasks can be found [here](https://github.com
 
 ## Design
 
-### Business Model
-
-The business model for this store would be a B2C (Business to Customer) model, as the business would be selling products directly from themselves to the customer.  
-
 ### Colour Scheme
 
 - I wanted the colour scheme to be similar to the colour of dark ales and wines to fit in with the site's theme, so the main colour I chose was a dark reddish-brown, along with a lighter shade and a couple more neutral tones to balance it out.  
@@ -210,6 +207,10 @@ Wireframes for each page are linked here:
 ### Database Schema
 
 ![Database Schema](assets/images/schema.png)
+
+### Business Model
+
+The business model for this store would be a B2C (Business to Customer) model, as the business would be selling products directly from themselves to the customer.
 
 ### Marketing 
 
