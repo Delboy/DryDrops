@@ -147,6 +147,8 @@ A list of my user stories and their tasks can be found [here](https://github.com
 - As an admin, I can edit a product so that I can keep the products information up to date.
 - As an admin, I can delete a product so that I can remove products no longer available.
 - As an admin, I can feature products so that I can display them on the home page.
+
+The next 3 user stories were added after I had completed all user stories and decided to add a coupon system.
 - As an admin, I can add coupon codes so that I can offer discounts to my customers.
 - As an admin, I can edit coupon codes so that I change or edit their information.
 - As an admin, I can delete coupon codes so that I can remove codes no longer valid.
@@ -209,7 +211,13 @@ Wireframes for each page are linked here:
 
 ### Database Schema
 
+My original database schema was as follows:
+
 ![Database Schema](assets/images/schema.png)
+
+After I had completed all my tasks and satisfied my user stories, I decided to add a coupon system. The addition to the schema can be seen here:
+
+![Updated Database Schema](assets/images/updated_schema.png)
 
 ### Business Model
 
@@ -707,7 +715,7 @@ These phrases can also be used in the metadata at the head of the page.
     - Used to store static files and images.
 - [Favicon.io](https://favicon.io/)
     - Used to generate the site's favicon.
-- [SQlite](https://www.sqlite.org/index.html)
+- [DrawSQL](https://drawsql.app/)
     - Used for debugging.
 - [PostgreSQL](https://www.postgresql.org/)
     - Database used through heroku.
