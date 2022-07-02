@@ -34,6 +34,7 @@
     </div>
 </div>
 
+{% if coupons %}
 <div class="container">
     <hr>
     <div class="row">
@@ -70,7 +71,29 @@
                         </td>
                         <td class="py-2 border-bottom ">
                             <a href="{% url 'edit_coupon' coupon.id %}" class="mb-0 text-info small d-inline">edit</a>
-                            <i class="fa fa-trash btn text-danger d-inline p-0 pl-2"></i>
+                            <!-- Button triggering deletion warning modal -->
+                            <i class="fa fa-trash btn text-danger d-inline p-0 pl-2" data-toggle="modal" data-target="#coupon-modal-{{ coupon.id }}"></i>
+                            <!-- Deletion Warning Modal -->
+                            <div class="modal fade" id="coupon-modal-{{ coupon.id }}" tabindex="-1" role="dialog" aria-labelledby="warning-{{ coupon.id }}"
+                            aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="warning-{{ coupon.id }}">Warning!</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to delete {{ coupon }}? This act is irreversible.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-dark rounded-pill" data-dismiss="modal">Cancel</button>
+                                            <a href="{% url 'delete_coupon' coupon.id %}" class="btn text-white bg-danger rounded-pill">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 {% endfor %}
@@ -122,7 +145,29 @@
                 <div class="col">
                     <div class="text-center">
                         <a href="{% url 'edit_coupon' coupon.id %}" class="mb-0 text-info small d-inline">edit</a>
-                        <i class="fa fa-trash btn text-danger d-inline p-0 pl-2"></i>
+                        <!-- Button triggering deletion warning modal -->
+                        <i class="fa fa-trash btn text-danger d-inline p-0 pl-2" data-toggle="modal" data-target="#sm-coupon-modal-{{ coupon.id }}"></i>
+                        <!-- Deletion Warning Modal -->
+                        <div class="modal fade" id="sm-coupon-modal-{{ coupon.id }}" tabindex="-1" role="dialog" aria-labelledby="warning-{{ coupon.id }}"
+                        aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="warning-{{ coupon.id }}">Warning!</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete {{ coupon }}? This act is irreversible.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-dark rounded-pill" data-dismiss="modal">Cancel</button>
+                                        <a href="{% url 'delete_coupon' coupon.id %}" class="btn text-white bg-danger rounded-pill">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,5 +177,6 @@
         </div>
     </div>
 </div>
+{% endif %}
 
 {% endblock %}

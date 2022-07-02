@@ -93,3 +93,16 @@ def edit_coupon(request, coupon_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_coupon(request, coupon_id):
+    """ Delete a coupon from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    coupon = get_object_or_404(Coupon, pk=coupon_id)
+    coupon.delete()
+    messages.success(request, 'Coupon deleted!')
+    return redirect(reverse('add_coupon'))
