@@ -1,6 +1,7 @@
 from django.shortcuts import redirect
 from django.utils import timezone
 from django.views.decorators.http import require_POST
+from django.contrib import messages
 from .models import Coupon
 from .forms import CouponApplyForm
 
@@ -19,7 +20,13 @@ def coupon_apply(request):
                 active=True
                 )
             request.session['coupon_id'] = coupon.id
+            messages.success(request, (
+                        f"Success! {coupon} coupon applied")
+                    )
         except Coupon.DoesNotExist:
             request.session['coupon_id'] = None
-
+            messages.error(
+                request,
+                "Sorry, that coupon does not exist or is no longer valid"
+                )
     return redirect('view_bag')

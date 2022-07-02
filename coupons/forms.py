@@ -8,7 +8,7 @@ class CouponApplyForm(forms.Form):
     class Meta:
         model = Coupon
         fields = ['code']
-  
+
     def __init__(self, *args, **kwargs):
         super(CouponApplyForm, self).__init__(*args, **kwargs)
         self.fields['code'].label = ""
