@@ -58,6 +58,7 @@ def bag_contents(request):
         total = total - discount
     else:
         coupon = ''
+        discount = 0
 
     pre_delivery = product_count * settings.STANDARD_DELIVERY
     grand_total = delivery + total

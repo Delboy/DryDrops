@@ -87,6 +87,7 @@ def checkout(request):
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
+            request.session['coupon_id'] = ''
             return redirect(
                 reverse('checkout_success', args=[order.order_number])
                 )
