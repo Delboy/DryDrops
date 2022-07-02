@@ -1,13 +1,16 @@
 import uuid
 
+from decimal import Decimal
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 from django_countries.fields import CountryField
 
 from products.models import Product
 from profiles.models import UserProfile
+from coupons.models import Coupon
 
 
 class Order(models.Model):
@@ -27,6 +30,13 @@ class Order(models.Model):
     country = CountryField(blank_label='Country *', null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     first_order = models.BooleanField(default=False)
+    coupon = models.ForeignKey(
+        Coupon, related_name='orders',
+        null=True, blank=True, on_delete=models.SET_NULL
+        )
+    discount = models.IntegerField(
+        default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(100)])
     order_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0
         )
@@ -51,9 +61,17 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(
-            Sum('lineitem_total')
-            )['lineitem_total__sum'] or 0
+        if self.discount == 0:
+            self.order_total = self.lineitems.aggregate(
+                Sum('lineitem_total')
+                )['lineitem_total__sum'] or 0
+        else:
+            discount_as_decimal = Decimal(self.discount / 100)
+            total = self.lineitems.aggregate(
+                Sum('lineitem_total')
+                )['lineitem_total__sum'] or 0
+            discount = total * discount_as_decimal
+            self.order_total = total - discount
 
         quantity = self.lineitems.aggregate(
             Sum('quantity')

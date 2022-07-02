@@ -7,6 +7,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
+from coupons.models import Coupon
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from bag.contexts import bag_contents
@@ -38,6 +39,7 @@ def checkout(request):
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
+        coupon_id = request.session.get('coupon_id')
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -58,6 +60,10 @@ def checkout(request):
                 orders = Order.objects.all().filter(user_profile=profile)
                 if len(orders) == 0:
                     order.first_order = True
+            if coupon_id:
+                coupon = Coupon.objects.get(id=coupon_id)
+                order.coupon = coupon
+                order.discount = coupon.discount
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
