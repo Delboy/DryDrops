@@ -8,6 +8,7 @@ django-countries==7.2.1
 django-crispy-forms==1.14.0
 django-profanity-filter==0.2.1
 django-storages==1.12.3
+django-tempus-dominus==5.1.2.17
 gunicorn==20.1.0
 inflection==0.5.1
 jmespath==1.0.0

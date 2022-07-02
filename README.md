@@ -738,6 +738,8 @@ These phrases can also be used in the metadata at the head of the page.
     - Used to help render forms.
 - [Profanity Filter](https://github.com/ReconCubed/django-profanity-filter)
     - App used to remove profanity from comments.
+- [Django-tempus-dominus](https://pypi.org/project/django-tempus-dominus/)
+    - Used to render a date and time picker on add coupon page.
 - [Tinyjpg](https://tinyjpg.com/)
     - Used to compress images.
 - [Screen to Gif](https://www.screentogif.com/)

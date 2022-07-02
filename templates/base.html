@@ -113,6 +113,7 @@
               {% if request.user.is_superuser %}
               <hr class="dropdown-divider">
               <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+              <a href="{% url 'add_coupon' %}" class="dropdown-item">Coupon Management</a>
               {% endif %}
               {% else %}
               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>

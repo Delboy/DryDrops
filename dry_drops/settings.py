@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'profanity',
     'storages',
+    'tempus_dominus',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,9 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'dry_drops.wsgi.application'
+
+# Datetimepicker settings
+TEMPUS_DOMINUS_DATETIME_FORMAT = 'DD-MM-YYYY HH:mm'
 
 
 # Database
