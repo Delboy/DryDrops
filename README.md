@@ -147,6 +147,9 @@ A list of my user stories and their tasks can be found [here](https://github.com
 - As an admin, I can edit a product so that I can keep the products information up to date.
 - As an admin, I can delete a product so that I can remove products no longer available.
 - As an admin, I can feature products so that I can display them on the home page.
+- As an admin, I can add coupon codes so that I can offer discounts to my customers.
+- As an admin, I can edit coupon codes so that I change or edit their information.
+- As an admin, I can delete coupon codes so that I can remove codes no longer valid.
 
 #### EPIC | Purchasing
 - As a shopper, I can add items to my bag in different quantities so that I can store the items until I'm ready to buy.
