@@ -209,6 +209,9 @@ Wireframes for each page are linked here:
 * [Success](assets/documents/success.pdf)
 * [Product Management](assets/documents/product-management.pdf)
 
+Coupon Management Wireframe was constructed after initial design: 
+* [Coupon Management](assets/documents/coupon-management.pdf)
+
 ### Database Schema
 
 My original database schema was as follows:
