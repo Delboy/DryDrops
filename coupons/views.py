@@ -54,9 +54,11 @@ def add_coupon(request):
     else:
         form = CouponForm()
 
+    coupons = Coupon.objects.all()
     template = 'coupons/add_coupon.html'
     context = {
         'form': form,
+        'coupons':coupons,
     }
 
     return render(request, template, context)

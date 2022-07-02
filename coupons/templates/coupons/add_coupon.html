@@ -18,9 +18,9 @@
 
 <div class="row mx-4 mb-4">
     <div class="col-12">
-        <h4>Add a Coupon:</h4>
+        <h4 class="mt-3">Add a Coupon:</h4>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 mt-2">
         <form method="POST" action="{% url 'add_coupon' %}" class="form" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.media }}
@@ -31,6 +31,105 @@
                 <button class="btn link-btn rounded-pill" type="submit">Add Coupon</button>
             </div>
         </form>
+    </div>
+</div>
+
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col">
+            <h3 class="my-3">Existing Coupons</h3>
+            <!-- Coupon table for medium screens and above -->
+            <table class="table table-sm table-borderless ml-4 my-5 d-none d-md-table">
+                <thead>
+                    <tr>
+                        <th>CODE</th>
+                        <th>Valid From</th>
+                        <th>VAlid To</th>
+                        <th>Discount</th>
+                        <th>Active</th>
+                        <th>Buttons</th>
+                    </tr>
+                </thead>
+                {% for coupon in coupons %}
+                    <tr>
+                        <td class="py-2 border-bottom">
+                            {{ coupon.code }}
+                        </td>
+                        <td class="py-2 border-bottom ">
+                           {{ coupon.valid_from }}
+                        </td>
+                        <td class="py-2 border-bottom ">
+                           {{ coupon.valid_to }}
+                        </td>
+                        <td class="py-2 border-bottom ">
+                           {{ coupon.discount }}%
+                        </td>
+                        <td class="py-2 border-bottom ">
+                           {{ coupon.active }}
+                        </td>
+                        <td class="py-2 border-bottom ">
+                            <p class="mb-0 text-info small d-inline">edit</p>
+                            <i class="fa fa-trash btn text-danger d-inline p-0 pl-2"></i>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <!-- List of Codes for small screens -->
+            <div class="d-md-none">
+            {% for coupon in coupons %}
+            <div class="row">
+                <div class="col-6">
+                    <h5>CODE</h5>
+                </div>
+                <div class="col-6">
+                    <p>{{ coupon.code }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h5>Valid From</h5>
+                </div>
+                <div class="col-6">
+                    <p>{{ coupon.valid_from }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h5>Valid To</h5>
+                </div>
+                <div class="col-6">
+                    <p>{{ coupon.valid_to }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h5>Discount</h5>
+                </div>
+                <div class="col-6">
+                    <p>{{ coupon.discount }}%</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h5>Active</h5>
+                </div>
+                <div class="col-6">
+                    <p>{{ coupon.active}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="text-center">
+                        <p class="text-info d-inline">edit</p>
+                        <i class="fa fa-trash btn text-danger d-inline p-0 pl-2"></i>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            {% endfor %}
+        </div>
+        </div>
     </div>
 </div>
 
