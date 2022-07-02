@@ -19,7 +19,7 @@ class OrderAdmin(admin.ModelAdmin):
               'email', 'phone_number', 'country',
               'postcode', 'town_or_city', 'street_address1',
               'street_address2', 'county', 'first_order', 'coupon',
-              'discount', 'delivery_cost',
+              'discount', 'delivery_cost', 'order_subtotal',
               'order_total', 'grand_total', 'original_bag',
               'stripe_pid')
 

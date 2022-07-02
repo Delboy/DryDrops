@@ -74,6 +74,7 @@ def bag_contents(request):
         'coupon_apply_form': coupon_apply_form,
         'coupon': coupon,
         'before_coupon': before_coupon,
+        'discount': discount,
     }
 
     return context

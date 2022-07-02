@@ -37,6 +37,9 @@ class Order(models.Model):
     discount = models.IntegerField(
         default=0,
         validators=[MinValueValidator(0), MaxValueValidator(100)])
+    order_subtotal = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0
+        )
     order_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0
         )
@@ -70,6 +73,7 @@ class Order(models.Model):
             total = self.lineitems.aggregate(
                 Sum('lineitem_total')
                 )['lineitem_total__sum'] or 0
+            self.order_subtotal = total
             discount = total * discount_as_decimal
             self.order_total = total - discount
 

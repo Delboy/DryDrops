@@ -140,6 +140,20 @@
                 </div>
             </div>
 
+            {% if order.coupon %}
+            <div class="row">
+                <div class="col">
+                    <p class="mb-1">Subtotal: {{ order.order_subtotal }} </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p class="mb-1">Coupon: {{ order.coupon }} ({{order.discount}}% off) </p>
+                </div>
+            </div>
+            {% endif %}
+
             <div class="row">
                 <div class="col">
                     <p class="mb-1">Order Total: £{{ order.order_total |intcomma }}</p>
