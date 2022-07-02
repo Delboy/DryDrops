@@ -122,10 +122,6 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'dry_drops.wsgi.application'
 
-# Datetimepicker settings
-TEMPUS_DOMINUS_DATETIME_FORMAT = 'DD-MM-YYYY HH:mm'
-
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 

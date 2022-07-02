@@ -27,7 +27,7 @@
             {{ form | crispy }}
             <p class="small font-italic">* Required</p>
             <div class="text-md-right text-center pt-3">
-                <a class="btn btn-outline-dark rounded-pill" href="{% url 'products' %}">Cancel</a>
+                <a class="btn btn-outline-dark rounded-pill" href="{% url 'home' %}">Cancel</a>
                 <button class="btn link-btn rounded-pill" type="submit">Add Coupon</button>
             </div>
         </form>
@@ -69,7 +69,7 @@
                            {{ coupon.active }}
                         </td>
                         <td class="py-2 border-bottom ">
-                            <p class="mb-0 text-info small d-inline">edit</p>
+                            <a href="{% url 'edit_coupon' coupon.id %}" class="mb-0 text-info small d-inline">edit</a>
                             <i class="fa fa-trash btn text-danger d-inline p-0 pl-2"></i>
                         </td>
                     </tr>
@@ -121,7 +121,7 @@
             <div class="row">
                 <div class="col">
                     <div class="text-center">
-                        <p class="text-info d-inline">edit</p>
+                        <a href="{% url 'edit_coupon' coupon.id %}" class="mb-0 text-info small d-inline">edit</a>
                         <i class="fa fa-trash btn text-danger d-inline p-0 pl-2"></i>
                     </div>
                 </div>

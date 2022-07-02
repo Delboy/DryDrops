@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.utils import timezone
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
@@ -59,6 +59,37 @@ def add_coupon(request):
     context = {
         'form': form,
         'coupons':coupons,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_coupon(request, coupon_id):
+    """ Edit a coupon in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    coupon = get_object_or_404(Coupon, pk=coupon_id)
+    if request.method == 'POST':
+        form = CouponForm(request.POST, instance=coupon)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated coupon!')
+            return redirect('add_coupon')
+        else:
+            messages.error(
+                request,
+                'Failed to update coupon. Please ensure the form is valid.')
+    else:
+        form = CouponForm(instance=coupon)
+        messages.info(request, f'You are editing {coupon}')
+
+    template = 'coupons/edit_coupon.html'
+    context = {
+        'form': form,
+        'coupon': coupon,
     }
 
     return render(request, template, context)
