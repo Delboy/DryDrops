@@ -2,7 +2,9 @@
 
 Hello {{ order.full_name }}!
 
-This is a confirmation of your order at Boutique Ado. Your order information is below:
+We hope you found everything you needed. As a thank you, save 10% of your next order with coupon code SAVE10
+
+Your order information is below:
 
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
@@ -17,7 +19,7 @@ We've got your phone number on file as {{ order.phone_number }}.
 
 If you have any questions, feel free to contact us at {{ contact_email }}.
 
-Thank you for your order!
+Thanks again!
 
 Sincerely,
 
