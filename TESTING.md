@@ -111,6 +111,11 @@
 ![add-product-w3](assets/images/add-product-w3.png)    
 #### Edit Review validation
 ![edit-review-w3](assets/images/edit-review-w3.png)
+#### Add Coupon validation
+![add-coupon-w3](assets/images/add-coupon-w3.png)   
+#### Edit Coupon validation
+![edit-coupon-w3](assets/images/edit-coupon-w3.png)
+- The add and edit coupon page shows eight errors. These are to do with the datetimepicker widget so cannot be changed.
 
 ### CSS
 
