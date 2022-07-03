@@ -23,8 +23,7 @@ class StripeWH_Handler:
         discount = order.order_subtotal - order.order_total
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
-            {'order': order,
-            'discount': discount,})
+            {'order': order, 'discount': discount})
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
