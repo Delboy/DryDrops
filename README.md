@@ -587,6 +587,13 @@ These phrases can also be used in the metadata at the head of the page.
 
     ![Bag-Qty-Totals](assets/images/bag-totals.png)
 
+- #### Coupons
+    - Underneath the subtotals is an input box where users can enter a coupon code.
+    - If the coupon code entered is valid, a success toast message will pop and a summary of the coupon added, and the discount given will appear in the summary of the costs.
+    - If the coupon code entered is invalid, an error toast message will pop, and the totals will not change.
+
+    ![Bag-Coupons](assets/images/bag-coupons.png)
+
 [Back to top ⇧](#dry-drops)
 
 ### Checkout
