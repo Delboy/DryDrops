@@ -90,26 +90,26 @@
 
 - All Pages were checked with the official [W3C validator](https://validator.w3.org/). 
 
-#### Home Page
+#### Home Page validation 
 ![home-w3](assets/images/home-w3.png)
-#### Products Page
+#### Products Page validation
 ![products-w3](assets/images/products-w3.png)
-#### Product Details
+#### Product Details validation
 ![product-details-w3](assets/images/product-details-w3.png)
-#### About Us
+#### About Us validation
 ![about-us-w3](assets/images/about-us-w3.png)
-#### Contact
+#### Contact validation
 ![contact-w3](assets/images/contact-w3.png)
-#### Bag
+#### Bag validation
 ![bag-w3](assets/images/bag-w3.png)
-#### Checkout 
+#### Checkout validation 
 ![checkout-w3](assets/images/checkout-w3.png)
-#### Checkout Success
+#### Checkout Success validation
 ![checkout-success-w3](assets/images/checkout-success-w3.png)
-#### Product Management 
+#### Product Management validation 
 - The add product page shows two errors. These are to do with the image upload widget and thus changing the code breaks the field.
 ![add-product-w3](assets/images/add-product-w3.png)    
-#### Edit Review
+#### Edit Review validation
 ![edit-review-w3](assets/images/edit-review-w3.png)
 
 ### CSS
@@ -291,14 +291,14 @@
 - If an admin is logged in, products will show an 'Edit' button on both their product card and their details page.
 - Clicking either of these buttons will take the admin to the 'Edit Product' page where admins can update the product's info.
 
-![Product-management-add](assets/images/product-management-edit.png)
+![Product-management-edit](assets/images/product-management-edit.png)
 
 *As an admin, I can delete a product so that I can remove products no longer available*
 - If an admin is logged in, the products will show a 'Delete' button on both their product card and their details page.
 - Clicking this button will prompt a modal, asking the user if they are sure they want to delete the product.
 - Clicking delete on the modal will remove the product from the database.
 
-![Product-management-add](assets/images/product-management-delete.png)
+![Product-management-delete](assets/images/product-management-delete.png)
 
 *As an admin, I can feature products so that I can display them on the home page*
 - If an admin is logged in, the products will show a 'feature' button on both their product card and their details page.
@@ -307,6 +307,22 @@
 - Featured items will have a banner around the product's image, only visible by admins.
 
 ![Hot-Products-Home](assets/images/hot-products-home.png)
+
+*As an admin, I can add coupon codes so that I can offer discounts to my customers*
+- Admins can navigate to the 'Coupon Management' page under the accounts menu.
+
+![Admin-menu](assets/images/admin-menu.png)
+
+- On this page, the user can add new coupons by filling out a short form. 
+
+*As an admin, I can edit coupon codes so that I change or edit their information*
+- If an admin is logged in, coupons will show an 'Edit' button at the end of their row on the coupon management page.
+- Clicking the edit button will take the admin to the 'Edit Coupon' page where admins can update the coupon's info.
+
+*As an admin, I can delete coupon codes so that I can remove codes no longer valid*
+- If an admin is logged in, coupons will show a 'Delete' button at the end of their row on the coupon management page.
+- Clicking the delete button will prompt a modal, asking the user if they are sure they want to delete the coupon.
+- Clicking delete on the modal will remove the coupon from the database.
 
 [Back to top ⇧](#dry-drops---testing)
 
@@ -685,6 +701,47 @@
     - Only superusers can delete products.
 
     ![Delete-product-Access](assets/gifs/delete-product-access.gif)
+
+- #### Add Coupon
+    Checked that:
+    - The add coupon page is accessed by the account dropdown menu, under coupon management.
+    - The form lists all the necessary fields to create a new coupon. 
+    - The user must fill out all fields with an Asterix. If the form is submitted with any of these fields left blank then an error message will appear above that particular field, notifying the user of the issue.
+    - The Discount code field must be unique. An error message will appear if an already existing discount code is attempted.
+    - If a discount percentage is added that is less than 0 or greater than 100 the form will fail and an error message will appear under the field.
+    - Clicking the 'Add Coupon' button at the bottom of the form will create the coupon providing there are no errors on the form.
+    - A list of all added coupons displays underneath the add coupon form.
+    
+    ![Add Coupon](assets/gifs/add-coupon.gif)
+
+    - It is only accessible by superusers.
+
+    ![Add-coupon-Access](assets/gifs/add-coupon-access.gif)
+
+- #### Edit Coupon
+    Checked that:
+    - The Edit coupon page can be accessed by clicking the 'edit' button at end of the listed coupon, on the coupon management page.
+    - Accessing the page loads the add coupon page, with the details of the coupon already filled in. 
+    - Clicking the 'Update Coupon' button will save any changes made to the existing coupon.  
+
+    ![Edit-Coupon](assets/gifs/edit-coupon.gif)
+
+    - The Edit coupon page can only be accessed by superusers. 
+
+    ![Edit-Coupon-Access](assets/gifs/edit-coupon-access.gif)
+
+- #### Delete Coupon
+    Checked that:
+    - The Delete coupon button is a red trash can icon that can be found at the end of the listed coupon, on the coupon management page.
+    - Clicking the delete button will bring up a warning modal, asking the user if they are sure they want to delete the coupon, and informing them that it is irreversible. 
+    - Once the warning modal has been activated, if the user then clicks the delete button the coupon will be removed from the database. 
+    - If however, the user presses the cancel button, the modal is closed and no effect has taken place. 
+
+    ![Delete-Coupon](assets/gifs/delete-coupon.gif)
+
+    - Only superusers can delete coupons.
+
+    ![Delete-Coupon-Access](assets/gifs/delete-coupon-access.gif)
 
 [Back to top ⇧](#dry-drops---testing)
 

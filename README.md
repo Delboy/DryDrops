@@ -533,7 +533,7 @@ These phrases can also be used in the metadata at the head of the page.
 - #### Add Coupon
     - The add coupon page is accessed by the account dropdown menu, under coupon management. It is only accessible by superusers.
     - The form lists all the necessary fields to create a new coupon. 
-    - The user must fill out all fields. If the form is submitted with any of these fields left blank then an error message will appear above that particular field, notifying the user of the issue.
+    - The user must fill out all fields with an Asterix. If the form is submitted with any of these fields left blank then an error message will appear above that particular field, notifying the user of the issue.
     - The Discount code field must be unique. An error message will appear if an already existing discount code is attempted.
     - If a discount percentage is added that is less than 0 or greater than 100 the form will fail and an error message will appear under the field.
     - Clicking the 'Add Coupon' button at the bottom of the form will create the coupon providing there are no errors on the form.
