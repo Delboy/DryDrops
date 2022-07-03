@@ -777,6 +777,14 @@
 
     ![Totals](assets/gifs/totals.gif)
 
+- #### Coupons
+    Checked that:
+    - Underneath the subtotals is an input box where users can enter a coupon code.
+    - If the coupon code entered is valid, a success toast message will pop and a summary of the coupon added, and the discount given will appear in the summary of the costs.
+    - If the coupon code entered is invalid, an error toast message will pop, and the totals will not change.
+
+    ![Coupons](assets/gifs/coupons.gif)
+
 [Back to top ⇧](#dry-drops---testing)
 
 ### Checkout
