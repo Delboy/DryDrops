@@ -20,8 +20,9 @@
 </div>
 {% endblock %}
 
+<!-- Order Summary -->
 {% block content %}
-<div class="container">
+<div class="container px-4">
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
             <p>Order Summary <span class="small">({{ product_count }})</span></p>
@@ -54,28 +55,21 @@
                     </div>
                 </div>
             {% endfor %}
+            <!-- Totals -->
             <hr class="w-75">
-            <div class="row pr-5 text-right">
-                <div class="col-7 offset-1">
-                    {% if coupon %}
-                    <p>Subtotal:</p>
-                    <p class="text-success">'{{ coupon }}' ({{ coupon.discount }}% off)</p>
-                    {% endif %}
-                    <p class="my-0 font-weight-bold">Order Total:</p>
-                    <p class="my-1 small">Delivery:</p>
-                    <p class="my-2 font-weight-bold">Grand Total:</p>
-                </div>
-                <div class="col-3">
-                    {% if coupon %}
-                    <p>£{{ before_coupon|floatformat:2 | intcomma }}</p>
-                    <p class="text-success">- £{{ discount|floatformat:2 | intcomma }}</p>
-                    {% endif %}
-                    <p class="my-0 font-weight-bold">£{{ total | floatformat:2 | intcomma }}</p>
-                    <p class="my-1">£{{ delivery | floatformat:2 }}</p>
-                    <p class="my-2 h4"><strong>£{{ grand_total | floatformat:2 | intcomma  }}</strong></p>
-                </div>
+            <div class="ml-md-5 mr-md-5 px-3">
+                {% if coupon %}
+                <p>Subtotal: £{{ before_coupon|floatformat:2 | intcomma }}</p>
+                <p><strong class="text-success">{{ coupon }}</strong>({{ coupon.discount}}% off): <span class="text-danger">- £{{ discount | floatformat:2 }}</span></p>
+                <p><strong>Bag Total: £{{ total|floatformat:2 | intcomma }}</strong></p>
+                {% else %}
+                <p><strong>Bag Total: £{{ total|floatformat:2 | intcomma }}</strong></p>
+                {% endif %}            
+                <p>Delivery: £{{ delivery|floatformat:2 }}</p>
+                <h4><strong>Grand Total: £{{ grand_total|floatformat:2 | intcomma }}</strong></h4>
             </div>
         </div>
+        <!-- Delivery Details -->
         <div class="col-12 col-lg-6">
             <p class="text-center">Please fill out the from below to complete your order.</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -108,6 +102,8 @@
                         {% endif %}
                     </div>
                 </fieldset>
+
+                <!-- Payment Section -->
                 <fieldset class="px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">Payment:</legend>
                     <!-- A Stripe card element will go here -->
@@ -143,7 +139,6 @@
 
 <div id="loading-overlay">
     <p class="loading-spinner display-1 text-light"><i class="fas fa-3x fa-sync-alt fa-spin"></i></p>
-
 </div>
 
 {% endblock %}
