@@ -150,6 +150,7 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+    discount = order.order_subtotal - order.order_total
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -182,6 +183,7 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'discount': discount,
     }
 
     return render(request, template, context)

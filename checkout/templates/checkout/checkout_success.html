@@ -33,7 +33,7 @@
 
             <div class="row mb-2">
                 <div class="col-12">
-                    <p class="mb-0"><strong>Order Number:</strong> <span class="small">{{ order.order_number }}</span></p>
+                    <p class="mb-0"><strong>Order Number:</strong> <span id='order-no' class="small">{{ order.order_number }}</span></p>
                 </div>
             </div>
 
@@ -149,7 +149,7 @@
 
             <div class="row">
                 <div class="col">
-                    <p class="mb-1">Coupon: <span class="text-success">{{ order.coupon }}</span> ({{order.discount}}% off) </p>
+                    <p class="mb-1"><span class="text-success">{{ order.coupon }}</span> ({{order.discount}}% off):<span class="text-danger"> -£{{ discount }}</span> </p>
                 </div>
             </div>
             {% endif %}
@@ -167,7 +167,7 @@
             </div>
 
             <div class="row">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6">
                     <h3 class="mb-1 font-weight-bold">Grand Total: £{{ order.grand_total | intcomma }}</h3>
                 </div>
             </div>
