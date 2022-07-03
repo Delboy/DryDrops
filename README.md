@@ -64,6 +64,9 @@ The payment system uses a service called Stripe. To test this system, dummy card
     - [Add Product](#add-product)
     - [Edit Product](#edit-product)
     - [Delete Product](#delete-product)
+    - [Add Coupon](#add-coupon)
+    - [Edit Coupon](#edit-coupon)
+    - [Delete Coupon](#delete-coupon)
 * [Bag](#bag)
     - [Items](#add-product)
     - [Quantity and Price](#quantity-and-price)
@@ -526,6 +529,32 @@ These phrases can also be used in the metadata at the head of the page.
     - If however, the user presses the cancel button, the modal is closed and no effect has taken place. 
 
     ![Products-Management-Delete](assets/images/product-management-delete.png)
+
+- #### Add Coupon
+    - The add coupon page is accessed by the account dropdown menu, under coupon management. It is only accessible by superusers.
+    - The form lists all the necessary fields to create a new coupon. 
+    - The user must fill out all fields. If the form is submitted with any of these fields left blank then an error message will appear above that particular field, notifying the user of the issue.
+    - The Discount code field must be unique. An error message will appear if an already existing discount code is attempted.
+    - If a discount percentage is added that is less than 0 or greater than 100 the form will fail and an error message will appear under the field.
+    - Clicking the 'Add Coupon' button at the bottom of the form will create the coupon providing there are no errors on the form.
+    - A list of all added coupons displays underneath the add coupon form.
+
+    ![Products-Management-Add-Coupon](assets/images/product-management-add-coupon.png)
+
+- #### Edit Coupon
+    - The Edit coupon page can only be accessed by superusers. 
+    - The Edit coupon page can be accessed by clicking the 'edit' button at end of the listed coupon, on the coupon management page.
+    - Accessing the page loads the add coupon page, with the details of the coupon already filled in. 
+    - Clicking the 'Update Coupon' button will save any changes made to the existing coupon.  
+
+- #### Delete Coupon
+    - Only superusers can delete coupons.
+    - The Delete coupon button is a red trash can icon that can be found at the end of the listed coupon, on the coupon management page.
+    - Clicking the delete button will bring up a warning modal, asking the user if they are sure they want to delete the coupon, and informing them that it is irreversible. 
+    - Once the warning modal has been activated, if the user then clicks the delete button the coupon will be removed from the database. 
+    - If however, the user presses the cancel button, the modal is closed and no effect has taken place. 
+
+    ![Products-Management-Buttons](assets/images/product-management-buttons.png)
 
 [Back to top ⇧](#dry-drops)
 
