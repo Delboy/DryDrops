@@ -58,7 +58,7 @@ def add_coupon(request):
     template = 'coupons/add_coupon.html'
     context = {
         'form': form,
-        'coupons':coupons,
+        'coupons': coupons,
     }
 
     return render(request, template, context)
