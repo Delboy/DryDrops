@@ -24,6 +24,7 @@
 {% block content %}
 <div class="row px-4 pt-4">
     <div class="col-12 col-lg-7">
+        <!-- Order Info  -->
         <div class="order-confirmation-wrapper p-4 border">
             <div class="row mb-2">
                 <div class="col">
@@ -43,6 +44,7 @@
                 </div>
             </div>
 
+            <!-- Item Summary -->
             <div class="row mb-2 font-weight-bold">
                 <div class="col-3 d-none d-md-block"></div>
                 <div class="col-4 col-md-3">Items</div>
@@ -63,7 +65,6 @@
                 <div class="col-4 col-md-3 text-center">{{ item.quantity }}</div>
                 <div class="col-4 col-md-3">£{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</div>
             </div>
-            
             {% endfor %}
 
             <div class="row">
@@ -72,6 +73,7 @@
                 </div>
             </div>
 
+            <!-- Delivery Info -->
             <div class="row">
                 <div class="col mb-1">
                     <small class="font-weight-bold">Delivering To:</small>
@@ -134,6 +136,7 @@
 
             <hr>
 
+            <!-- Billing Info-->
             <div class="row">
                 <div class="col mb-1">
                     <small class=" font-weight-bold">Billing Info:</small>

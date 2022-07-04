@@ -20,6 +20,7 @@
 
 {% block content %}
 <div class="row m-4">
+    <!-- Delivery Info -->
     <div class="col-lg-6">
         <h4>Default Delivery Information:</h4>
         <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
@@ -28,6 +29,7 @@
             <button class="btn link-btn rounded-pill mx-auto mx-md-0 d-block">Update information</button>
         </form>
     </div>
+    <!-- Order History -->
     <div class="col-lg-6 mt-2 mt-lg-0">
         <hr class="d-lg-none">
         <h4>Order History:</h4>
@@ -84,6 +86,7 @@
     </div>
 </div>
 
+<!-- Favourite Items -->
 <div class="row mx-4 mt-2">
     <div class="col-12">
         {% if not orders %}

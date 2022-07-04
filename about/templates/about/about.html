@@ -17,6 +17,7 @@
 {% block content %}
 <div class="container">
     <div class="row">
+        <!-- Image -->
         <div class="col-md-6">
             <img src="{{ MEDIA_URL }}founder.jpg" class="img-fluid" alt="A picture of Dry Drops founder, Jack Daniels">
             <p class="text-center font-italic text-muted mt-1">Jack Daniels - Founder of Dry Drops</p>
@@ -25,6 +26,7 @@
                 <a href="{% url 'products' %}" class="btn link-btn rounded-pill">View Our Products</a>
             </div>
         </div>
+        <!-- Bio -->
         <div class="col-md-6 mt-4 mt-md-0">
             <p><strong>Dry Drops</strong> was founded in late 2018 after Jack Daniels' lifelong battle with alcohol finally came to an
                 end. Instead of investing all his time, energy and money into his addiction he decided to invest it into
@@ -80,6 +82,7 @@
 
                 <p>All of us here hope you enjoy what we've built and thank you very much for considering our services.</p>
             </div>
+            <!-- Charity Links -->
             <p class="text-center mt-4">If you yourself have problems with alcohol abuse please contact one of our partnered charities below.</p>
             <div class="my-5 text-center">
                 <a href="https://www.alcoholics-anonymous.org.uk/" target="_blank"><img src="{{ MEDIA_URL }}AA.jpg" alt="Alcoholics Anonymous logo" rel="sponsored" class="charity img-fluid mr-md-5"></a>
@@ -89,6 +92,5 @@
         </div>
     </div>
 </div>
-
 
 {% endblock %}
