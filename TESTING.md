@@ -56,6 +56,7 @@
     - [Items](#items)
     - [Quantity and Price](#quantity-and-price)
     - [Totals and Messaging](#totals-and-messaging)
+    - [Coupons](#Coupons)
 * [Checkout](#checkout)
     - [Details](#details)
     - [Order Summary](#order-summary)
@@ -107,8 +108,8 @@
 #### Checkout Success validation
 ![checkout-success-w3](assets/images/checkout-success-w3.png)
 #### Product Management validation 
-- The add product page shows two errors. These are to do with the image upload widget and thus changing the code breaks the field.
 ![add-product-w3](assets/images/add-product-w3.png)    
+- The add product page shows two errors. These are to do with the image upload widget and thus changing the code breaks the field.
 #### Edit Review validation
 ![edit-review-w3](assets/images/edit-review-w3.png)
 #### Add Coupon validation

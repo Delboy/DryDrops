@@ -4,6 +4,8 @@ Dry Drops is an e-commerce website operating in the field of alcohol-free bevera
 
 This fully responsive website was built using the Django framework in Python.
 
+A link to the live project can be found [here](https://dry-drops.herokuapp.com/).
+
 The payment system uses a service called Stripe. To test this system, dummy card details can be used. A list of these can be found [here](https://stripe.com/docs/testing#cards).
 
 ![Responsive](assets/images/responsive.png)
@@ -71,6 +73,7 @@ The payment system uses a service called Stripe. To test this system, dummy card
     - [Items](#add-product)
     - [Quantity and Price](#quantity-and-price)
     - [Totals and Messaging](#totals-and-messaging)
+    - [Coupons](#coupons)
 * [Checkout](#checkout)
     - [Details](#details)
     - [Order Summary](#order-summary)
@@ -97,7 +100,7 @@ The payment system uses a service called Stripe. To test this system, dummy card
 * [Languages used](#languages-used)
 * [Libraries & Programs Used](#libraries-and-programs-used)
 
-[Testing](#eat-me)
+[Testing](#testing)
   
 [Deployment](#deployment)
 * [Github](#github)
@@ -125,7 +128,7 @@ The payment system uses a service called Stripe. To test this system, dummy card
 
 ### User Stories
 
-A list of my user stories and their tasks can be found [here](https://github.com/delboy/drydrops/issues).
+A list of my user stories and their tasks can be found [here](https://github.com/Delboy/DryDrops/issues?q=is%3Aissue+is%3Aclosed).
 
 #### EPIC | Navigation
 - As a shopper, I can navigate around the site so that I can easily view the desired content.
@@ -789,7 +792,7 @@ These phrases can also be used in the metadata at the head of the page.
 
 ## Testing 
 
-Testing and results can be found [here](TESTING.md)
+Testing and results can be found [here](TESTING.md).
 
 ## Deployment
 
