@@ -4,7 +4,7 @@ Dry Drops is an e-commerce website operating in the field of alcohol-free bevera
 
 This fully responsive website was built using the Django framework in Python.
 
-A link to the live project can be found [here](https://dry-drops.herokuapp.com/).
+A link to the live project can be found [here](https://drydrops-production.up.railway.app/).
 
 The payment system uses a service called Stripe. To test this system, dummy card details can be used. A list of these can be found [here](https://stripe.com/docs/testing#cards).
 
